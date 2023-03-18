@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "pf-bdea0102": {
+      "type": "pf-bdea0102",
+      "settings": {}
+    }
+  },
+  "order": [
+    "pf-bdea0102"
+  ],
+  "layout": "theme.pagefly"
+}

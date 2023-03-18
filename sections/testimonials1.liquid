@@ -1,0 +1,92 @@
+<section
+    id="st__testimonial1-{{ section.id }}"
+    class="sf-testimonials1 relative"
+>
+  <div class="container-fluid section-my section-testimonials1">
+    <h2 class="qq-comparison-table-title mb-3 text-center">{{ section.settings.title }}</h2>
+    <div class='section-viewport'>
+      <div class='column-text'>
+        {% for block in section.blocks %}
+          <div class="item{% if forloop.index == 1 %} active{% endif %}">          
+            <div class="stars flex">
+              {%- render 'testimonials__stars' -%}
+            </div>
+  
+            <div class="sf__tes-desc mb-6 text-color-subtext rte not-change">{{ block.settings.description }}</div>
+            <label class="sf__tes-title text-xl mb-2.5 font-medium not-change">{{ block.settings.title }}</label>
+            <div class="sf__tes-name not-change">{{ block.settings.author }}</div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class='column-right'>
+      <div class='testimonials1 first'>
+        {% render 'testimonials1-swiper', starting: 1, big: true %}
+        <div class='buttons-wrapper'>
+          <button class="btn-prev">
+              {% render 'icon', name: 'prev' %}
+          </button>
+          <button class="btn-next">
+              {% render 'icon', name: 'next' %}
+          </button>
+        </div>
+      </div>
+      <div class='testimonials1 second'>
+        {% render 'testimonials1-swiper', starting: 2 %}
+      </div>
+      <div class='testimonials1 third'>
+        {% render 'testimonials1-swiper', starting: 3 %}
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Testimonials1",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title",
+            "default": "What People Are Saying"
+          }
+        ],
+        "blocks": [
+            {
+                "type": "testimonial",
+                "name": "Testimonial",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title",
+                        "default": "Love it so much"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Content",
+                        "default": "<p>\"Short dress in a printed viscose weave with a round neckline, opening with a button at the back of the Seams with small frill trims at the waist and on the sleeves and skirt. Unlined.\"</p>"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "author",
+                        "label": "Author",
+                        "default": "<p>Dean D. US</p>"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image",
+                        "info": "Optional"
+                    }
+                ]
+            }
+        ],
+        "presets": [{
+            "name": "Testimonials1",
+            "category": "Promotional"
+        }]
+    }
+{% endschema %}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+  </head>
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+
+  <div data-rebuy-id="392"></div>
+<script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop=natural-stacks.myshopify.com"></script>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script type='text/javascript'>
+  jQuery(document).ready(function($) {
+    const bullet_html = "<div class='bullet_point'>"
+              + "<h3>WHY CUSTOMERS LOVE NATURAL STACKS</h3>"
+              + "<ul>"
+                + "<li>"
+                  + "<div class='col col-img'>"
+                    + "<img src='https://cdn.shopify.com/s/files/1/0269/3025/files/WHY_BUY_FROM_NATURAL_STACKS_9.png?v=1662093161' />"
+                  + "</div> "
+                  + "<div class='col col-text'>"
+                    + "<label>100% MONEY BACK GUARANTEE</label>"
+                    + "<p>We offer a 30 day, 100% money back guarantee. If you don't love it, reach out to us at support@naturalstacks.com</p>"
+                  + "</div>"
+                + "</li>"
+                + "<li>"
+                  + "<div class='col col-img'>"
+                    + "<img src='https://cdn.shopify.com/s/files/1/0269/3025/files/WHY_BUY_FROM_NATURAL_STACKS_10.png?v=1662093162' />"
+                  + "</div> "
+                  + "<div class='col col-text'>"
+                    + "<label>ALL-NATURAL INGREDIENTS</label>"
+                    + "<p>Made with unrivaled transparency because it's your right to know exactly what you're putting into your body.</p>"
+                  + "</div>"
+                + "</li>"
+                + "<li>"
+                  + "<div class='col col-img'>"
+                    + "<img src='https://cdn.shopify.com/s/files/1/0269/3025/files/WHY_BUY_FROM_NATURAL_STACKS_11.png?v=1662093162' />"
+                  + "</div> "
+                  + "<div class='col col-text'>"
+                    + "<label>FREE AND FAST SHIPPING</label>"
+                    + "<p>Free U.S. shipping on orders over $50 and on all subscription orders.</p>"
+                  + "</div>"
+                + "</li>"
+                + "<li>"
+                  + "<div class='col col-img'>"
+                    + "<img src='https://cdn.shopify.com/s/files/1/0269/3025/files/WHY_BUY_FROM_NATURAL_STACKS_12.png?v=1662093161' />"
+                  + "</div> "
+                  + "<div class='col col-text'>"
+                    + "<label>3RD PARTY TESTED</label>"
+                    + "<p>Our innovative formulas feature ingredient traceability, full label disclosure, and 3rd party lab testing on every single batch.</p>"
+                  + "</div>"
+                + "</li>"
+              + "</ul>"
+            + "</div>";
+    $(".order-summary__sections").append(bullet_html);
+
+    var prices = [0, 0, 0, 0];
+    var handles = [0, 0, 0, 0];
+    {% for i in (1..4) %}
+      {% assign hdl = 'freegift' | append: i | append: '_price' %}
+      {% assign hdl1 = 'freegift' | append: i | append: '_product' %}
+      {% if settings[hdl] == blank or settings[hdl1] == blank %} {% continue %} {% endif %}
+      
+      prices[{{ i | minus: 1 }}] = {{ settings[hdl] }};
+      handles[{{ i | minus: 1 }}] = '{{ settings[hdl1]}}';
+    {% endfor %}
+
+    jQuery.getJSON('/cart.js', function(cart) {
+      var items = cart.items;
+      var add_flag = 0;
+      var added_flag = 0;
+      for(var i = 0; i < prices.length; i ++) {
+        if(prices[i] == 0 || handles[i] == 'free-shipping') {
+          continue;
+        }
+
+        if(prices[i] <= cart.total_price) {
+          var f = 0;
+          for(var j = 0; j < items.length; j ++) {
+            if(items[j].handle == handles[i]) {
+              f = 1;
+            }
+          }
+          var datas = {};
+          datas['items'] = [];
+          if(f == 0) {
+            add_flag ++;
+            jQuery.getJSON('/products/' + handles[i], function(obj) {
+              console.log(obj);
+              data = {
+                "quantity": 1,
+                "id": obj.product.variants[0].id
+              };
+              datas['items'].push(data);
+              added_flag ++;
+              if(add_flag == added_flag) {
+                console.log("reload");
+                console.log(datas);
+                jQuery.ajax({
+                  type: 'POST',
+                  url: '/cart/add.js',
+                  data: datas,
+                  dataType: 'json',
+                  success: function(cart1) {
+                    console.log("added");
+                    location.reload();
+                  }
+                });
+              }
+            });
+          }
+        }
+        else {
+          var f = 0;
+          for(var j = 0; j < items.length; j ++) {
+            if(items[j].handle == handles[i]) {
+              f = 1;
+            }
+          }
+          
+          if(f == 1) {
+            add_flag ++;
+            var datas = {};
+            jQuery.getJSON('/products/' + handles[i], function(obj) {
+              added_flag ++;
+              console.log(obj);
+              datas[obj.product.variants[0].id] = 0;
+
+              if(add_flag == added_flag) {
+                console.log("update", datas);
+                jQuery.ajax({
+                  type: 'POST',
+                  url: '/cart/update.js',
+                  data: {updates : datas},
+                  dataType: 'json',
+                  success: function(cart) {
+                    location.reload();
+                  }
+                });
+              }
+            });
+          }
+        }
+      }
+    });
+  });
+</script>
+
+
+<style type='text/css'>
+  .order-summary__sections {
+    height: auto;
+  }
+  
+  .bullet_point {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .bullet_point h3 {
+    color: #ffba04;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0;
+  }
+  
+  .bullet_point ul li {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .bullet_point ul li .col-img {
+    width: 80px;
+  }
+  
+  .bullet_point ul li .col-text {
+    width: calc(100% - 80px);
+  }
+  
+  .bullet_point ul li .col-text label {
+    font-weight: 900;
+  }
+</style>

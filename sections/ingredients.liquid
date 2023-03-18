@@ -1,0 +1,62 @@
+<div id="ingredients" class='ingredients'>
+  <div class='container'>
+    <h2 class='title'>{{section.settings.heading}}</h2>
+    <div class='body'>{{section.settings.body}}</div>
+    <div class='ingredients-panel'>
+      <div class='navs'>
+        {%- for item in product.metafields.custom.ingredients.value -%}
+          {%- assign hdl = item | replace: " ", "" | handle -%}
+          {%- assign hdl_img = hdl | append: '_image' -%}
+          {%- assign hdl_title = hdl | append: '_title' -%}
+          {%- assign hdl_body = hdl | append: '_body' -%}
+          <a class='nav-item{% if forloop.index == 1 %} active{% endif %}' data-handle="{{hdl}}">
+            {% render 'responsive-image', image: {{settings[hdl_img]}}, image_class: '' %}
+            <label class="showDesktop">{{settings[hdl_title]}}</label>
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+    {%- for item in product.metafields.custom.ingredients.value -%}
+      {%- assign hdl = item | replace: " ", "" | handle -%}
+      {%- assign hdl_img = hdl | append: '_image' -%}
+      {%- assign hdl_title = hdl | append: '_title' -%}
+      {%- assign hdl_body = hdl | append: '_body' -%}
+      <div class='ingredient-content{% if forloop.index == 1 %} active{% endif %}' data-handle="{{hdl}}">
+        <div class='col-left'>
+          <h3>{{settings[hdl_title]}}</h3>
+          <div class='rte'>
+            {{settings[hdl_body]}}
+          </div>
+        </div>
+        <div class='col-right'>
+          {% render 'responsive-image', image: {{settings[hdl_img]}}, image_class: '' %}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+    "name": "Ingredients",
+    "class": "section-ingredients",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "body",
+        "label": "Body"
+      }
+    ],
+    "presets": [{
+      "name": "Ingredients",
+      "category": "Text",
+      "blocks": []
+    }]
+}
+
+{% endschema %}

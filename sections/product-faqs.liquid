@@ -1,0 +1,63 @@
+{% assign enabled = product.metafields.sf_faqs_enable %}
+{% unless product.metafields.custom.faq.value == blank %}
+<div class="container section-my product-single__use home-row-section product-section product-faq">
+  <div id="shopify-section-module-faq" class="shopify-section accordion-list product-section__header">
+    {% unless section.settings.section_title == blank %}
+      <h2 class="section__heading text-center">
+          {{ section.settings.section_title }}
+      </h2>
+    {% endunless %}
+    
+    {% for faq_item in product.metafields.custom.faq.value %}
+      {% assign mod = forloop.index | modulo: 2 %}
+      {% if mod == 0 %}
+        {% continue %}
+      {% endif %}
+      {% assign answer_ind = forloop.index %}
+      {% assign question = faq_item %}
+      {% assign i = forloop.index | divided_by: 2 | ceil %}
+      {% assign answer = product.metafields.custom.faq.value[answer_ind] %}
+      {% if question %}
+        <div>
+          <article id="accordion-{{ i | plus: 20 }}" class="accordion-item">
+            <h1 id="accordion-{{ i | plus: 20 }}" class="accordion-item-title">
+              <a class="accordion {% if i == 1 %} accordion-active {% endif %}" href="#"
+                   data-accordion-trigger="accordion-module-faq-{{ i | plus: 20 }}">
+                <span class="accordion-inline-title">
+                  {% if question %} {{ question }} {% endif %}
+                </span>{% include 'icon-arow-down', class: 'accordion-icon' %}
+              </a>
+            </h1>
+            <div class="accordion-item-content rte full-width-rte hidden"
+                 data-accordion-content="accordion-module-faq-{{ i | plus: 20 }}">
+              {% if answer %}<span class="accordion-description">{{ answer }}</span>
+              {% endif %}
+            </div>
+          </article>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endunless %}
+
+
+{% schema %}
+  {
+    "name": "Product FAQs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "Frequently Asked Questions"
+      }
+    ],
+    "templates": ["product"],
+    "presets": [
+      {
+        "name": "Product FAQs"
+      }
+    ]
+  }
+{% endschema %}

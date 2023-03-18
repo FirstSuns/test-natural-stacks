@@ -1,0 +1,210 @@
+<div id="ingredients1" class='ingredients1'>
+  <div class='container section-my'>
+    <h2 class='title text-center'>{{section.settings.heading}}</h2>
+    <div class='body text-center'>{{section.settings.body}}</div>
+    {% liquid
+      if product.metafields.custom.ingredients.value.size == 1
+        assign col_class = 'col-1'
+      elsif product.metafields.custom.ingredients.value.size == 2
+        assign col_class = 'col-2'
+      else
+        assign col_class = 'col-3'
+      endif
+    %}
+    <div class='ingredients1-wrapper'>
+      {% assign ind = 0 %}
+      {%- for item in product.metafields.custom.ingredients.value -%}
+        {% for block in section.blocks %}
+          {% assign hd1 = block.settings.title1 | handle %}
+          {% assign hd2 = item | handle %}
+          {% if hd1 == hd2 %}
+            <div class='ingredient1-item{% if ind > 2 %} mobile_collapsed{% endif %} {{ col_class }}' {% if block.settings.image1 != blank %} style="background-image: url({{ block.settings.image1 | img_url: 'master' }});" {% endif %}>
+              {% unless block.settings.title1 == blank %}
+                <h3 class='item-title'>{% if block.settings.title1 == "Coleus forskohlii" %}<i>{% endif %}{{ block.settings.title1 }}{% if block.settings.title1 == "Coleus forskohlii" %}</i>{% endif %}</h3>
+              {% endunless %}
+              {% unless block.settings.text1 == blank %}
+                <p class='item-text'>{{ block.settings.shorttext1 }}</p>
+              {% endunless %}
+              <a class='btn-expand'>
+                <svg width="24" height="24" version="1.1" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g fill-rule="nonzero"><g><g><g><g transform="translate(-153.000000, -497.000000) translate(153.000000, 188.000000) translate(0.000000, 132.000000) translate(0.000000, 177.000000)"><circl cx="12" cy="12" r="12" fill="#142B6F" fill-opacity=".51"></circl><g stroke="#FFF" stroke-linecap="square" stroke-width="2"><path d="M0,4 L8,4" transform="translate(8.000000, 8.000000)"></path><path d="M0,4 L8,4" transform="translate(8.000000, 8.000000) translate(4.000000, 4.000000) rotate(-270.000000) translate(-4.000000, -4.000000)"></path></g></g></g></g></g></g></g></svg>
+              </a>
+            </div>
+            {% assign ind = ind | plus: 1 %}
+            {% break %}
+          {% endif %}
+          
+          {% assign hd1 = block.settings.title2 | handle %}
+          {% assign hd2 = item | handle %}
+          {% if hd1 == hd2 %}
+            <div class='ingredient1-item{% if ind > 2 %} mobile_collapsed{% endif %} {{ col_class }}' {% if block.settings.image2 != blank %} style="background-image: url({{ block.settings.image2 | img_url: 'master' }});" {% endif %}>
+              {% unless block.settings.title2 == blank %}
+                <h3 class='item-title'>{% if block.settings.title2 == "Coleus forskohlii" %}<i>{% endif %}{{ block.settings.title2 }}{% if block.settings.title2 == "Coleus forskohlii" %}</i>{% endif %}</h3>
+              {% endunless %}
+              {% unless block.settings.text2 == blank %}
+                <p class='item-text'>{{ block.settings.shorttext2 }}</p>
+              {% endunless %}
+              <a class='btn-expand'>
+                <svg width="24" height="24" version="1.1" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g fill-rule="nonzero"><g><g><g><g transform="translate(-153.000000, -497.000000) translate(153.000000, 188.000000) translate(0.000000, 132.000000) translate(0.000000, 177.000000)"><circl cx="12" cy="12" r="12" fill="#142B6F" fill-opacity=".51"></circl><g stroke="#FFF" stroke-linecap="square" stroke-width="2"><path d="M0,4 L8,4" transform="translate(8.000000, 8.000000)"></path><path d="M0,4 L8,4" transform="translate(8.000000, 8.000000) translate(4.000000, 4.000000) rotate(-270.000000) translate(-4.000000, -4.000000)"></path></g></g></g></g></g></g></g></svg>
+              </a>
+            </div>
+            {% assign ind = ind | plus: 1 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {%- endfor -%}
+    </div>
+    <div class='cta_row'>
+      <a class='link-supplement_facts'> Supplement Facts</a>
+      <a class='link-expand'>
+        <span class='to_expand'> Show All {{ ind }} </span>
+        <span class='to_collapse'> Show Less </span>
+      </a>
+    </div>
+    <div class='ingredients1-expand-popup hide'>
+      <div class='ingredients1-expand-wrapper'>
+        {%- for item in product.metafields.custom.ingredients.value -%}
+          {% for block in section.blocks %}
+            {% assign hd1 = block.settings.title1 | handle %}
+            {% assign hd2 = item | handle %}
+            {% if hd1 == hd2 %}
+              <div class='ingredient1-item-outer'>
+                <div class='ingredient1-item' {% if block.settings.image1 != blank %} style="background-image: url({{ block.settings.image1 | img_url: 'master' }});" {% endif %}>
+                  {% unless block.settings.title1 == blank %}
+                    <h3 class='item-title'>{{ block.settings.title1 }}</h3>
+                  {% endunless %}
+                  {% unless block.settings.text1 == blank %}
+                    <p class='item-text'>{{ block.settings.text1 }}</p>
+                  {% endunless %}
+                  <a class='btn-close'>
+                    <svg width="16" height="16" version="1.1" viewBox="0 0 16 16"><g fill="none" fill-rule="evenodd" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"><g stroke="#142B6F" stroke-width="2"><g><g><path d="M14,14 L2,2 L14,14 Z M14,2 L2,14 L14,2 Z" transform="translate(-284.000000, -22.000000) translate(284.000000, 22.000000)"></path></g></g></g></g></svg>
+                  </a>
+              
+                  {% unless section.settings.item_link1 == blank %}
+                    <a href="{{ section.settings.item_link1 }}" class='item-link'>Learn More</a>
+                  {% endunless %}
+                </div>
+              </div>
+              {% break %}
+            {% endif %}
+            
+            {% assign hd1 = block.settings.title2 | handle %}
+            {% assign hd2 = item | handle %}
+            {% if hd1 == hd2 %}
+              <div class='ingredient1-item-outer'>
+                <div class='ingredient1-item' {% if block.settings.image2 != blank %} style="background-image: url({{ block.settings.image2 | img_url: 'master' }});" {% endif %}>
+                  {% unless block.settings.title2 == blank %}
+                    <h3 class='item-title'>{{ block.settings.title2 }}</h3>
+                  {% endunless %}
+                  {% unless block.settings.text2 == blank %}
+                    <p class='item-text'>{{ block.settings.text2 }}</p>
+                  {% endunless %}
+                  <a class='btn-close'>
+                    <svg width="16" height="16" version="1.1" viewBox="0 0 16 16"><g fill="none" fill-rule="evenodd" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"><g stroke="#142B6F" stroke-width="2"><g><g><path d="M14,14 L2,2 L14,14 Z M14,2 L2,14 L14,2 Z" transform="translate(-284.000000, -22.000000) translate(284.000000, 22.000000)"></path></g></g></g></g></svg>
+                  </a>
+              
+                  {% unless section.settings.item_link2 == blank %}
+                    <a href="{{ section.settings.item_link2 }}" class='item-link'>Learn More</a>
+                  {% endunless %}
+                </div>
+              </div>
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {%- endfor -%}
+      </div>
+    </div>
+    <div class='supplement_facts-popup hide'>
+      <div class='supplement_facts-popup-wrapper'>
+        {% for img in product.metafields.custom.supplement_facts.value %}
+          <img src="{{ img | img_url: 'master' }}" />
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+    "name": "Ingredients1",
+    "class": "section-ingredients1",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "body",
+        "label": "Body"
+      },
+      {
+        "type": "url",
+        "id": "item_link",
+        "label": "Learn More Link"
+      }
+    ],
+    "blocks":[
+        {
+            "type":"ingredient_item",
+            "name":"Ingredient Item",
+            "settings":[
+              {
+                  "type": "header",
+                  "content": "Ingredient 1"
+              },
+              {
+                "type": "text",
+                "id": "title1",
+                "label": "Title"
+              },
+              {
+                "type": "textarea",
+                "id": "shorttext1",
+                "label": "Short Text"
+              },
+              {
+                "type": "textarea",
+                "id": "text1",
+                "label": "Text"
+              },
+              {
+                "type": "image_picker",
+                "id": "image1",
+                "label": "Image"
+              },
+              {
+                  "type": "header",
+                  "content": "Ingredient 2"
+              },
+              {
+                "type": "text",
+                "id": "title2",
+                "label": "Title"
+              },
+              {
+                "type": "textarea",
+                "id": "shorttext2",
+                "label": "Short Text"
+              },
+              {
+                "type": "textarea",
+                "id": "text2",
+                "label": "Text"
+              },
+              {
+                "type": "image_picker",
+                "id": "image2",
+                "label": "Image"
+              }
+            ]
+        }
+    ],
+    "presets": [{
+      "name": "Ingredients1",
+      "category": "Text",
+      "blocks": []
+    }]
+}
+
+{% endschema %}

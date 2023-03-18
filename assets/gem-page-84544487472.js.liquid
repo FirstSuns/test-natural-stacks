@@ -1,0 +1,390 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    (function( jQuery ){
+  // var $module = jQuery('#m-1642161918450').children('.module');
+  // You can add custom Javascript code right here.
+  
+})( window.GemQuery || jQuery );
+
+
+var slideElem = document.querySelector('.carousel-nav');
+var sliderflkty = new Flickity(slideElem, {
+    asNavFor: '.carousel-main',
+    contain: true,
+    pageDots: false,
+    prevNextButtons: false, 
+    freeScroll: true
+});
+    
+    
+    
+    
+    
+    
+(function( jQuery ){
+  // var $module = jQuery('#m-1657197381531').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+(function( jQuery ){
+  var $module = jQuery('#m-1657022434793').children('.module');
+  var videoUrl = jQuery.trim($module.attr('data-url'));
+  var autoPause = $module.attr('data-autopause');
+  var autoPlay = $module.attr('data-autoplay');
+  var videoloop = $module.attr('data-videoloop');
+  var videoMute = $module.attr('data-videomute');
+  var byline = $module.attr('data-byline');
+  var showtitle = $module.attr('data-showtitle');
+  var showportrait = $module.attr('data-showportrait');
+
+  setTimeout(function() {
+    var videoWrapper = $module.children('.vimeo_video');
+    videoWrapper.empty().append('<div id="vimeo-wrapper-1657022434793"></div>');
+
+    var options = {
+      url: videoUrl,
+      loop: videoloop,
+      autoplay: autoPlay,
+      autopause: autoPause,
+      byline: byline,
+      title: showtitle,
+      muted: videoMute,
+      portrait: showportrait
+    };
+    var player = new Vimeo.Player("vimeo-wrapper-1657022434793", options);
+
+    player.on('loaded', function() {	
+      var $playerFrame = $module.find('iframe');	
+      var width = parseInt($playerFrame.attr('width'));	
+      var height = parseInt($playerFrame.attr('height'));	
+      if (width != NaN && height != NaN) {	
+        $module.find('.videoFullScreen').css('padding-bottom', (height / width * 100) + '%');	
+      }	
+    });	
+    
+    $module.on('pausevideo', function() {	
+      player.pause();	
+    });
+  }, 100);
+})( window.GemQuery || jQuery );
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    (function( jQuery ){
+  // var $module = jQuery('#m-1649329298721').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+
+var elem = document.querySelector('.tm-carousel');
+var flkty = new Flickity(elem, {
+    // options
+    cellAlign: 'left',
+    contain: true,
+    freeScroll: true,
+    wrapAround: true,
+    groupCells: true,
+    prevNextButtons: false
+});
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    (function(jQuery) {
+            // var $module = jQuery('#m-1657024144507').children('.module');
+            // You can add custom Javascript code right here.
+
+
+            jQuery(".tab__content").hide();
+            jQuery(".tab__content:first").show();
+
+            jQuery(".tab__head li").click(function() {
+
+                jQuery(".tab__content").hide();
+                var activeTab = jQuery(this).attr("rel");
+                jQuery("#" + activeTab).fadeIn();
+                jQuery(".tab__head li").removeClass("active");
+                jQuery(this).addClass("active");
+
+
+            });
+
+
+
+        })(window.GemQuery || jQuery);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    (function( jQuery ){
+  // var $module = jQuery('#m-1642161918450').children('.module');
+  // You can add custom Javascript code right here.
+  
+})( window.GemQuery || jQuery );
+
+
+var slideElem2 = document.querySelector('.carousel-nav2');
+var sliderflkty2 = new Flickity(slideElem2, {
+    asNavFor: '.carousel-main2',
+    contain: true,
+    pageDots: false,
+    prevNextButtons: false, 
+    freeScroll: true
+});

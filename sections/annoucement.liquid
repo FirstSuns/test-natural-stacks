@@ -1,0 +1,86 @@
+{% assign flag = 1 %}
+{% if section.settings.only_homepage and template != 'index' %}
+  <style type="text/css">
+    #shopify-section-announcement {
+      height: 0;
+    }
+
+    .stuck .header__wrapper {
+      top: 0 !important;
+    }
+  </style>
+  {% assign flag = 0 %}
+{% endif %}
+
+{% unless section.settings.show_section %}
+  <style type="text/css">
+    #shopify-section-announcement {
+      height: 0;
+    }
+  </style>
+  {% assign flag = 0 %}
+{% endunless %}
+
+{% if flag == 1 %}
+  <div class="announcement slick_slider" id="announcement" style="background: {{ section.settings.background }}; color: {{ section.settings.text_color }}; opacity: 0;">
+    {% for block in section.blocks %}
+      <div class='item'>
+        {% if block.settings.link %}
+          <a href='block.settings.link'>
+        {% endif %}
+            {{ block.settings.content }}
+        {% if block.settings.link %}
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Announcement Bar",
+    "class": "section-announcement",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_section",
+        "label": "Show Announcement"
+      },
+      {
+        "type": "checkbox",
+        "id": "only_homepage",
+        "label": "Show only on homepage"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ]
+}
+
+{% endschema %}

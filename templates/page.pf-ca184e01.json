@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "pf-ca184e01": {
+      "type": "pf-ca184e01",
+      "settings": {}
+    }
+  },
+  "order": [
+    "pf-ca184e01"
+  ],
+  "layout": "theme.pagefly"
+}

@@ -1,0 +1,10 @@
+<div class='article-products'>
+  <h2>Shop the Products</h2>
+  <div class="mt-6 flex flex-wrap -mx-2 xl:-mx-3">
+    {% for product1 in article.metafields.custom.article_products.value %}
+      <div class="sf__col-item w-6/12 md:w-4/12 px-2 xl:px-3">
+        {%- render 'product-card', product: product1 -%}
+      </div>
+    {% endfor %}
+  </div>
+</div>

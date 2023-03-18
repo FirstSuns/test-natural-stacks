@@ -1,0 +1,580 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "e471692e-ca2a-4fe6-9f8e-cc64052eb22b": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_saving": true
+          }
+        },
+        "ac794702-714f-4dba-8393-e6a2406ea50d": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "e1933521-ea31-49fa-ab2d-72a14b8a5718": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "fea49fdb-38dc-492d-8976-79368cb712ee": {
+          "type": "variant_picker",
+          "settings": {
+            "size_title": "Size"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_atc_button": true,
+            "show_dynamic_checkout": false
+          }
+        },
+        "abd1544e-94ad-4a1b-a277-cf6182934a8a": {
+          "type": "text",
+          "settings": {
+            "text": "100% money back guarantee | Free Shipping on orders $30+",
+            "text_style": "body",
+            "additional_class": "guarantee_text"
+          }
+        },
+        "d3dc445e-529b-4e26-b635-1fa8126587dd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ClaimsIcon_2_1.png",
+            "image_link": "",
+            "image_width": 100,
+            "image_alignment": "center",
+            "additional_class": "guarantee_img"
+          }
+        },
+        "2345d74a-2bc5-4f10-ae12-4f4659301929": {
+          "type": "horizontal_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Directions",
+            "hyperlink_target": "",
+            "content": "",
+            "liquid": "<div class='suggested_use'>\n{{product.metafields.custom.direction}} \n<\/div>"
+          }
+        },
+        "3c77c9bd-e44c-4053-9225-3f0386ea8663": {
+          "type": "horizontal_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Ingredients",
+            "hyperlink_target": "#ingredients",
+            "content": "",
+            "liquid": ""
+          }
+        },
+        "addons": {
+          "type": "addons",
+          "settings": {
+            "show_atcp": false,
+            "show_ask_a_question": true,
+            "show_social": true,
+            "store_locator": true
+          }
+        },
+        "45e7749e-91ff-4446-a1e2-c29364f318d7": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "e471692e-ca2a-4fe6-9f8e-cc64052eb22b",
+        "price",
+        "ac794702-714f-4dba-8393-e6a2406ea50d",
+        "e1933521-ea31-49fa-ab2d-72a14b8a5718",
+        "fea49fdb-38dc-492d-8976-79368cb712ee",
+        "buy_buttons",
+        "abd1544e-94ad-4a1b-a277-cf6182934a8a",
+        "d3dc445e-529b-4e26-b635-1fa8126587dd",
+        "2345d74a-2bc5-4f10-ae12-4f4659301929",
+        "3c77c9bd-e44c-4053-9225-3f0386ea8663",
+        "addons",
+        "45e7749e-91ff-4446-a1e2-c29364f318d7"
+      ],
+      "settings": {
+        "container": "container",
+        "layout": "layout-6",
+        "show_atwl": false,
+        "enable_history_state": true,
+        "show_featured_media": true,
+        "show_zoom_button": true,
+        "enable_video_autoplay": false,
+        "show_nav_media_mobile": false,
+        "show_pagination_mobile": true,
+        "use_sticky_atc": true,
+        "use_sticky_atc_on_mobile": true,
+        "enable_dynamic_checkout": false,
+        "sticky_atc_wishtlist": false,
+        "sticky_atc_compare": false
+      }
+    },
+    "d868f9d4-c24d-477f-b740-76bb5fb80fd5": {
+      "type": "product-benefits",
+      "settings": {
+        "heading": "",
+        "subheading": "{{ product.title }} Benefits",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_per_row": 3,
+        "item_gap": 30,
+        "item_gap_mobile": 10,
+        "card_style": "vertical",
+        "image_max_width": "70px",
+        "content_alignment": "center",
+        "hover_effect": "zoom-in",
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "use_scroll_mobile": false,
+        "use_grid_column_mb": false,
+        "custom_class": "core_benefits"
+      }
+    },
+    "25bc96bf-c970-4915-bac7-f0f812399174": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_gap": 100,
+        "item_gap_mobile": 30,
+        "image": "shopify:\/\/shop_images\/6_2.jpg",
+        "link": "",
+        "layout": "left",
+        "image_column_size": "6",
+        "hover_effect": false,
+        "title": "A Good Night’s Sleep… Every Night.*",
+        "sub_title": "",
+        "text": "<p>Fall asleep faster.* Remain asleep all night.* Wake up feeling refreshed and energized for the rest of the day.*<\/p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "sf__btn-link",
+        "button_size": "",
+        "custom_class": ""
+      }
+    },
+    "e17daa69-aa4b-4691-9ed3-eeada8b2d3ca": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_gap": 100,
+        "item_gap_mobile": 30,
+        "image": "shopify:\/\/shop_images\/1_Square_5.jpg",
+        "link": "",
+        "layout": "right",
+        "image_column_size": "6",
+        "hover_effect": false,
+        "title": "Think Clearly*",
+        "sub_title": "",
+        "text": "<p>Slow down the hands of time, keeping cognition, learning, and memory sharp for the long haul.*<\/p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "sf__btn-link",
+        "button_size": "",
+        "custom_class": ""
+      }
+    },
+    "77fc833d-e03a-4ace-a0ac-c8b405f3c777": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_gap": 100,
+        "item_gap_mobile": 30,
+        "image": "shopify:\/\/shop_images\/Untitled_design_-_2022-11-30T144352.288.png",
+        "link": "",
+        "layout": "left",
+        "image_column_size": "6",
+        "hover_effect": false,
+        "title": "A Better Memory*",
+        "sub_title": "",
+        "text": "<p>With increased synaptic density, the brain has more “storage capacity” leading to improved short-term and long-term memory.*<\/p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "sf__btn-link",
+        "button_size": "",
+        "custom_class": ""
+      }
+    },
+    "165996683072f83839": {
+      "type": "ingredients",
+      "disabled": true,
+      "settings": {
+        "heading": "Real Ingredients. Real Research",
+        "body": "<p>Redwood is a potent blend of vitamins and minerals curated from around the world. The effects of Redwood may make it sound like a \"magic pill\" but what Redwood does is actually very simple.<br><br>The ingredients in Redwood boost nitric oxide production, increasing the rate of blood flow in the body. You'll enjoy more stamina and energy along with all of the added benefits of better blood flow, including circulation, improved vein health, warmer hands and feet, better bedroom performance, stronger immunity and improved mood.† <a class=\"underline text-black\" href=\"\/pages\/ingredients-list\">See all ingredients<\/a><\/p>"
+      }
+    },
+    "2efe215f-f2ae-4648-9a56-8628ad2229f5": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "{{ product.metafields.custom.image_with_text }}",
+        "custom_class": ""
+      }
+    },
+    "6455f514-e2ee-4ac9-b002-71562aca1bb1": {
+      "type": "ingredients1",
+      "blocks": {
+        "a8a6aed4-0432-4473-9bd0-93219051773c": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "0bd2e861-1153-4f1e-b641-ac32a8cf5b69": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "601be1b3-fcc4-48be-ac3e-d6290afc6cd9": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "7c38834f-68f4-4b46-a196-18b97e8bc336": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "ac9c316c-741f-465e-b714-0fdcc2165e58": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "1403df99-ad76-482a-96cc-01f70357795c": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "6baab303-5750-4c8a-834d-720021592a33": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "63da738f-e15a-4b0d-8ead-ca9c7b78fb73": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "854cf33a-23d6-4108-b3d7-15aa2bdb6546": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "ee202f26-9c44-4e2b-98f8-6d1dccb9e2c8": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "c3441979-a05d-4d18-881a-1828088f8e15": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "b860ccc8-7466-4934-bc80-3d038eff852e": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "8fe379e4-6e59-476c-a526-9faf03747032": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "c981066b-d3e1-4106-818e-eb894f7fc73a": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "b4ac6425-1bc7-4a69-a04c-00b3f01d8d7e": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "f30c5ab9-e569-42ee-9162-63e18c4afe8e": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "70365303-3976-41ca-873b-2ec9e3700954": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "31e2307d-e423-457b-bc85-a570e38827c7": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "54a7708e-60b2-491d-bd7d-3d23b16653f6": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "21d0a5e2-a043-4929-a996-bc9999376022": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "e5940d13-079f-42eb-bc69-ad4ee5455446": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "4df8639d-af23-4f5c-a7cc-8f092ed3aa69": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "767e87ef-30a7-49d5-9f96-0e5e316404f6": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "7ebf6755-9ab8-41bc-bbf3-b35f44a157c7": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "60ef9664-f261-4b0e-8d81-d5fa005979a8": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "10c777c6-cb92-43ff-a7cd-01de8f68cbc0": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "25423866-8892-4710-9d5a-10d89ac314d0": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "2646ea4a-d6d8-411a-a2dd-467952bdebc4": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "d90c9e62-8662-4e2c-818c-920d177363cd": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "458252bc-4a58-40da-b623-ab4d0b7f1143": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "927329c6-994e-44b9-beef-0e21a09d85ce": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "7fc6cb04-445e-49c9-80c2-d7b4b4013450": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "6754a3fb-83a3-416d-aa2d-c74979381e1a": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "6f3d6f2f-f627-4bab-8f11-ce46935596ac": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "75aeac17-5bfc-4dbe-baf6-dbd57a37cff4": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "67788bfd-4768-4c25-aeeb-8feb84e2bb12": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "36bd1e90-0c4e-46d8-8ca0-803f14755814": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "da9a1858-05cb-40c4-aa28-e71c8a0a00fe": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "902d6ff8-397c-42f4-b48a-63e04c00120e": {
+          "type": "ingredient_item",
+          "settings": {}
+        },
+        "e1fecd8b-97a5-4d97-8271-5b16e5289356": {
+          "type": "ingredient_item",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "a8a6aed4-0432-4473-9bd0-93219051773c",
+        "0bd2e861-1153-4f1e-b641-ac32a8cf5b69",
+        "601be1b3-fcc4-48be-ac3e-d6290afc6cd9",
+        "7c38834f-68f4-4b46-a196-18b97e8bc336",
+        "ac9c316c-741f-465e-b714-0fdcc2165e58",
+        "1403df99-ad76-482a-96cc-01f70357795c",
+        "6baab303-5750-4c8a-834d-720021592a33",
+        "63da738f-e15a-4b0d-8ead-ca9c7b78fb73",
+        "854cf33a-23d6-4108-b3d7-15aa2bdb6546",
+        "ee202f26-9c44-4e2b-98f8-6d1dccb9e2c8",
+        "c3441979-a05d-4d18-881a-1828088f8e15",
+        "b860ccc8-7466-4934-bc80-3d038eff852e",
+        "8fe379e4-6e59-476c-a526-9faf03747032",
+        "c981066b-d3e1-4106-818e-eb894f7fc73a",
+        "b4ac6425-1bc7-4a69-a04c-00b3f01d8d7e",
+        "f30c5ab9-e569-42ee-9162-63e18c4afe8e",
+        "70365303-3976-41ca-873b-2ec9e3700954",
+        "31e2307d-e423-457b-bc85-a570e38827c7",
+        "54a7708e-60b2-491d-bd7d-3d23b16653f6",
+        "21d0a5e2-a043-4929-a996-bc9999376022",
+        "e5940d13-079f-42eb-bc69-ad4ee5455446",
+        "4df8639d-af23-4f5c-a7cc-8f092ed3aa69",
+        "767e87ef-30a7-49d5-9f96-0e5e316404f6",
+        "7ebf6755-9ab8-41bc-bbf3-b35f44a157c7",
+        "60ef9664-f261-4b0e-8d81-d5fa005979a8",
+        "10c777c6-cb92-43ff-a7cd-01de8f68cbc0",
+        "25423866-8892-4710-9d5a-10d89ac314d0",
+        "2646ea4a-d6d8-411a-a2dd-467952bdebc4",
+        "d90c9e62-8662-4e2c-818c-920d177363cd",
+        "458252bc-4a58-40da-b623-ab4d0b7f1143",
+        "927329c6-994e-44b9-beef-0e21a09d85ce",
+        "7fc6cb04-445e-49c9-80c2-d7b4b4013450",
+        "6754a3fb-83a3-416d-aa2d-c74979381e1a",
+        "6f3d6f2f-f627-4bab-8f11-ce46935596ac",
+        "75aeac17-5bfc-4dbe-baf6-dbd57a37cff4",
+        "67788bfd-4768-4c25-aeeb-8feb84e2bb12",
+        "36bd1e90-0c4e-46d8-8ca0-803f14755814",
+        "da9a1858-05cb-40c4-aa28-e71c8a0a00fe",
+        "902d6ff8-397c-42f4-b48a-63e04c00120e",
+        "e1fecd8b-97a5-4d97-8271-5b16e5289356"
+      ],
+      "settings": {
+        "heading": "What's Inside {{ product.title }}",
+        "body": "",
+        "item_link": "#"
+      }
+    },
+    "1657834232a8cb7d2c": {
+      "type": "custom-content",
+      "blocks": {
+        "b86d26ff-146c-4982-a2a3-0ebc54f5d66c": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "subheading": "",
+            "text": "",
+            "width": "100%",
+            "alignment": "start",
+            "align_text": "center",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "View Ingredient Suppliers & 3rd Party Test Results",
+            "button_link": "https:\/\/healthloq.com\/p\/natural-stacks\/b\/MTM-001",
+            "button_style": "sf__btn-primary",
+            "button_size": "",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "b86d26ff-146c-4982-a2a3-0ebc54f5d66c"
+      ],
+      "settings": {
+        "heading": "Open Source Transparency",
+        "subheading": "The First Open Source Supplement Company",
+        "description": "<center><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0269\/3025\/t\/307\/assets\/open-source_afc2b407-d8bc-49f3-9e12-61f59bdf3054-1644335778269.png?v=1644335779\" alt=\"open_source\" width=\"258\" height=\"149\"><\/center>\n<br>\nNatural Stacks “Open Source” transparency program provides ingredient traceability and 3rd party lab test results for every batch. It’s powered by blockchain technology and secured by HealthLoq™ for transparent, tamperproof, trusted data. <p><a href=\"https:\/\/www.naturalstacks.com\/pages\/open-source\" target=\"_blank\">Learn More About Our Commitment to Transparency<\/a><\/p>",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "#f8f8f8",
+        "gap": 0,
+        "use_scroll_mobile": false,
+        "gap_mobile": 16,
+        "custom_class": ""
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "blocks": {
+        "00cee67e-7175-425b-9bf3-61d872359390": {
+          "type": "liquid",
+          "settings": {
+            "header": "How To Use",
+            "custom_liquid": "{{ product.metafields.custom.tab_content_3 }}"
+          }
+        },
+        "b8df660e-d095-452d-8b9c-0b252b8063a0": {
+          "type": "liquid",
+          "settings": {
+            "header": "What To Expect",
+            "custom_liquid": "{{ product.metafields.custom.tab_content_2 }}"
+          }
+        },
+        "84a285ac-f78b-4657-b483-f54abd43bda5": {
+          "type": "liquid",
+          "settings": {
+            "header": "Citations",
+            "custom_liquid": "{{ product.metafields.custom.tab_content_1 }}"
+          }
+        }
+      },
+      "block_order": [
+        "00cee67e-7175-425b-9bf3-61d872359390",
+        "b8df660e-d095-452d-8b9c-0b252b8063a0",
+        "84a285ac-f78b-4657-b483-f54abd43bda5"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "bg_color": "",
+        "default_open": false
+      }
+    },
+    "c2774ad7-b345-493d-85a4-e7596ac9b961": {
+      "type": "product-faqs",
+      "settings": {
+        "section_title": "Frequently Asked Questions"
+      }
+    },
+    "16566965268aec6a01": {
+      "type": "product-reviews",
+      "settings": {
+        "container": "container",
+        "heading": "Reviews",
+        "custom_liquid": "{% render 'other-review-app-snippet' %}"
+      }
+    },
+    "4d57c2de-672a-4d4f-9958-5280ee4ea5d0": {
+      "type": "product-recommendations",
+      "settings": {
+        "container": "container",
+        "heading": "You Might Also Like",
+        "limit": 8,
+        "columns": 4,
+        "column_gap": 30,
+        "enable_slider": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d868f9d4-c24d-477f-b740-76bb5fb80fd5",
+    "25bc96bf-c970-4915-bac7-f0f812399174",
+    "e17daa69-aa4b-4691-9ed3-eeada8b2d3ca",
+    "77fc833d-e03a-4ace-a0ac-c8b405f3c777",
+    "165996683072f83839",
+    "2efe215f-f2ae-4648-9a56-8628ad2229f5",
+    "6455f514-e2ee-4ac9-b002-71562aca1bb1",
+    "1657834232a8cb7d2c",
+    "product-details-tabs",
+    "c2774ad7-b345-493d-85a4-e7596ac9b961",
+    "16566965268aec6a01",
+    "4d57c2de-672a-4d4f-9958-5280ee4ea5d0"
+  ]
+}

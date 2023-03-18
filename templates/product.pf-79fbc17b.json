@@ -1,0 +1,1007 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "e471692e-ca2a-4fe6-9f8e-cc64052eb22b": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_saving": true
+          }
+        },
+        "ac794702-714f-4dba-8393-e6a2406ea50d": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "fea49fdb-38dc-492d-8976-79368cb712ee": {
+          "type": "variant_picker",
+          "settings": {
+            "size_title": "Size"
+          }
+        },
+        "e1933521-ea31-49fa-ab2d-72a14b8a5718": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_atc_button": true,
+            "show_dynamic_checkout": false
+          }
+        },
+        "abd1544e-94ad-4a1b-a277-cf6182934a8a": {
+          "type": "text",
+          "settings": {
+            "text": "100% money back guarantee | Free Shipping on orders $50+",
+            "text_style": "body",
+            "additional_class": "guarantee_text"
+          }
+        },
+        "d3dc445e-529b-4e26-b635-1fa8126587dd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ClaimsIcon_2_1.png",
+            "image_link": "",
+            "image_width": 100,
+            "image_alignment": "center",
+            "additional_class": "guarantee_img"
+          }
+        },
+        "2345d74a-2bc5-4f10-ae12-4f4659301929": {
+          "type": "horizontal_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Directions",
+            "hyperlink_target": "",
+            "content": "<p><\/p>",
+            "liquid": "<div class='suggested_use'>\n{{product.metafields.custom.direction}} \n<\/div>"
+          }
+        },
+        "3c77c9bd-e44c-4053-9225-3f0386ea8663": {
+          "type": "horizontal_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Ingredients",
+            "hyperlink_target": "#ingredients",
+            "content": "<p><\/p>",
+            "liquid": ""
+          }
+        },
+        "addons": {
+          "type": "addons",
+          "settings": {
+            "show_atcp": false,
+            "show_ask_a_question": true,
+            "show_social": false,
+            "how_to_use": true,
+            "store_locator": true
+          }
+        },
+        "45e7749e-91ff-4446-a1e2-c29364f318d7": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "e471692e-ca2a-4fe6-9f8e-cc64052eb22b",
+        "price",
+        "ac794702-714f-4dba-8393-e6a2406ea50d",
+        "fea49fdb-38dc-492d-8976-79368cb712ee",
+        "e1933521-ea31-49fa-ab2d-72a14b8a5718",
+        "buy_buttons",
+        "abd1544e-94ad-4a1b-a277-cf6182934a8a",
+        "d3dc445e-529b-4e26-b635-1fa8126587dd",
+        "2345d74a-2bc5-4f10-ae12-4f4659301929",
+        "3c77c9bd-e44c-4053-9225-3f0386ea8663",
+        "addons",
+        "45e7749e-91ff-4446-a1e2-c29364f318d7"
+      ],
+      "settings": {
+        "container": "container",
+        "layout": "layout-6",
+        "show_atwl": false,
+        "enable_history_state": true,
+        "show_featured_media": true,
+        "show_zoom_button": true,
+        "enable_video_autoplay": false,
+        "show_nav_media_mobile": false,
+        "show_pagination_mobile": true,
+        "use_sticky_atc": true,
+        "use_sticky_atc_on_mobile": true,
+        "enable_dynamic_checkout": false,
+        "sticky_atc_wishtlist": false,
+        "sticky_atc_compare": false
+      }
+    },
+    "165996683072f83839": {
+      "type": "ingredients",
+      "disabled": true,
+      "settings": {
+        "heading": "Real Ingredients. Real Research",
+        "body": "<p>Redwood is a potent blend of vitamins and minerals curated from around the world. The effects of Redwood may make it sound like a \"magic pill\" but what Redwood does is actually very simple.<br><br>The ingredients in Redwood boost nitric oxide production, increasing the rate of blood flow in the body. You'll enjoy more stamina and energy along with all of the added benefits of better blood flow, including circulation, improved vein health, warmer hands and feet, better bedroom performance, stronger immunity and improved mood.† <a class=\"underline text-black\" href=\"\/pages\/ingredients-list\">See all ingredients<\/a><\/p>"
+      }
+    },
+    "d868f9d4-c24d-477f-b740-76bb5fb80fd5": {
+      "type": "product-benefits",
+      "settings": {
+        "heading": "{{ product.title }} Benefits",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_per_row": 3,
+        "item_gap": 30,
+        "item_gap_mobile": 10,
+        "card_style": "vertical",
+        "image_max_width": "120px",
+        "content_alignment": "center",
+        "hover_effect": "zoom-in",
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "use_scroll_mobile": false,
+        "use_grid_column_mb": false,
+        "custom_class": "core_benefits section-py"
+      }
+    },
+    "f5bf9c5a-21b8-4340-9153-5bdc880162ce": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "container": "container-fluid",
+        "background_color": "#f8f8f8",
+        "item_gap": 100,
+        "item_gap_mobile": 30,
+        "image": "{{ product.metafields.custom.image_text_2_image.value }}",
+        "link": "",
+        "layout": "right",
+        "image_column_size": "6",
+        "hover_effect": false,
+        "title": "{{ product.metafields.custom.image_text_2_heading.value }}",
+        "sub_title": "",
+        "text": "<p>{{ product.metafields.custom.image_text_2_body | metafield_tag }}<\/p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "sf__btn-link",
+        "button_size": "",
+        "custom_class": ""
+      }
+    },
+    "25bc96bf-c970-4915-bac7-f0f812399174": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "container": "container-fluid",
+        "background_color": "#f8f8f8",
+        "item_gap": 100,
+        "item_gap_mobile": 30,
+        "image": "{{ product.metafields.custom.image_text_1_image.value }}",
+        "link": "",
+        "layout": "left",
+        "image_column_size": "6",
+        "hover_effect": false,
+        "title": "{{ product.metafields.custom.image_text_1_heading.value }}",
+        "sub_title": "",
+        "text": "<p>{{ product.metafields.custom.image_text_1_body | metafield_tag }}<\/p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "sf__btn-link",
+        "button_size": "",
+        "custom_class": ""
+      }
+    },
+    "6455f514-e2ee-4ac9-b002-71562aca1bb1": {
+      "type": "ingredients1",
+      "blocks": {
+        "a8a6aed4-0432-4473-9bd0-93219051773c": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Magnesium Glycinate",
+            "shorttext1": "<p>One of the best-absorbed forms of magnesium.<\/p> <br>\n\n\n<b>Supplier: AIDP<\/b>",
+            "text1": "Magnesium and glycine both have a calming effect on the brain, helping to reduce neural excitability (stress) and support healthy sleep quality.* Magnesium glycinate is one of the best absorbed forms of magnesium.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_1038238021_-_Edited.png",
+            "title2": "Magnesium-L-Threonate",
+            "shorttext2": "<p>The only magnesium that has been shown to effectively raise the brain’s magnesium levels <\/p> <br>\n\n\n\n<b>Supplier: AIDP<\/b>",
+            "text2": "Magnesium-l-threonate is a breakthrough super-mineral with strong evidence of supporting cognitive functions and brain health. It is the only magnesium compound that has been shown to effectively raise the brain’s magnesium levels, which leads to improved memory and cognitive functions.",
+            "image2": "shopify:\/\/shop_images\/shutterstock_1048376242_-_Edited_65ad29e5-3925-4a6e-94ed-073b01d45c5c.png"
+          }
+        },
+        "0bd2e861-1153-4f1e-b641-ac32a8cf5b69": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Magnesium Taurate",
+            "shorttext1": "<p>A combination of magnesium and taurate,  free-form amino acid known to calm neural activity.<\/p> <br>\n\n\n\n<b>Supplier: AIDP<\/b>",
+            "text1": "Magnesium Taurate is a synergistic combination of magnesium and taurate, a free-form amino acid known to calm neural activity similar to the neurotransmitter GABA, promoting relaxation. This form of magnesium supports maximum absorption in the cells and distribution throughout the body.",
+            "image1": "shopify:\/\/shop_images\/MAGNESIUM_TAURATE_4935b05e-e056-408e-ba67-169279bfb7ba.png",
+            "title2": "Pantesin Pantethine",
+            "shorttext2": "<p>Assists in the production of acetylcholine.<\/p>",
+            "text2": "Pantethine is a high-potency form of Vitamin B-5 that shares the same role as Vitamin B-1 in its utility in generating Acetyl-CoA molecules to be used by ChAT in the production of acetylcholine.",
+            "image2": "shopify:\/\/shop_images\/pantethine_hero_v88774e29bcd096b2e79e7468152a3eafb6b0e499_-_Edited_5f74f55a-a240-4924-8caa-4a06c748f018.png"
+          }
+        },
+        "601be1b3-fcc4-48be-ac3e-d6290afc6cd9": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Acetyl L-Carnitine",
+            "shorttext1": "<p>Research has shown that Acetyl-L-Carnitine may reduce mental and physical fatigue*.<\/p>",
+            "text1": "Acetyl-L-Carnitine is an immediate byproduct of metabolism that combines with CoA supplied by Vitamin B5 to produce Acetyl-CoA and Carnitine. At this stage in the process, this newly created Acetyl molecule is then able to join the Acetyl group of the acetylcholine molecule. Research has shown that Acetyl-L-Carnitine may also reduce mental and physical fatigue*.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_455512993_-_Edited_b8c44667-ba17-4114-9d4b-f99f14bc3e23.png",
+            "title2": "Alpha-GPC",
+            "shorttext2": "<p>Alpha-GPC has the most evidence supporting its efficacy and superior absorption through the gut wall and passage into the brain.<\/p>",
+            "text2": "There are many different types of acetylcholine precursors, but Alpha GPC has the most evidence supporting its efficacy and superior absorption through the gut wall and passage into the brain. Once in the brain, Alpha-GPC is only one step removed from becoming the bioactive neurotransmitter, acetylcholine.",
+            "image2": "shopify:\/\/shop_images\/shutterstock_1766059313_-_Edited_1_5bf3b309-e9ce-4668-bf00-1fa36de9c64e.png"
+          }
+        },
+        "7c38834f-68f4-4b46-a196-18b97e8bc336": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Vitamin B1",
+            "shorttext1": "<p>These are necessary molecules used to provide acetyl groups to the enzyme Choline Acetyltransferase (ChAT) so it can produce the acetylcholine neurotransmitter.<\/p>",
+            "text1": "Vitamin B1, taking the form of Thiamine HCL, is included to increase the production of acetyl-CoA molecules in the brain. These are necessary molecules used to provide acetyl groups to the enzyme Choline Acetyltransferase (ChAT) so it can produce the acetylcholine neurotransmitter.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_1231323865_-_Edited_7febd7b9-5b8d-4b27-9d24-83445741aa28.png",
+            "title2": "White Peony Extract",
+            "shorttext2": "<p>Pure white peony extract.<\/p>",
+            "text2": "White peony extract enhances ChAT activity. By increasing activity of ChAT, we can accelerate the construction of acetylcholine from its chemical constituents.",
+            "image2": "shopify:\/\/shop_images\/White_Peony_Extract_-_Edited_c20a0106-67c6-4187-81de-ef60bb30d031.png"
+          }
+        },
+        "ac9c316c-741f-465e-b714-0fdcc2165e58": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Docosahexaenoic Acid (DHA)",
+            "shorttext1": "<p>Cold-pressed, pure DHA<\/p>",
+            "text1": "Omega-3 fatty acid docosahexaenoic acid (DHA) is proven to support healthy joints, support cognitive function, and promote muscle growth. \n\nNatural Stacks™ Krill Oil uses only sustainably harvested krill from the pristine Antarctic ocean. It’s immediately cold-pressed while still on board the vessel to preserve the biological benefits of the krill.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_683992843_-_Edited_add1ed71-8c0a-449a-9ae4-b7090dd1da9a.png",
+            "title2": "Eicosapentaenoic Acid",
+            "shorttext2": "<p>High potency, cold pressed.<\/p>",
+            "text2": "Omega-3 fatty acids docosahexaenoic acid (DHA) and eicosapentaenoic acid (EPA) have been proven to support support healthy joints, support cognitive function, and promote muscle growth.",
+            "image2": "shopify:\/\/shop_images\/shutterstock_2019352037_-_Edited_54b02349-3476-420a-a50b-f84b08dd8d2b.png"
+          }
+        },
+        "1403df99-ad76-482a-96cc-01f70357795c": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Esterified Astaxanthin",
+            "shorttext1": "<p>Naturally found in krill<\/p>",
+            "text1": "Naturally found in krill, astaxanthin is a powerful ingredient. The only two main sources of this fat-soluble ingredient are the microalgae that produce it (haematococcus pluvialis) and the sea creatures that consume the algae. It’s what gives salmon their pink color and is the driving force behind their incredible endurance.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_719033074_-_Edited_a38acb75-2cf9-48c1-8f1e-36dc96d59fe7.png",
+            "title2": "Phospholipids",
+            "shorttext2": "<p>Gives krill oil significantly greater bio-absorption than fish oil.<\/p>",
+            "text2": "EPA and DHA omega-3 fatty acids in krill are bonded to cell-building phospholipids. This gives krill oil significantly greater bio-absorption than fish oil.",
+            "image2": "shopify:\/\/shop_images\/shutterstock_537410344_-_Edited_f205796b-785c-405c-82b9-5ef7289ea1ed.png"
+          }
+        },
+        "6baab303-5750-4c8a-834d-720021592a33": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Curcumin Liquid Extract (NovaSOL®)",
+            "shorttext1": "<p>185x more bioavailable than standardized extract<\/p>",
+            "text1": "The leading bioavailable clinically-proven curcumin that is 185x more bioavailable than standardized extract. \n\nIt works by converting the curcumin into a fully water soluble form, thus promoting maximum absorption.",
+            "image1": "shopify:\/\/shop_images\/1071443111_-_Edited_43d2f312-48e5-4062-9128-1da08b498af4.png",
+            "title2": "Organic Coconut Oil",
+            "shorttext2": "<p>The healthiest fat on the planet, organic coconut oil. <\/p>",
+            "text2": "We added the healthiest fat on the planet, organic coconut oil to the formula in order to further increase the effectiveness and absorption of the liquid curcumin.",
+            "image2": "shopify:\/\/shop_images\/U90bbc56c4c09458ba74c439ab6b90a0d3.jpg_960x960_-_Edited_c4ff9173-ab8b-4577-abd3-9ba7ca76321c.png"
+          }
+        },
+        "63da738f-e15a-4b0d-8ead-ca9c7b78fb73": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "B12 - Methylcobalamin",
+            "shorttext1": "<p>Vitamin B12 is crucial for the maintenance of normal, healthy cognitive function and memory recall through one’s lifespan. [4]*<\/p>",
+            "text1": "Vitamin B12 supports healthy nerves and neural cell function.*\n\nA 2006 review of the roles of folate and Vitamin B12 and their impact on the nervous system highlighted the importance of adequate B12 levels for healthy neuronal function. [3]*\n\nThe same 2013 study mentioned above shows that Vitamin B12 is crucial for the maintenance of normal, healthy cognitive function and memory recall through one’s lifespan. [4]*",
+            "image1": "shopify:\/\/shop_images\/shutterstock_274627076_-_Edited_c8dabcf1-c1de-4a25-aeed-0b45787a7c08.png",
+            "title2": "Folate",
+            "shorttext2": "<p>Folate contributes to the normal, healthy functioning of our brains.*<\/p>",
+            "text2": "Folate, Vitamin B12 and trimethylglycine are added to Dopamine Brain Food™ to lend support to the methylation process, and to aid in the generation of S-adenosyl methionine (SAM-E).* SAM-E is an amino acid that also plays an important role in the methylation process by helping to convert norepinephrine to epinephrine for use in attention-based activities.*",
+            "image2": "shopify:\/\/shop_images\/1011522199_-_Edited_7f789953-2f57-4fac-bef0-ad1ee95556ca.png"
+          }
+        },
+        "854cf33a-23d6-4108-b3d7-15aa2bdb6546": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "L-Phenylalanine",
+            "shorttext1": "<p>L-Phenylalanine is present in many foods (such as meat and dairy).<\/p>",
+            "text1": "L-Phenylalanine and L-Tyrosine are amino acid precursors to dopamine - both must be present in order for dopamine to be synthesized. L-Phenylalanine is present in many foods (such as meat and dairy), and is converted into L-Tyrosine in the body. In turn, L-Tyrosine is converted into L-Dopa, the direct precursor to dopamine.*",
+            "image1": "shopify:\/\/shop_images\/shutterstock_209153794_-_Edited_f2af6fed-829f-4e79-8368-312d767f8f10.png",
+            "title2": "TMG",
+            "shorttext2": "<p>Commonly found in beets, spinach and shellfish, TMG or trimethylglycine is also known as Betaine.<\/p>",
+            "text2": "Folate, Vitamin B12 and trimethylglycine are added to Dopamine Brain Food™ to lend support to the methylation process, and to aid in the generation of S-adenosyl methionine (SAM-E).* SAM-E is an amino acid that also plays an important role in the methylation process by helping to convert norepinephrine to epinephrine for use in attention-based activities.*",
+            "image2": "shopify:\/\/shop_images\/shutterstock_1938173167_-_Edited_7b670aa0-7f1b-4706-b244-1705a441ed8f.png"
+          }
+        },
+        "ee202f26-9c44-4e2b-98f8-6d1dccb9e2c8": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Tyrosine",
+            "shorttext1": "<p>L-Tyrosine is converted into L-Dopa, the direct precursor to dopamine.*<\/p>",
+            "text1": "L-Phenylalanine and L-Tyrosine are amino acid precursors to dopamine - both must be present in order for dopamine to be synthesized. L-Phenylalanine is present in many foods (such as meat and dairy), and is converted into L-Tyrosine in the body. In turn, L-Tyrosine is converted into L-Dopa, the direct precursor to dopamine.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_1469774009_-_Edited_58383036-b26e-4896-a04f-3598056ecb09.png",
+            "title2": "Vitamin B6",
+            "shorttext2": "<p>Contains important antioxidant properties that protect cells from damage during the production and metabolism of dopamine.*<\/p>",
+            "text2": "Vitamin B6 helps convert L-Dopa into dopamine and Vitamin C helps convert dopamine into norepinephrine (increasing alertness and attention).* Each of these also have important antioxidant properties that protect cells from damage during the production and metabolism of dopamine.*",
+            "image2": "shopify:\/\/shop_images\/shutterstock_1684537576_-_Edited_a23aa21f-cde1-41f2-bff0-a3234b4e5152.png"
+          }
+        },
+        "c3441979-a05d-4d18-881a-1828088f8e15": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Vitamin C",
+            "shorttext1": "<p>Vitamin C is a neuroprotective antioxidant.*\n\n<\/p>",
+            "text1": "Vitamin C helps convert dopamine into norepinephrine (increasing alertness and attention).* Each of these also have important antioxidant properties that protect cells from damage during the production and metabolism of dopamine.*",
+            "image1": "shopify:\/\/shop_images\/1281546310_-_Edited_155cb724-d0a0-4d46-ac01-eee43d4c49f8.png",
+            "title2": "Gamma-Aminobutyric Acid",
+            "shorttext2": "<p>As the main inhibitory neurotransmitter in the brain, GABA’s role is to act like a “brake” and balance excessive stimulation. <\/p>",
+            "text2": "Gamma-Aminobutyric Acid is a naturally occurring neurotransmitter with central nervous system (CNS) inhibitory activity. Gamma-aminobutyric acid (GABA), converted from the principal excitatory neurotransmitter glutamate in the brain, plays a role in regulating neuronal excitability by binding to its receptors, GABA-A and GABA-B, and thereby causing ion channel opening, hyperpolarization and eventually inhibition of neurotransmission.\n\nGABA acts to slow down signals between neurons, making neurons less electrically excitable.",
+            "image2": "shopify:\/\/shop_images\/shutterstock_1766059313_-_Edited_d49b38cc-5c55-4c4d-845a-c5f6ec1344ab.png"
+          }
+        },
+        "b860ccc8-7466-4934-bc80-3d038eff852e": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Grape Seed Extract",
+            "shorttext1": "<p>Supports healthy cellular function. <\/p>",
+            "text1": "Similar to L-citrulline, grape seed extract is used to increase nitric oxide production to help GABA pass across the blood-brain barrier and enter the brain.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_2085944014_-_Edited_aaf6f620-90ba-4294-a9fa-8b05907bfb5a.png",
+            "title2": "L-Citrulline",
+            "shorttext2": "<p>Found in foods like watermelon, dairy, beef and pork. <\/p>",
+            "text2": "An amino acid found in foods like watermelon, dairy, beef and pork. L-Citrulline is converted into L-arginine, a known nitric oxide booster, which is theorized to help shuttle GABA into the brain across the blood-brain barrier.",
+            "image2": "shopify:\/\/shop_images\/L-Citrulline_1_b076d47d-1393-4fe8-9276-3363961b2ec9.png"
+          }
+        },
+        "8fe379e4-6e59-476c-a526-9faf03747032": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Rosemary Leaf Extract",
+            "shorttext1": "<p>Found in rosemary, sage, mint and basil. <\/p>",
+            "text1": "Found in rosemary, sage, mint and basil, rosmarinic acid is a naturally occurring polyphenol flavonoid. It is also found in lemon balm and is used in aromatherapy to promote feelings of calm and relaxation.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_1308105106_-_Edited_f381c604-106a-4fae-9734-907db0079c01.png",
+            "title2": "Artichoke Leaf Extract",
+            "shorttext2": "<p>Artichoke Extract (Cynara scolymus) is an extract from the bulb of the artichoke vegetable.\n <\/p>",
+            "text2": "Artichoke extract contains Luteolin, a natural inhibitor of PDE4 [6,7]. PDE4 is an enzyme that breaks down cAMP molecules, messenger systems that relay signals in the brain. Studies have correlated lower levels of the enzyme PDE4 to significant increases in normal mental performance, including increased cognition [8], improved long term memory [9], increased wakefulness [10], and neuroprotection. [11,12,13]",
+            "image2": "shopify:\/\/shop_images\/shutterstock_1238874403_-_Edited_f81e22e9-1b49-4438-9d7e-abbf00c72c4f.png"
+          }
+        },
+        "c981066b-d3e1-4106-818e-eb894f7fc73a": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Coleus forskohlii",
+            "shorttext1": "<p>Widely used in traditional Ayurvedic medicine [4].\n <\/p>",
+            "text1": "Forskolin is derived from the plant Coleus forskohlii which has been widely used in traditional Ayurvedic medicine [4]. It has also has been extensively studied due to it’s ability to increase levels of intracellular cAMP molecules [5]. Combined with Luteolin from Artichoke Extract, forskolin is theorized to synergistically increase the duration of cAMP in neurons.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_2030295545_-_Edited_40961f08-7f5c-4459-91bc-0702bf1400e5.png",
+            "title2": "Vitamin B3 (Niacinamide)",
+            "shorttext2": "Our Vitamin B-3 source is a niacinamide, which has been carefully selected to reduce incidences of flushing.",
+            "text2": "Vitamin B-3 (Niacinamide) is an essential vitamin that is also a necessary cofactor for the proper metabolism of fat, carbohydrate, protein, and alcohol.* It’s also closely involved in cell signaling and DNA repair.* It’s used most extensively in the brain, gut and skin, which have a high cellular turnover rate.* Our Vitamin B-3 source is a niacinamide, which has been carefully selected to reduce incidences of flushing - many other Vitamin B-3 sources are niacin, which can cause uncomfortable skin flushing.*",
+            "image2": "shopify:\/\/shop_images\/Vitamin_b3_niacinamide_1_37ca8b58-2ee3-4f0e-9d47-ef2f3be7f51f.png"
+          }
+        },
+        "b4ac6425-1bc7-4a69-a04c-00b3f01d8d7e": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "L-Tryptophan",
+            "shorttext1": "L-Tryptophan may help promote restful sleep, calm and relaxation.",
+            "text1": "L-Tryptophan is an essential amino acid that is one of the required nutrients for natural serotonin synthesis.* The most common dietary sources of tryptophan include nuts and seeds, meats and dairy, fish and legumes.",
+            "image1": "shopify:\/\/shop_images\/1824411083_-_Edited_57e60824-a31e-43c5-b5ac-555d66991498.png",
+            "title2": "Zinc Glycinate",
+            "shorttext2": "This innovative formula provides natural ingredients from vitamins, minerals, and amino acids",
+            "text2": "Zinc glycinate is a critical factor in maintaining a healthy immune system, supporting optimal cell division and replication.*\n\nThis innovative formula provides natural ingredients from vitamins, minerals, and amino acids that our bodies use as precursors and cofactors to support normal, healthy function of neurotransmitters.*",
+            "image2": "shopify:\/\/shop_images\/173944334_-_Edited_cf9b196d-9d77-43bd-b8f0-51a03d24715f.png"
+          }
+        },
+        "f30c5ab9-e569-42ee-9162-63e18c4afe8e": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "German Chamomile Extract (1.0% apigenin-7glucoside)",
+            "shorttext1": "(Matricaria recutita)",
+            "text1": "German Chamomile is a popular herb known to ease anxiousness and promote sleep. It has been used for hundreds of years as a natural remedy for helping people relax into a deep sleep and stay asleep longer.",
+            "image1": "shopify:\/\/shop_images\/142824418_-_Edited_e2beac72-7bdc-472e-a246-f6f41501c911.png",
+            "title2": "Glycine",
+            "shorttext2": "Formulated with 3 grams of glycine to provide a calming effect on the brain.",
+            "text2": "In clinical research, the essential amino acid, glycine, has been shown to have a calming effect on the brain as well as aiding in body temperature regulation, helping you fall asleep faster. To provide the maximum benefits, we formulated SleepBiotic with 3 grams of glycine.",
+            "image2": "shopify:\/\/shop_images\/565269796_-_Edited_6cb5ea32-0c1f-4256-9534-f8fe2c53b253.png"
+          }
+        },
+        "70365303-3976-41ca-873b-2ec9e3700954": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Green Banana Flour",
+            "shorttext1": "Made from the pulp of unripe, high potassium bananas",
+            "text1": "Milled in the United States, our banana flour is made from the pulp of unripe bananas before the sugar content has developed. Raw green banana flour is extremely nutrient dense: it’s high in potassium, vitamins, minerals, and resistant starch.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_401134135_-_Edited_312a5ab6-dfa6-4dfb-929f-a87e0b92bcfa.png",
+            "title2": "Guar Gum (SunFiber®)",
+            "shorttext2": "Partially Hydrolyzed Guar Gum",
+            "text2": "Derived from the guar seed, Sunfiber®, a partially hydrolyzed guar gum, aids in digestive health. Sunfiber is one of the most extensively studied prebiotic fibers and helps support overall regularity, improves your glycemic index and improves overall gut health.",
+            "image2": "shopify:\/\/shop_images\/Untitled_design_89_690e9c09-2e90-493f-8db0-5dd7e8ad48a6.png"
+          }
+        },
+        "31e2307d-e423-457b-bc85-a570e38827c7": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Green Coffee Beans",
+            "shorttext1": "Supports a relaxed but alert state that is ideal for productive, focused activity - mental or physical.",
+            "text1": "Made with green coffee beans to support a relaxed but alert state that is ideal for productive, focused activity - mental or physical.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_186769733_-_Edited_a5e1e7f9-a519-4e39-91ba-e2118d1bf20d.png",
+            "title2": "L-Theanine",
+            "shorttext2": "Creates long-lasting energy and attention without jitters,",
+            "text2": "L-theanine is a natural amino acid found in green tea that removes the undesirable side effects of caffeine, creating long-lasting energy and attention without jitters, anxiousness, or a crash. A recent study from The Netherlands confirmed that \"The combination of L-Theanine and Caffeine improves the cognitive performance and increases subject alertness.\" and that the combination \"helps to focus attention during a demanding cognitive task.\" [1]",
+            "image2": "shopify:\/\/shop_images\/shutterstock_1783974305_-_Edited_9bc55645-5a5f-4b06-b795-fd8d46f62b0d.png"
+          }
+        },
+        "54a7708e-60b2-491d-bd7d-3d23b16653f6": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Vitamin D3",
+            "shorttext1": "Vitamin D3 is essential for optimal performance and health.",
+            "text1": "Each softgel features 5,000 IU of the most bioavailable form of natural\nVitamin D (Cholecalciferol). Vitamin D3 is essential for optimal performance and health.",
+            "image1": "shopify:\/\/shop_images\/shutterstock_1069184900_-_Edited_a99d220b-7a66-4ec3-b531-049b55dac502.png",
+            "title2": "Lactobacillus Helveticus (2.7 Billion CFU)",
+            "shorttext2": "Supports gut bacteria associated with positive mood states*.",
+            "text2": "Daily use of this strain has been shown to support gut bacteria associated<br>  with positive mood states. The cultures accomplish this by relieving stress-related <br> gut inflammation and increasing production of calming neurotransmitters<br>  in the gut to support a positive mood and relieve stress*.",
+            "image2": "shopify:\/\/shop_images\/Lactobacillus-Helveticus_499fb4e6-17ca-44af-832b-87d86f139bf8.png"
+          }
+        },
+        "21d0a5e2-a043-4929-a996-bc9999376022": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Lactobacillus Brevis (1 Billion CFU)",
+            "shorttext1": "This unique strain is known to increase levels of the all-star <br>\nbrain growth hormone.",
+            "text1": "This unique strain is known to increase levels of the all-star <br>\nbrain growth hormone, brain-derived neurotrophic factor (BDNF).<br> Higher levels of BDNF are associated with increased intelligence, <br> positive mood, productivity, memory, as well as a decreased risk <br>of various neurodegenerative mental states*.",
+            "image1": "shopify:\/\/shop_images\/Lactobacillus-brevis_1c263f72-2971-4dbc-8f1b-fe1837ec103c.png",
+            "title2": "Magnesium",
+            "shorttext2": "Pure magnesium citrate.",
+            "text2": "200mg of magnesium to support hundreds of chemical reactions in the body and help you fall asleep faster.",
+            "image2": "shopify:\/\/shop_images\/MAGNESIUM_TAURATE_4935b05e-e056-408e-ba67-169279bfb7ba.png"
+          }
+        },
+        "e5940d13-079f-42eb-bc69-ad4ee5455446": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Chamomile Flower Extract",
+            "shorttext1": "50mg of chamomile flower extract \nto relax the body and mind*.",
+            "text1": "One of the most unique ingredients in Natural Stacks supplements, chamomile flower extract helps relax the body and mind*, improve digestion*, and support a great night’s sleep*.",
+            "image1": "shopify:\/\/shop_images\/Chamomile_Flower_Extract_a691c9b6-a0f4-4c76-ab10-9d99b25bdf0e.png",
+            "title2": "Melatonin",
+            "shorttext2": "1mg to promote deep sleep*.",
+            "text2": "Melatonin is one of the most useful sleep promoters available. However, overdoing it with melatonin can limit the body’s natural ability to produce more. That’s why 1mg is perfect for all the benefits without any downsides.",
+            "image2": "shopify:\/\/shop_images\/Vitamin_b3_niacinamide_1_37ca8b58-2ee3-4f0e-9d47-ef2f3be7f51f.png"
+          }
+        },
+        "4df8639d-af23-4f5c-a7cc-8f092ed3aa69": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Sensoril® Ashwagandha Extract",
+            "shorttext1": "Promotes a healthy stress response*, relaxation*, and calmness on a daily basis*.",
+            "text1": "The most effective form of ashwagandha extract, dosed at 125mg, promotes a healthy stress response*, relaxation*, and calmness on a daily basis*.\n\nA revolutionary study found ashwagandha supported a healthy stress response in adults*. Natural Stacks Zen uses a premium, patented form of ashwagandha called Sensoril®.",
+            "image1": "shopify:\/\/shop_images\/Untitled_design_-_2023-02-03T121303.003.png",
+            "title2": "Ginkgo Biloba",
+            "shorttext2": "Used for over a thousand years to improve and maintain brain health.",
+            "text2": "Used for over a thousand years to improve and maintain brain health.\n\nGinkgo is a natural ingredient highly prized in both natural and scientific circles for its unrivaled brain benefits.",
+            "image2": "shopify:\/\/shop_images\/Untitled_450_x_450_px_2.png"
+          }
+        },
+        "767e87ef-30a7-49d5-9f96-0e5e316404f6": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Panax Ginseng (Root) Extract",
+            "shorttext1": "Reinforces the positive benefits of ginkgo.",
+            "text1": "A neuroprotective 7, 8, 9 with proven effects on improving cognitive performance.\n\nIt helps increase your body’s natural resistance against physical, chemical, and biological stress. And reinforces the positive benefits of ginkgo.",
+            "image1": "shopify:\/\/shop_images\/Untitled_450_x_450_px_1.png",
+            "title2": "Bacopa Monnieri",
+            "shorttext2": "Combined with Ginkgo and Ginseng, this completes the natural trinity of laser focus and all-day attention span.",
+            "text2": "A herb with clinically studied effects on learning, memory, attention, and info processing 11,12\n\nCombined with Ginkgo and Ginseng, this completes the natural trinity of laser focus and all-day attention span.",
+            "image2": "shopify:\/\/shop_images\/Untitled_design_-_2023-01-05T143529.740_95706f4f-3a9a-477a-9026-6a5bff692480.png"
+          }
+        },
+        "7ebf6755-9ab8-41bc-bbf3-b35f44a157c7": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "NMN",
+            "shorttext1": "The essential proven precursor to NAD+ production.",
+            "text1": "The essential proven precursor to NAD+ production.",
+            "image1": "shopify:\/\/shop_images\/Untitled_design__90.webp",
+            "title2": "Trimethylglycine",
+            "shorttext2": "A natural compound that supports heart health, DNA production, and cellular performance.",
+            "text2": "A natural compound that supports heart health, DNA production, and cellular performance.",
+            "image2": "shopify:\/\/shop_images\/shutterstock_1189460518-trans.webp"
+          }
+        },
+        "60ef9664-f261-4b0e-8d81-d5fa005979a8": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Phosphorus",
+            "shorttext1": "35mg of phosphorus helps activate enzymes in the human body and assists in the brain’s antioxidative process.*[41]",
+            "text1": "35mg of phosphorus helps activate enzymes in the human body and assists in the brain’s antioxidative process.*[41]",
+            "title2": "Ultra Pure Alpha-Lipoic Acid",
+            "shorttext2": "Provides maximum antioxidant production in the brain, supporting cell health, energy, memory, and concentration.*",
+            "text2": "600mg of the ultra-pure Alpha-Lipoic Acid inside ALA+ provides maximum antioxidant production in the brain, supporting cell health, energy, memory, and concentration.*",
+            "image2": "shopify:\/\/shop_images\/Untitled_design_-_2023-01-27T170429.253.png"
+          }
+        },
+        "10c777c6-cb92-43ff-a7cd-01de8f68cbc0": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "Lycopene",
+            "shorttext1": "You’ll find 7mg of this key ingredient inside ALA+.*",
+            "text1": "Lycopene is another antioxidant that’s crucial for brain health, and you’ll find 7mg of this key ingredient inside ALA+.*",
+            "image1": "shopify:\/\/shop_images\/Untitled_design_-_2023-01-27T170413.933.png",
+            "title2": "Calcium",
+            "shorttext2": "May support bone health*.",
+            "text2": "The small of calcium inside ALA+ supports bone health, which is especially important due to the 50% of the American population that has inadequate levels of calcium.*[40]"
+          }
+        },
+        "25423866-8892-4710-9d5a-10d89ac314d0": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "2646ea4a-d6d8-411a-a2dd-467952bdebc4": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "d90c9e62-8662-4e2c-818c-920d177363cd": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "458252bc-4a58-40da-b623-ab4d0b7f1143": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "927329c6-994e-44b9-beef-0e21a09d85ce": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "7fc6cb04-445e-49c9-80c2-d7b4b4013450": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "6754a3fb-83a3-416d-aa2d-c74979381e1a": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "6f3d6f2f-f627-4bab-8f11-ce46935596ac": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "75aeac17-5bfc-4dbe-baf6-dbd57a37cff4": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "67788bfd-4768-4c25-aeeb-8feb84e2bb12": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "36bd1e90-0c4e-46d8-8ca0-803f14755814": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "da9a1858-05cb-40c4-aa28-e71c8a0a00fe": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "902d6ff8-397c-42f4-b48a-63e04c00120e": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "e1fecd8b-97a5-4d97-8271-5b16e5289356": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "c3ccc119-d13a-4504-bd74-94f9604135d4": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "7968681c-aeb1-454f-bcea-a9cac4e9059b": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "b377a660-5d25-4121-bd18-f257986244c2": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "0849bcf4-2149-45e1-88ba-65f45468bf95": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "fa6b1000-5d76-4d73-adce-a3048a9acea5": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "133e840b-f177-4a65-9dfd-01d7632dd909": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "6efa9ff6-4099-4505-acaf-aa17927c35bb": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "f06c1fc9-64cb-4957-9856-e1f324e9ba57": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "55cee9b6-d60a-4903-a6d7-45665a2c517f": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        },
+        "a4e4a9d2-b64b-46d6-b089-dbd7d4d30fd4": {
+          "type": "ingredient_item",
+          "settings": {
+            "title1": "",
+            "shorttext1": "",
+            "text1": "",
+            "title2": "",
+            "shorttext2": "",
+            "text2": ""
+          }
+        }
+      },
+      "block_order": [
+        "a8a6aed4-0432-4473-9bd0-93219051773c",
+        "0bd2e861-1153-4f1e-b641-ac32a8cf5b69",
+        "601be1b3-fcc4-48be-ac3e-d6290afc6cd9",
+        "7c38834f-68f4-4b46-a196-18b97e8bc336",
+        "ac9c316c-741f-465e-b714-0fdcc2165e58",
+        "1403df99-ad76-482a-96cc-01f70357795c",
+        "6baab303-5750-4c8a-834d-720021592a33",
+        "63da738f-e15a-4b0d-8ead-ca9c7b78fb73",
+        "854cf33a-23d6-4108-b3d7-15aa2bdb6546",
+        "ee202f26-9c44-4e2b-98f8-6d1dccb9e2c8",
+        "c3441979-a05d-4d18-881a-1828088f8e15",
+        "b860ccc8-7466-4934-bc80-3d038eff852e",
+        "8fe379e4-6e59-476c-a526-9faf03747032",
+        "c981066b-d3e1-4106-818e-eb894f7fc73a",
+        "b4ac6425-1bc7-4a69-a04c-00b3f01d8d7e",
+        "f30c5ab9-e569-42ee-9162-63e18c4afe8e",
+        "70365303-3976-41ca-873b-2ec9e3700954",
+        "31e2307d-e423-457b-bc85-a570e38827c7",
+        "54a7708e-60b2-491d-bd7d-3d23b16653f6",
+        "21d0a5e2-a043-4929-a996-bc9999376022",
+        "e5940d13-079f-42eb-bc69-ad4ee5455446",
+        "4df8639d-af23-4f5c-a7cc-8f092ed3aa69",
+        "767e87ef-30a7-49d5-9f96-0e5e316404f6",
+        "7ebf6755-9ab8-41bc-bbf3-b35f44a157c7",
+        "60ef9664-f261-4b0e-8d81-d5fa005979a8",
+        "10c777c6-cb92-43ff-a7cd-01de8f68cbc0",
+        "25423866-8892-4710-9d5a-10d89ac314d0",
+        "2646ea4a-d6d8-411a-a2dd-467952bdebc4",
+        "d90c9e62-8662-4e2c-818c-920d177363cd",
+        "458252bc-4a58-40da-b623-ab4d0b7f1143",
+        "927329c6-994e-44b9-beef-0e21a09d85ce",
+        "7fc6cb04-445e-49c9-80c2-d7b4b4013450",
+        "6754a3fb-83a3-416d-aa2d-c74979381e1a",
+        "6f3d6f2f-f627-4bab-8f11-ce46935596ac",
+        "75aeac17-5bfc-4dbe-baf6-dbd57a37cff4",
+        "67788bfd-4768-4c25-aeeb-8feb84e2bb12",
+        "36bd1e90-0c4e-46d8-8ca0-803f14755814",
+        "da9a1858-05cb-40c4-aa28-e71c8a0a00fe",
+        "902d6ff8-397c-42f4-b48a-63e04c00120e",
+        "e1fecd8b-97a5-4d97-8271-5b16e5289356",
+        "c3ccc119-d13a-4504-bd74-94f9604135d4",
+        "7968681c-aeb1-454f-bcea-a9cac4e9059b",
+        "b377a660-5d25-4121-bd18-f257986244c2",
+        "0849bcf4-2149-45e1-88ba-65f45468bf95",
+        "fa6b1000-5d76-4d73-adce-a3048a9acea5",
+        "133e840b-f177-4a65-9dfd-01d7632dd909",
+        "6efa9ff6-4099-4505-acaf-aa17927c35bb",
+        "f06c1fc9-64cb-4957-9856-e1f324e9ba57",
+        "55cee9b6-d60a-4903-a6d7-45665a2c517f",
+        "a4e4a9d2-b64b-46d6-b089-dbd7d4d30fd4"
+      ],
+      "settings": {
+        "heading": "Synergistic Ingredients",
+        "body": "",
+        "item_link": "#"
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "blocks": {
+        "00cee67e-7175-425b-9bf3-61d872359390": {
+          "type": "liquid",
+          "settings": {
+            "header": "How To Use",
+            "custom_liquid": "{{ product.metafields.custom.tab_content_3 }}"
+          }
+        },
+        "b8df660e-d095-452d-8b9c-0b252b8063a0": {
+          "type": "liquid",
+          "settings": {
+            "header": "What To Expect",
+            "custom_liquid": "{{ product.metafields.custom.tab_content_2 }}"
+          }
+        },
+        "84a285ac-f78b-4657-b483-f54abd43bda5": {
+          "type": "liquid",
+          "settings": {
+            "header": "Citations",
+            "custom_liquid": "{{ product.metafields.custom.tab_content_1 }}"
+          }
+        }
+      },
+      "block_order": [
+        "00cee67e-7175-425b-9bf3-61d872359390",
+        "b8df660e-d095-452d-8b9c-0b252b8063a0",
+        "84a285ac-f78b-4657-b483-f54abd43bda5"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "bg_color": "#ffffff",
+        "default_open": false
+      }
+    },
+    "90bd53fe-8ec6-4efe-89f1-980c66c84a20": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"our-promise\"><\/div>",
+        "custom_class": ""
+      }
+    },
+    "1657834232a8cb7d2c": {
+      "type": "custom-content",
+      "blocks": {
+        "b86d26ff-146c-4982-a2a3-0ebc54f5d66c": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "subheading": "",
+            "text": "",
+            "width": "100%",
+            "alignment": "start",
+            "align_text": "center",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "View Ingredient Suppliers & 3rd Party Test Results",
+            "button_link": "{{ product.metafields.custom.healthloq_link.value }}",
+            "button_style": "sf__btn-primary",
+            "button_size": "",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "b86d26ff-146c-4982-a2a3-0ebc54f5d66c"
+      ],
+      "settings": {
+        "heading": "Open Source Transparency",
+        "subheading": "The First Open Source Supplement Company",
+        "description": "<center><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0269\/3025\/t\/307\/assets\/open-source_afc2b407-d8bc-49f3-9e12-61f59bdf3054-1644335778269.png?v=1644335779\" alt=\"open_source\" width=\"258\" height=\"149\"><\/center>\n<br>\nNatural Stacks “Open Source” transparency program provides ingredient traceability and 3rd party lab test results for every batch. It’s powered by blockchain technology and secured by HealthLoq™ for transparent, tamperproof, trusted data. <p><a href=\"https:\/\/www.naturalstacks.com\/pages\/open-source\" target=\"_blank\">Learn More About Our Commitment to Transparency<\/a><\/p>",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "#f8f8f8",
+        "gap": 0,
+        "use_scroll_mobile": false,
+        "gap_mobile": 16,
+        "custom_class": ""
+      }
+    },
+    "c2774ad7-b345-493d-85a4-e7596ac9b961": {
+      "type": "product-faqs",
+      "settings": {
+        "section_title": "Frequently Asked Questions"
+      }
+    },
+    "16566965268aec6a01": {
+      "type": "product-reviews",
+      "settings": {
+        "container": "container",
+        "heading": "Reviews",
+        "custom_liquid": "{% render 'other-review-app-snippet' %}"
+      }
+    },
+    "4d57c2de-672a-4d4f-9958-5280ee4ea5d0": {
+      "type": "product-recommendations",
+      "settings": {
+        "container": "container",
+        "heading": "You Might Also Like",
+        "limit": 8,
+        "columns": 4,
+        "column_gap": 30,
+        "enable_slider": true
+      }
+    },
+    "pf-79fbc17b": {
+      "type": "pf-79fbc17b",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "165996683072f83839",
+    "d868f9d4-c24d-477f-b740-76bb5fb80fd5",
+    "f5bf9c5a-21b8-4340-9153-5bdc880162ce",
+    "25bc96bf-c970-4915-bac7-f0f812399174",
+    "6455f514-e2ee-4ac9-b002-71562aca1bb1",
+    "product-details-tabs",
+    "90bd53fe-8ec6-4efe-89f1-980c66c84a20",
+    "1657834232a8cb7d2c",
+    "c2774ad7-b345-493d-85a4-e7596ac9b961",
+    "16566965268aec6a01",
+    "4d57c2de-672a-4d4f-9958-5280ee4ea5d0",
+    "pf-79fbc17b"
+  ]
+}

@@ -1,0 +1,1761 @@
+{% comment %}
+[[ QQ - Comparison Table ]] [[ Section for Shopify Websites to display tables comparing features, ideally for Pricing Tables ]]
+Author: qwiqode.com
+Created: 01.01.2022 Version: 1.0
+Company website: qwiqode.com
+Email: hello@qwiqode.com
+* (c) Copyright by Studio Umbrella Inc. /
+{% endcomment %}
+
+
+
+  
+  {% liquid
+  assign sectionClass = section.settings.section_class
+  assign sectionBackgroundColor = section.settings.section_background_color
+  assign sectionMarginTop = section.settings.section_margin_top
+  assign sectionMarginTopMobile = section.settings.section_margin_top_mobile
+  assign sectionMarginBottom = section.settings.section_margin_bottom
+  assign sectionMarginBottomMobile = section.settings.section_margin_bottom_mobile
+  assign sectionPaddingTop = section.settings.section_padding_top
+  assign sectionPaddingTopMobile = section.settings.section_padding_top_mobile
+  assign sectionPaddingBottom = section.settings.section_padding_bottom
+  assign sectionPaddingBottomMobile = section.settings.section_padding_bottom_mobile
+
+  assign sectionWidth = section.settings.section_width
+  assign contentMaxWidth = section.settings.content_max_width
+
+  assign borderColor = section.settings.border_color
+  assign borderWidth = section.settings.border_width
+  assign borderVertical = section.settings.border_vertical
+  assign borderHorizontal = section.settings.border_horizontal
+
+  assign sectionTitle = section.settings.section_title
+  assign sectionTitleType = section.settings.section_title_type
+  assign sectionTitleColor = section.settings.section_title_color
+  assign sectionTitleCustomFont = section.settings.section_title_custom_font
+  assign sectionTitleFont = section.settings.section_title_font
+  assign sectionTitleFontName = section.settings.section_title_font_name
+  assign sectionTitleFontWeight = section.settings.section_title_font_weight
+  assign sectionTitleMarginBottom = section.settings.section_title_margin_bottom
+  assign sectionTitleMarginBottomMobile = section.settings.section_title_margin_bottom_mobile
+  assign sectionTitleFontSize = section.settings.section_title_font_size
+  assign sectionTitleFontSizeMobile = section.settings.section_title_font_size_mobile
+  assign sectionTitleLineHeight = section.settings.section_title_line_height
+  assign sectionTitleLineHeightMobile = section.settings.section_title_line_height_mobile
+  assign sectionTitleLetterSpacing = section.settings.section_title_letter_spacing
+  assign sectionTitleLetterSpacingMobile = section.settings.section_title_letter_spacing_mobile
+
+  assign columnImageMarginBottom = section.settings.column_image_margin_bottom
+  assign columnImageMarginBottomMobile = section.settings.column_image_margin_bottom_mobile
+
+  assign columnTitleColor = section.settings.column_title_color
+  assign columnTitleCustomFont = section.settings.column_title_custom_font
+  assign columnTitleFont = section.settings.column_title_font
+  assign columnTitleFontName = section.settings.column_title_font_name
+  assign columnTitleFontWeight = section.settings.column_title_font_weight
+  assign columnTitleFontSize = section.settings.column_title_font_size
+  assign columnTitleFontSizeMobile = section.settings.column_title_font_size_mobile
+  assign columnTitleLineHeight = section.settings.column_title_line_height
+  assign columnTitleLineHeightMobile = section.settings.column_title_line_height_mobile
+  assign columnTitleLetterSpacing = section.settings.column_title_letter_spacing
+  assign columnTitleLetterSpacingMobile = section.settings.column_title_letter_spacing_mobile
+  assign columnTitleTextAlignment = section.settings.column_title_text_alignment
+  assign columnTitleTextAlignmentMobile = section.settings.column_title_text_alignment_mobile
+  assign columnTitlePaddingHorizontal = section.settings.column_title_padding_horizontal
+  assign columnTitlePaddingHorizontalMobile = section.settings.column_title_padding_horizontal_mobile
+
+  assign columnSubtitleColor = section.settings.column_subtitle_color
+  assign columnSubtitleCustomFont = section.settings.column_subtitle_custom_font
+  assign columnSubtitleFont = section.settings.column_subtitle_font
+  assign columnSubtitleFontName = section.settings.column_subtitle_font_name
+  assign columnSubtitleFontWeight = section.settings.column_subtitle_font_weight
+  assign columnSubtitleFontSize = section.settings.column_subtitle_font_size
+  assign columnSubtitleFontSizeMobile = section.settings.column_subtitle_font_size_mobile
+  assign columnSubtitleLineHeight = section.settings.column_subtitle_line_height
+  assign columnSubtitleLineHeightMobile = section.settings.column_subtitle_line_height_mobile
+  assign columnSubtitleLetterSpacing = section.settings.column_subtitle_letter_spacing
+  assign columnSubtitleLetterSpacingMobile = section.settings.column_subtitle_letter_spacing_mobile
+  assign columnSubtitleTextAlignment = section.settings.column_subtitle_text_alignment
+  assign columnSubtitleTextAlignmentMobile = section.settings.column_subtitle_text_alignment_mobile
+  assign columnSubtitlePaddingHorizontal = section.settings.column_subtitle_padding_horizontal
+  assign columnSubtitlePaddingHorizontalMobile = section.settings.column_subtitle_padding_horizontal_mobile
+
+  assign rowTitleColor = section.settings.row_title_color
+  assign rowTitleCustomFont = section.settings.row_title_custom_font
+  assign rowTitleFont = section.settings.row_title_font
+  assign rowTitleFontName = section.settings.row_title_font_name
+  assign rowTitleFontWeight = section.settings.row_title_font_weight
+  assign rowTitleFontSize = section.settings.row_title_font_size
+  assign rowTitleFontSizeMobile = section.settings.row_title_font_size_mobile
+  assign rowTitleLineHeight = section.settings.row_title_line_height
+  assign rowTitleLineHeightMobile = section.settings.row_title_line_height_mobile
+  assign rowTitleLetterSpacing = section.settings.row_title_letter_spacing
+  assign rowTitleLetterSpacingMobile = section.settings.row_title_letter_spacing_mobile
+  assign rowTitleTextAlignment = section.settings.row_title_text_alignment
+  assign rowTitleTextAlignmentMobile = section.settings.row_title_text_alignment_mobile
+  assign rowTitlePaddingHorizontal = section.settings.row_title_padding_horizontal
+  assign rowTitlePaddingHorizontalMobile = section.settings.row_title_padding_horizontal_mobile
+
+  assign columnCellBackgroundColor = section.settings.column_cell_background_color
+  assign columnCellColor = section.settings.column_cell_color
+  assign columnCellCustomFont = section.settings.column_cell_custom_font
+  assign columnCellFont = section.settings.column_cell_font
+  assign columnCellFontName = section.settings.column_cell_font_name
+  assign columnCellFontWeight = section.settings.column_cell_font_weight
+  assign columnCellFontSize = section.settings.column_cell_font_size
+  assign columnCellFontSizeMobile = section.settings.column_cell_font_size_mobile
+  assign columnCellLineHeight = section.settings.column_cell_line_height
+  assign columnCellLineHeightMobile = section.settings.column_cell_line_height_mobile
+  assign columnCellLetterSpacing = section.settings.column_cell_letter_spacing
+  assign columnCellLetterSpacingMobile = section.settings.column_cell_letter_spacing_mobile
+  assign columnCellTextAlignment = section.settings.column_cell_text_alignment
+  assign columnCellTextAlignmentMobile = section.settings.column_cell_text_alignment_mobile
+  assign columnCellPaddingHorizontal = section.settings.column_cell_padding_horizontal
+  assign columnCellPaddingHorizontalMobile = section.settings.column_cell_padding_horizontal_mobile
+  assign columnCellMinHeight = section.settings.column_cell_min_height
+  assign columnCellPaddingVertical = section.settings.column_cell_padding_vertical
+  assign columnCellPaddingVerticalMobile = section.settings.column_cell_padding_vertical_mobile
+ 
+
+  assign columnsAmount = section.settings.num_of_columns
+  assign columns = columnsAmount | plus:1 
+  assign loopMax = columns | minus: 1 
+
+  assign navigationIcon = section.settings.navigation_icon
+  assign navigationIconColor = section.settings.navigation_icon_color
+  assign navigationIconBackgroundColor = section.settings.navigation_icon_background_color
+  assign mobileColumns = section.settings.mobile_columns
+  assign mobileColumnsMargin = section.settings.mobile_columns_margin
+
+  if navigationIcon == blank
+    assign navigationType = 'default'
+  endif
+
+  assign divID = section.id | replace: 'template--', '' | replace: 'shopify-section-', '' | replace: '__', '' | prepend: 'qq'
+
+%}
+
+<div class="qq-comparison-table {{sectionClass}}" id="{{divID}}">
+    <div class="qq-comparison-table-inner">
+        {% if sectionTitle %}
+          <{{sectionTitleType}} class="qq-comparison-table-title">{{ sectionTitle }}</{{sectionTitleType}}>
+        {% endif %}
+        
+        <div class="qq-comparison-columns">
+          <div class="qq-comparison-row qq-header">
+            <div class="qq-ct--cell"></div> {% comment %} kept empty to retain grid structure for comparison table{% endcomment %}
+            {%- for i in (1..columnsAmount) -%}
+              {%- assign _title_tmp = 'column_header_title_' | append: i -%}
+              {%- assign _text_tmp = 'column_header_text_' | append: i -%}
+              {%- assign _image_tmp = 'column_header_image_' | append: i -%}
+
+              {%- assign cell_title = section.settings[_title_tmp] -%}
+              {%- assign cell_text = section.settings[_text_tmp] -%}
+              {%- assign cell_image = section.settings[_image_tmp] -%}
+
+              {% unless cell_title == blank and cell_image == blank %}
+                  <div class="qq-ct--cell">
+                      {% if cell_image != blank %}
+                        <img src="{{ cell_image | img_url: '250x250', crop: 'center' }}">
+                      {% endif %}
+                      {% if cell_title != blank %}
+                        <h4 class="qq-ct--title">{{cell_title}}</h4>
+                      {% endif %}
+                      {% if cell_text != blank %}
+                        <p>{{cell_text}}</p>
+                      {% endif %}
+                  </div>
+              {% endunless %}
+            {% endfor %}
+          </div>
+
+          {%- for block in section.blocks -%}
+            {% assign cellIcon = block.settings.column_cell_icon | img_url: '150x150', crop: 'center'  %}
+
+            <div class="qq-comparison-row">
+              <div class="qq-ct--cell qq-row-title">
+                {% if block.settings.row_title  %}
+                  <h4>{{block.settings.row_title }}</h4>
+                {% endif %}
+              </div>
+
+              {%- for i in (1..columns) -%}
+                {% if i <= columnsAmount %}
+
+                  {%- assign text_tmp = 'column_' | append: i -%}
+                  {%- assign cell_text = block.settings[text_tmp] -%}
+                  {%- assign icon_tmp = 'column_icon_' | append: i -%}
+                  {%- assign use_cell_icon = block.settings[icon_tmp] -%}
+
+                  <div class="qq-ct--cell">
+                    {%- unless cell_text == blank and use_cell_icon == false -%}
+                      <div class="qq-ct--cell-content">
+                        {% if use_cell_icon == true %}
+                          <img src="{{ cellIcon }}">
+                        {% endif %}
+                        {% if cell_text != blank %}
+                          {{cell_text}}
+                        {% endif %}
+                      </div>
+                    {%- endunless -%}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+
+          {% endfor %}
+        </div>
+
+
+        <div class="qq-comparison-columns-mobile">
+
+            <div class="qq-arrow-prev {{navigationType}}" data-top="{{columnCellPaddingVertical}}">
+              {% if navigationIcon != blank %}
+                <img src="{{navigationIcon | img_url: '50x50', crop: 'center' }}">
+              {% else %}
+                <svg width="18" height="10" xmlns="http://www.w3.org/2000/svg"><title>Show Answer</title><g fill-rule="nonzero" stroke="#4A4B47" fill="none" stroke-linecap="square"><path d="m.834.5 3.666 4M8.5.834 4.5 4.5"/></g></svg>
+              {% endif %}
+            </div>
+            <div class="qq-arrow-next {{navigationType}}" data-top="{{columnCellPaddingVertical}}">
+              {% if navigationIcon != blank %}
+                <img src="{{navigationIcon | img_url: '50x50', crop: 'center' }}">
+              {% else %}
+                <svg width="18" height="10" xmlns="http://www.w3.org/2000/svg"><title>Show Answer</title><g fill-rule="nonzero" stroke="#4A4B47" fill="none" stroke-linecap="square"><path d="m.834.5 3.666 4M8.5.834 4.5 4.5"/></g></svg>
+              {% endif %}
+            </div>
+            <div class="qq-comparison-table-slider"
+            data-mobileColumns="{{mobileColumns}}">
+              {%- for i in (1..columnsAmount) -%}
+                <div class="qq-comparison-column">
+
+                    {%- assign _title_tmp = 'column_header_title_' | append: i -%}
+                    {%- assign _text_tmp = 'column_header_text_' | append: i -%}
+                    {%- assign _image_tmp = 'column_header_image_' | append: i -%}
+
+                    {%- assign cell_title = section.settings[_title_tmp] -%}
+                    {%- assign cell_text = section.settings[_text_tmp] -%}
+                    {%- assign cell_image = section.settings[_image_tmp] -%}
+
+                    {% unless cell_title == blank and cell_image == blank %}
+                        <div class="qq-ct--cell qq-header-cell">
+                            {% if cell_image != blank %}
+                              <img src="{{ cell_image | img_url: '250x250', crop: 'center' }}">
+                            {% endif %}
+                            {% if cell_title != blank %}
+                              <h4>{{cell_title}}</h4>
+                            {% endif %}
+                            {% if cell_text != blank %}
+                              <p>{{cell_text}}</p>
+                            {% endif %}
+                        </div>
+                    {% endunless %}
+
+                    {%- for block in section.blocks -%}
+                        {% assign cellIcon = block.settings.column_cell_icon | img_url: '150x150', crop: 'center'  %}
+
+                        {%- assign text_tmp = 'column_' | append: i -%}
+                        {%- assign cell_text = block.settings[text_tmp] -%}
+                        {%- assign icon_tmp = 'column_icon_' | append: i -%}
+                        {%- assign use_cell_icon = block.settings[icon_tmp] -%}
+
+                        <div class="qq-ct--cell">
+                          {% if block.settings.row_title  %}
+                            <div class="qq-ct--title">
+                              <h4>{{block.settings.row_title }}</h4>
+                            </div>
+                          {% endif %}
+                          {%- unless cell_text == blank and use_cell_icon == false -%}
+                            <div class="qq-ct--content">
+                              {% if use_cell_icon == true %}
+                                <img src="{{ cellIcon }}">
+                              {% endif %}
+                              {% if cell_text != blank %}
+                                {{cell_text}}
+                              {% endif %}
+                            </div>
+                          {%- endunless -%}
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style data='../ComparisonTable.css.liquid'> 
+section.qq-comparison-table-section{margin-left:auto;margin-right:auto}section.qq-comparison-table-section .qq-comparison-table{width:100%;margin-left:auto;margin-right:auto}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-table-inner{padding:30px}section.qq-comparison-table-section .qq-comparison-table h4,section.qq-comparison-table-section .qq-comparison-table p{margin:0;width:100%;display:block}section.qq-comparison-table-section .qq-comparison-table .qq-ct--cell{height:auto;display:flex;align-items:center;justify-content:center}@media screen and (min-width:851px){section.qq-comparison-table-section .qq-comparison-table .qq-ct--cell{height:100%}}section.qq-comparison-table-section .qq-comparison-table .qq-ct--cell .qq-ct--cell-content{width:100%}section.qq-comparison-table-section .qq-comparison-table img{width:100%;height:100%;-o-object-fit:contain;object-fit:contain}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-row{display:grid;text-align:center;align-items:center;justify-content:center}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-row img{height:45px;width:45px;-o-object-fit:contain;object-fit:contain;-o-object-position:center;object-position:center}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-row.qq-header .qq-ct--cell{flex-direction:column;padding-left:0;padding-right:0}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-row.qq-header img{width:auto;height:auto;max-height:120px;-o-object-fit:contain;object-fit:contain;-o-object-position:center;object-position:center}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-row.qq-header .qq-ct--title{margin:10px 0 3px}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-table-title{margin-left:auto;margin-right:auto;text-align:center}@media screen and (max-width:850px){section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns{display:none}section.qq-comparison-table-section .qq-comparison-table .qq-ct--cell{border-left:0!important;border-right:0!important}}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile{position:relative}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .qq-comparison-column{height:auto}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .slick-arrow{bottom:auto;top:38px;border-radius:50%;position:absolute;width:28px;height:28px;z-index:100;transition:all .5s ease}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .slick-arrow.default{overflow:hidden;margin-top:-6px}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .slick-arrow.default svg{position:absolute}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .slick-arrow.default.qq-arrow-next svg{transform:rotate(-90deg) scale(1.6);left:10px;top:2px}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .slick-arrow.default.qq-arrow-prev svg{top:16px;transform:rotate(90deg) scale(1.6);left:0}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .slick-arrow img{width:100%;height:100%;-o-object-fit:contain;object-fit:contain}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .slick-arrow.qq-arrow-prev{left:0}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .slick-arrow.qq-arrow-prev img{transform:rotate(180deg)}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .slick-arrow.qq-arrow-next{right:0}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .qq-ct--cell{flex-direction:column;padding:0;text-align:center}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .qq-ct--cell img{height:50px}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .qq-ct--cell.qq-header-cell img{height:120px}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .qq-ct--cell .qq-ct--title{padding:10px 0;width:100%;text-align:center;background-color:rgba(255,255,255,.7)}section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile .qq-ct--cell .qq-ct--content{padding:10px 0;width:100%}@media screen and (min-width:851px){section.qq-comparison-table-section .qq-comparison-table .qq-comparison-columns-mobile{display:none}} 
+</style>
+
+{% assign sectionID = 'shopify-section-' | append: section.id %}
+<style data='../ComparisonTable-inline-css.min.css.liquid'>
+{% if sectionTitleCustomFont %} {{sectionTitleFont | font_face }} {% endif %} {% if columnTitleCustomFont %} {{columnTitleFont | font_face }} {% endif %} {% if rowTitleCustomFont %} {{rowTitleFont | font_face }} {% endif %} {% if columnCellCustomFont %} {{columnCellFont | font_face }} {% endif %} #{{sectionID}} * { text-transform:none; } {% if sectionWidth == 'fullwidth' %} #{{sectionID}} { width: 100vw !important; position:relative; {% if sectionBackgroundColor contains '#' %}background-color:{{sectionBackgroundColor}};{%endif%} } html:not([dir="rtl"]) #{{sectionID}} { margin-left: -50vw !important; left: 50% !important; } html[dir="rtl"] #{{sectionID}} { margin-right: -50vw !important; right: 50% !important; } #{{sectionID}} > div { max-width:{{contentMaxWidth}}px; } {% else %} #{{sectionID}} { width:100%; max-width:{{contentMaxWidth}}px; } {% endif %} {% comment %} //Section title// {% endcomment %} #{{sectionID}} h2.qq-comparison-table-title { {% if sectionTitleCustomFont %} {% if sectionTitleFontName != blank %} font-family: {{sectionTitleFontName}}; {% else %} font-family:{{sectionTitleFont.family}}, {{sectionTitleFont.fallback_families}}; {% endif %} {%endif%} {% if sectionTitleFontWeight != "default" %}font-weight:{{sectionTitleFontWeight}} !important;{%endif%} {% if sectionTitleColor contains '#' %} color:{{sectionTitleColor}};{%endif%} } {% comment %} //Column title// {% endcomment %} #{{sectionID}} .qq-ct--cell:not(.qq-row-title) .qq-ct--title, #{{sectionID}} .qq-header-cell h4 { {% if columnTitleCustomFont %} {% if columnTitleFontName != blank %} font-family: {{columnTitleFontName}}; {% else %} font-family:{{columnTitleFont.family}}, {{columnTitleFont.fallback_families}}; {% endif %} {%endif%} {% if columnTitleFontWeight != "default" %}font-weight:{{columnTitleFontWeight}} !important;{%endif%} {% if columnTitleColor contains '#' %} color:{{columnTitleColor}};{%endif%} } {% comment %} //Column Subtitle// {% endcomment %} #{{sectionID}} .qq-comparison-row.qq-header p, #{{sectionID}} .qq-header-cell p { {% if columnSubtitleCustomFont %} {% if columnSubtitleFontName != blank %} font-family: {{columnSubtitleFontName}}; {% else %} font-family:{{columnSubtitleFont.family}}, {{columnSubtitleFont.fallback_families}}; {% endif %} {%endif%} {% if columnSubtitleFontWeight != "default" %}font-weight:{{columnSubtitleFontWeight}} !important;{%endif%} {% if columnSubtitleColor contains '#' %} color:{{columnSubtitleColor}};{%endif%} } {% comment %} Row Title Wrapper {% endcomment %} #{{sectionID}} .qq-comparison-row:not(.qq-header) .qq-row-title { padding-left:{{rowTitlePaddingHorizontal}}px; padding-right:{{rowTitlePaddingHorizontal}}px; } {% comment %} //Row Title// {% endcomment %} #{{sectionID}} .qq-ct--cell.qq-row-title h4, #{{sectionID}} .qq-comparison-column .qq-ct--title h4 { {% if rowTitleCustomFont %} {% if rowTitleFontName != blank %} font-family: {{rowTitleFontName}}; {% else %} font-family:{{rowTitleFont.family}}, {{rowTitleFont.fallback_families}}; {% endif %} {%endif%} {% if rowTitleFontWeight != "default" %}font-weight:{{rowTitleFontWeight}} !important;{%endif%} {% if rowTitleColor contains '#' %} color:{{rowTitleColor}};{%endif%} } {% comment %} //Cell Content// {% endcomment %} #{{sectionID}} .qq-ct--cell-content p, #{{sectionID}} .qq-comparison-column .qq-ct--content p { {% if columnCellCustomFont %} {% if columnCellFontName != blank %} font-family: {{columnCellFontName}}; {% else %} font-family:{{columnCellFont.family}}, {{columnCellFont.fallback_families}}; {% endif %} {%endif%} {% if columnCellFontWeight != "default" %}font-weight:{{columnCellFontWeight}} !important;{%endif%} {% if columnCellColor contains '#' %} color:{{columnCellColor}};{%endif%} } @media screen and (min-width:851px) { #{{sectionID}} { margin-top:{{sectionMarginTop}}px; margin-bottom:{{sectionMarginBottom}}px; } #{{sectionID}} .qq-comparison-table-inner { padding-top:{{sectionPaddingTop}}px; padding-bottom:{{sectionPaddingBottom}}px; } #{{sectionID}} h2.qq-comparison-table-title { {% if sectionTitleFontSize != 0 %}font-size:{{sectionTitleFontSize}}px;{% endif %} {% if sectionTitleLineHeight != 0 %}line-height:{{sectionTitleLineHeight}}px;{% endif %} {% if sectionTitleLetterSpacing != 0 %}letter-spacing:{{sectionTitleLetterSpacing}}px;{% endif %} margin-bottom:{{sectionTitleMarginBottom}}px !important; } {% comment %} //Column Image// {% endcomment %} #{{sectionID}} .qq-comparison-row.qq-header .qq-ct--cell img { margin-bottom:{{columnImageMarginBottom}}px; } {% comment %} //Column Title// {% endcomment %} #{{sectionID}} .qq-ct--cell:not(.qq-row-title) .qq-ct--title, #{{sectionID}} .qq-header-cell h4 { {% if columnTitleFontSize != 0 %}font-size:{{columnTitleFontSize}}px;{% endif %} {% if columnTitleLineHeight != 0 %}line-height:{{columnTitleLineHeight}}px;{% endif %} {% if columnTitleLetterSpacing != 0 %}letter-spacing:{{columnTitleLetterSpacing}}px;{% endif %} text-align:{{columnTitleTextAlignment}}; padding-left:{{columnTitlePaddingHorizontal}}px; padding-right:{{columnTitlePaddingHorizontal}}px; } {% comment %} //Column Subtitle// {% endcomment %} #{{sectionID}} .qq-comparison-row.qq-header p, #{{sectionID}} .qq-header-cell p { {% if columnSubtitleFontSize != 0 %}font-size:{{columnSubtitleFontSize}}px;{% endif %} {% if columnSubtitleLineHeight != 0 %}line-height:{{columnSubtitleLineHeight}}px;{% endif %} {% if columnSubtitleLetterSpacing != 0 %}letter-spacing:{{columnSubtitleLetterSpacing}}px;{% endif %} text-align:{{columnSubtitleTextAlignment}}; padding-left:{{columnSubtitlePaddingHorizontal}}px; padding-right:{{columnSubtitlePaddingHorizontal}}px; } {% comment %} //Row Title// {% endcomment %} #{{sectionID}} .qq-ct--cell.qq-row-title h4, #{{sectionID}} .qq-comparison-column .qq-ct--title h4 { {% if rowTitleFontSize != 0 %}font-size:{{rowTitleFontSize}}px;{% endif %} {% if rowTitleLineHeight != 0 %}line-height:{{rowTitleLineHeight}}px;{% endif %} {% if rowTitleLetterSpacing != 0 %}letter-spacing:{{rowTitleLetterSpacing}}px;{% endif %} text-align:{{rowTitleTextAlignment}}; } {% comment %} Cell Content Wrapper {% endcomment %} #{{sectionID}} .qq-comparison-row:not(.qq-header) .qq-ct--cell:not(.qq-row-title) { padding-left:{{columnCellPaddingHorizontal}}px; padding-right:{{columnCellPaddingHorizontal}}px; } {% comment %} //Cell Content// {% endcomment %} #{{sectionID}} .qq-ct--cell-content p, #{{sectionID}} .qq-comparison-column .qq-ct--content p { {% if columnCellFontSize != 0 %}font-size:{{columnCellFontSize}}px;{% endif %} {% if columnCellLineHeight != 0 %}line-height:{{columnCellLineHeight}}px;{% endif %} {% if columnCellLetterSpacing != 0 %}letter-spacing:{{columnCellLetterSpacing}}px;{% endif %} text-align:{{columnCellTextAlignment}}; } #{{sectionID}} .qq-comparison-row .qq-ct--cell { padding-top:{{columnCellPaddingVertical}}px; padding-bottom:{{columnCellPaddingVertical}}px; } } @media screen and (max-width:850px) { #{{sectionID}} { margin-top:{{sectionMarginTopMobile}}px; margin-bottom:{{sectionMarginBottomMobile}}px; } #{{sectionID}} .qq-comparison-table-inner { padding-top:{{sectionPaddingTopMobile}}px; padding-bottom:{{sectionPaddingBottomMobile}}px; } #{{sectionID}} h2.qq-comparison-table-title { {% if sectionTitleFontSizeMobile != 0 %}font-size:{{sectionTitleFontSizeMobile}}px;{% endif %} {% if sectionTitleLineHeightMobile != 0 %}line-height:{{sectionTitleLineHeightMobile}}px;{% endif %} {% if sectionTitleLetterSpacingMobile != 0 %}letter-spacing:{{sectionTitleLetterSpacingMobile}}px;{% endif %} margin-bottom:{{sectionTitleMarginBottomMobile}}px !important; } {% comment %} //Column Image// {% endcomment %} #{{sectionID}} .qq-comparison-columns-mobile .qq-header-cell img { margin-bottom:{{columnImageMarginBottomMobile}}px; } #{{sectionID}} .qq-ct--cell:not(.qq-row-title) .qq-ct--title, #{{sectionID}} .qq-header-cell h4 { {% if columnTitleFontSizeMobile != 0 %}font-size:{{columnTitleFontSizeMobile}}px;{% endif %} {% if columnTitleLineHeightMobile != 0 %}line-height:{{columnTitleLineHeightMobile}}px;{% endif %} {% if columnTitleLetterSpacingMobile != 0 %}letter-spacing:{{columnTitleLetterSpacingMobile}}px;{% endif %} text-align:{{columnTitleTextAlignmentMobile}}; padding-left:{{columnTitlePaddingHorizontalMobile}}px; padding-right:{{columnTitlePaddingHorizontalMobile}}px; } {% comment %} column subtitle {% endcomment %} #{{sectionID}} .qq-comparison-row.qq-header p, #{{sectionID}} .qq-header-cell p { {% if columnSubtitleFontSizeMobile != 0 %}font-size:{{columnSubtitleFontSizeMobile}}px;{% endif %} {% if columnSubtitleLineHeightMobile != 0 %}line-height:{{columnSubtitleLineHeightMobile}}px;{% endif %} {% if columnSubtitleLetterSpacingMobile != 0 %}letter-spacing:{{columnSubtitleLetterSpacingMobile}}px;{% endif %} text-align:{{columnSubtitleTextAlignmentMobile}}; padding-left:{{columnSubtitlePaddingHorizontalMobile}}px; padding-right:{{columnSubtitlePaddingHorizontalMobile}}px; } {% comment %} Row Title Wrapper {% endcomment %} #{{sectionID}} .qq-ct--title { padding-left:{{rowTitlePaddingHorizontalMobile}}px !important; padding-right:{{rowTitlePaddingHorizontalMobile}}px !important; } {% comment %} //Row Title// {% endcomment %} #{{sectionID}} .qq-ct--cell.qq-row-title h4, #{{sectionID}} .qq-comparison-column .qq-ct--title h4 { {% if rowTitleFontSizeMobile != 0 %}font-size:{{rowTitleFontSizeMobile}}px;{% endif %} {% if rowTitleLineHeightMobile != 0 %}line-height:{{rowTitleLineHeightMobile}}px;{% endif %} {% if rowTitleLetterSpacingMobile != 0 %}letter-spacing:{{rowTitleLetterSpacingMobile}}px;{% endif %} text-align:{{rowTitleTextAlignmentMobile}}; } {% comment %} Cell Content Wrapper {% endcomment %} #{{sectionID}} .qq-comparison-columns-mobile .qq-comparison-column .qq-ct--content { padding-left:{{columnCellPaddingHorizontalMobile}}px; padding-right:{{columnCellPaddingHorizontalMobile}}px; } {% comment %} //Cell Content// {% endcomment %} #{{sectionID}} .qq-ct--cell-content p, #{{sectionID}} .qq-comparison-column .qq-ct--content p { {% if columnCellFontSizeMobile != 0 %}font-size:{{columnCellFontSizeMobile}}px;{% endif %} {% if columnCellLineHeightMobile != 0 %}line-height:{{columnCellLineHeightMobile}}px;{% endif %} {% if columnCellLetterSpacingMobile != 0 %}letter-spacing:{{columnCellLetterSpacingMobile}}px;{% endif %} text-align:{{columnCellTextAlignmentMobile}}; } #{{sectionID}} .qq-comparison-columns-mobile .qq-comparison-column .qq-ct--cell { padding-top:{{columnCellPaddingVerticalMobile}}px; padding-bottom:{{columnCellPaddingVerticalMobile}}px; } } #{{sectionID}} * { {% if sectionBackgroundColor contains '#' %}background-color:{{sectionBackgroundColor}};{%endif%} } #{{sectionID}} .qq-comparison-row { grid-template-columns: 0.7fr repeat({{ columns | minus:1 }}, 1fr); {% comment %} grid-template-columns: 0.7fr repeat({{ columns }}, 1fr); {% endcomment %} min-height:{{columnCellMinHeight}}px; } {% if navigationType == 'default' %} {% if navigationIconBackgroundColor contains '#' %} #{{sectionID}} .slick-arrow, #{{sectionID}} .slick-arrow svg { background:{{navigationIconBackgroundColor}}; } {% endif %} {% if navigationIconColor contains '#' %} #{{sectionID}} .slick-arrow svg g { stroke:{{navigationIconColor}}; } {% endif %} {% endif %} #{{sectionID}} .qq-comparison-table .qq-comparison-row.qq-header .qq-ct--cell .qq-ct--title { {% if columnTitleCustomFont %} {% if columnTitleFontName != blank %} font-family: {{columnTitleFontName}}; {% else %} font-family:{{columnTitleFont.family}}, {{columnTitleFont.fallback_families}}; {% endif %} {%endif%} {% if columnTitleFontWeight != "default" %}font-weight:{{columnTitleFontWeight}} !important;{%endif%} } #{{sectionID}} .qq-comparison-table .qq-comparison-row:not(.qq-header) .qq-ct--cell.qq-row-title h4 h4 { {% if rowTitleCustomFont %} {% if rowTitleFontName != blank %} font-family: {{rowTitleFontName}}; {% else %} font-family:{{rowTitleFont.family}}, {{rowTitleFont.fallback_families}}; {% endif %} {% endif %} {% if rowTitleFontWeight != "default" %}font-weight:{{rowTitleFontWeight}} !important;{%endif%} } #{{sectionID}} .qq-comparison-table .qq-comparison-row:not(.qq-header) .qq-ct--cell:not(.qq-row-title) { {% if columnCellCustomFont %} {% if columnCellFontName != blank %} font-family: {{columnCellFontName}}; {% else %} font-family:{{columnCellFont.family}}, {{columnCellFont.fallback_families}}; {% endif %} {%endif%} {% if columnCellFontWeight != "default" %}font-weight:{{columnCellFontWeight}} !important;{%endif%} } #{{sectionID}} .qq-comparison-columns-mobile .qq-ct--cell:not(.qq-header-cell), #{{sectionID}} .qq-comparison-columns-mobile .qq-ct--cell:not(.qq-header-cell) *, #{{sectionID}} .qq-comparison-columns .qq-comparison-row:not(.qq-header) .qq-ct--cell, #{{sectionID}} .qq-comparison-columns .qq-comparison-row:not(.qq-header) .qq-ct--cell * { background-color:{{columnCellBackgroundColor}} !important; } {% if borderVertical == true %} #{{sectionID}} .qq-comparison-table .qq-ct--cell:not(:first-child) { border-left: {{borderWidth}}px solid {{borderColor}}; } body[dir="rtl"] #{{sectionID}} .qq-comparison-table .qq-ct--cell:not(:first-child), html[dir="rtl"] #{{sectionID}} .qq-comparison-table .qq-ct--cell:not(:first-child) { border-left: 0; border-right: {{borderWidth}}px solid {{borderColor}}; } {% endif %} {% if borderHorizontal == true %} #{{sectionID}} .qq-comparison-table .qq-comparison-row:not(:last-child), #{{sectionID}} .qq-comparison-columns-mobile .qq-ct--cell:not(:last-child) { border-bottom: {{borderWidth}}px solid {{borderColor}}; } {% endif %} {% if mobileColumns == '2' %} #{{sectionID}} .qq-comparison-columns-mobile .qq-comparison-column { margin: 0 {{mobileColumnsMargin | divided_by: 2}}px; } {% endif %}
+</style>
+
+
+ 
+{% schema %}
+{
+    "name": "QQ - Comparison Table",
+    "class": "qq-comparison-table-section",
+    "tag": "section",
+    "settings": [
+        {
+          "type": "text",
+          "id": "section_class",
+          "label": "Section Class",
+          "info": "Add section class (without .). Use spaces to add multiple classes"
+        },
+        {
+          "type": "text",
+          "id": "section_title",
+          "label": "Section Title",
+          "default": "QQ Comparison Table Title"
+        },
+        {
+            "type": "select",
+            "id": "section_title_type",
+            "options": [
+                {
+                "value": "h1",
+                "label": "H1"
+                },
+                {
+                "value": "h2",
+                "label": "H2"
+                },
+                {
+                "value": "h3",
+                "label": "H3"
+                },
+                {
+                "value": "h4",
+                "label": "H4"
+                },
+                {
+                "value": "h5",
+                "label": "H5"
+                },
+                {
+                "value": "h6",
+                "label": "H6"
+                }
+            ],
+            "default": "h2",
+            "label": "HTML Element",
+            "info": "For better SEO"
+        },
+        {
+            "type": "range",
+            "id": "num_of_columns",
+            "min": 1,
+            "max": 4,
+            "step": 1,
+            "label": "Number of columns",
+            "default": 3
+        },
+        {
+          "type": "header",
+          "content": "Column 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "column_header_image_1",
+          "label": "Column Image",
+          "info": "Optional"
+        },
+        {
+          "type": "text",
+          "id": "column_header_title_1",
+          "label": "Column Title",
+          "default": "Column 1 Title",
+          "info": "Optional"
+        },
+        {
+          "type": "text",
+          "id": "column_header_text_1",
+          "label": "Column Subtitle",
+          "default": "Subtitle",
+          "info": "Optional"
+        },
+        {
+          "type": "header",
+          "content": "Column 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "column_header_image_2",
+          "label": "Column Image",
+          "info": "Optional"
+        },
+        {
+          "type": "text",
+          "id": "column_header_title_2",
+          "label": "Column Title",
+          "default": "Column 2 Title",
+          "info": "Optional"
+        },
+        {
+          "type": "text",
+          "id": "column_header_text_2",
+          "label": "Column Subtitle",
+          "default": "Subtitle",
+          "info": "Optional"
+        },
+        {
+          "type": "header",
+          "content": "Column 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "column_header_image_3",
+          "label": "Column Image",
+          "info": "Optional"
+        },
+        {
+          "type": "text",
+          "id": "column_header_title_3",
+          "label": "Column Title",
+          "default": "Column 3 Title",
+          "info": "Optional"
+        },
+        {
+          "type": "text",
+          "id": "column_header_text_3",
+          "label": "Column Subtitle",
+          "default": "Subtitle",
+          "info": "Optional"
+        },
+        {
+          "type": "header",
+          "content": "Column 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "column_header_image_4",
+          "label": "Column Image",
+          "info": "Optional"
+        },
+        {
+          "type": "text",
+          "id": "column_header_title_4",
+          "label": "Column Title",
+          "default": "Column 4 Title",
+          "info": "Optional"
+        },
+        {
+          "type": "text",
+          "id": "column_header_text_4",
+          "label": "Column Subtitle",
+          "default": "Subtitle",
+          "info": "Optional"
+        },
+        {
+          "type": "header",
+          "content": "Column Image Styling"
+        },
+        {
+          "type": "range",
+          "id": "column_image_margin_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Image Margin Bottom",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "column_image_margin_bottom_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Image Margin Bottom - Mobile",
+          "default": 20
+        },
+        {
+          "type": "header",
+          "content": "Navigation Styling"
+        },
+        {
+          "type": "image_picker",
+          "id": "navigation_icon",
+          "label": "Navigation Icon (for mobile version)",
+          "info": "On mobile devices this table becomes a carousel of the columns. You can select your own navigation arrows or use the default:"
+        },
+        {
+            "type": "color",
+            "id": "navigation_icon_color",
+            "label": "Default Navigation Icon Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "navigation_icon_background_color",
+            "label": "Default Navigation Icon Background Color",
+            "default": "#4A4B47"
+        },
+        {
+            "type": "select",
+            "id": "mobile_columns",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "1"
+                },
+                {
+                    "value": "2",
+                    "label": "2"
+                }
+            ],
+            "default": "1",
+            "label": "Columns on Mobile"
+        },
+        {
+          "type": "range",
+          "id": "mobile_columns_margin",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "unit": "px",
+          "label": "Margin between Columns",
+          "info": "Only if there are 2 mobile columns",
+          "default": 20
+        },
+        {
+          "type": "header",
+          "content": "Section Styling"
+        },
+        {
+            "type": "color",
+            "id": "section_background_color",
+            "label": "Section Background Color",
+            "default": "#F2F2F2"
+        },
+        {
+            "type": "select",
+            "id": "section_width",
+            "options": [
+                {
+                    "value": "regular",
+                    "label": "Regular"
+                },
+                {
+                    "value": "fullwidth",
+                    "label": "Fullwidth"
+                }
+            ],
+            "default": "regular",
+            "label": "Section Width"
+        },
+        {
+            "type": "range",
+            "id": "content_max_width",
+            "min": 800,
+            "max": 1500,
+            "step": 10,
+            "unit": "px",
+            "label": "Content Max Width",
+            "default": 1280
+        },
+        {
+            "type": "range",
+            "id": "border_width",
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "unit": "px",
+            "label": "Border width",
+            "default": 10
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border Color",
+          "default": "#f2f2f2"
+        },
+        {
+					"type": "checkbox",
+					"id": "border_vertical",
+					"label": "Show Vertical Borders",
+					"default": true
+				},
+        {
+					"type": "checkbox",
+					"id": "border_horizontal",
+					"label": "Show Horizontal Borders",
+					"default": true
+				},
+        {
+            "type": "range",
+            "id": "section_margin_top",
+            "min": 0,
+            "max": 200,
+            "step": 5,
+            "unit": "px",
+            "label": "Section Top Margin",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "section_margin_bottom",
+            "min": 0,
+            "max": 200,
+            "step": 5,
+            "unit": "px",
+            "label": "Section Bottom Margin",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "section_padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "label": "Section Top Padding",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "section_padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "label": "Section Bottom Padding",
+            "default": 20
+        },
+        {
+          "type": "header",
+          "content": "Section Styling - Mobile"
+        },
+        {
+            "type": "range",
+            "id": "section_margin_top_mobile",
+            "min": 0,
+            "max": 200,
+            "step": 5,
+            "unit": "px",
+            "label": "Section Top Margin - Mobile",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "section_margin_bottom_mobile",
+            "min": 0,
+            "max": 200,
+            "step": 5,
+            "unit": "px",
+            "label": "Section Bottom Margin - Mobile",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "section_padding_top_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "label": "Section Top Padding - Mobile",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "section_padding_bottom_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "label": "Section Bottom Padding - Mobile",
+            "default": 20
+        },
+        {
+          "type": "header",
+          "content": "Section Title Styling"
+        },
+        {
+          "type": "color",
+          "id": "section_title_color",
+          "label": "Section Title Color"
+        },
+        {
+					"type": "checkbox",
+					"id": "section_title_custom_font",
+					"label": "Use Custom Font",
+					"default": false
+				},
+        {
+					"type": "font_picker",
+					"id": "section_title_font",
+					"label": "Section Title Font",
+					"default": "mono"
+				},
+        {
+          "type": "text",
+          "id": "section_title_font_name",
+          "label": "Custom Font Family Name",
+          "info": "Add your custom font. Example: ‘Helvetica’, sans-serif."
+        },
+        {
+          "type": "select",
+          "id": "section_title_font_weight",
+          "options": [
+          {
+            "value": "default",
+            "label": "Default"
+          },
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400 (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700 (Bold)"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          },
+          {
+            "value": "900",
+            "label": "900"
+          }
+          ],
+          "default": "default",
+          "label": "Font Weight"
+        },
+        {
+          "type": "range",
+          "id": "section_title_margin_bottom",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "unit": "px",
+          "label": "Section Title Bottom Margin",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "section_title_font_size",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Section Title Font Size",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_title_letter_spacing",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Section Title Letter Spacing",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_title_line_height",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Section Title Line Height",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Section Title Styling - Mobile"
+        },
+        {
+          "type": "range",
+          "id": "section_title_margin_bottom_mobile",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "unit": "px",
+          "label": "Section Title Bottom Margin - Mobile",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "section_title_font_size_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Section Title Font Size - Mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_title_letter_spacing_mobile",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Section Title Letter Spacing - Mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_title_line_height_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Section Title Line Height - Mobile",
+          "default": 0
+        },
+        
+        {
+          "type": "header",
+          "content": "Column Title Styling"
+        },
+        {
+          "type": "color",
+          "id": "column_title_color",
+          "label": "Column Title Color"
+        },
+        {
+					"type": "checkbox",
+					"id": "column_title_custom_font",
+					"label": "Use Custom Font",
+					"default": false
+				},
+        {
+					"type": "font_picker",
+					"id": "column_title_font",
+					"label": "Column Title Font",
+					"default": "mono"
+				},
+        {
+          "type": "text",
+          "id": "column_title_font_name",
+          "label": "Custom Font Family Name",
+          "info": "Add your custom font. Example: ‘Helvetica’, sans-serif."
+        },
+        {
+          "type": "select",
+          "id": "column_title_font_weight",
+          "options": [
+          {
+            "value": "default",
+            "label": "Default"
+          },
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400 (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700 (Bold)"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          },
+          {
+            "value": "900",
+            "label": "900"
+          }
+          ],
+          "default": "default",
+          "label": "Font Weight"
+        },
+        {
+          "type": "select",
+          "id": "column_title_text_alignment",
+          "options": [{
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Column Title Text Alignment"
+        },
+        {
+          "type": "range",
+          "id": "column_title_padding_horizontal",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Column Title Padding Horizontal",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "column_title_font_size",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Title Font Size",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_title_letter_spacing",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Title Letter Spacing",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_title_line_height",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Title Line Height",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Column Title Styling - Mobile"
+        },
+        {
+          "type": "select",
+          "id": "column_title_text_alignment_mobile",
+          "options": [{
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Column Title Text Alignment - Mobile"
+        },
+        {
+          "type": "range",
+          "id": "column_title_padding_horizontal_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Column Title Padding Horizontal - Mobile",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "column_title_font_size_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Title Font Size - Mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_title_letter_spacing_mobile",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Title Letter Spacing - Mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_title_line_height_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Title Line Height - Mobile",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Column Subtitle Styling"
+        },
+        {
+          "type": "color",
+          "id": "column_subtitle_color",
+          "label": "Column Subtitle Color"
+        },
+        {
+					"type": "checkbox",
+					"id": "column_subtitle_custom_font",
+					"label": "Use Custom Font",
+					"default": false
+				},
+        {
+					"type": "font_picker",
+					"id": "column_subtitle_font",
+					"label": "Column Subtitle Font",
+					"default": "mono"
+				},
+        {
+          "type": "text",
+          "id": "column_subtitle_font_name",
+          "label": "Custom Font Family Name",
+          "info": "Add your custom font. Example: ‘Helvetica’, sans-serif."
+        },
+        {
+          "type": "select",
+          "id": "column_subtitle_font_weight",
+          "options": [
+          {
+            "value": "default",
+            "label": "Default"
+          },
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400 (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700 (Bold)"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          },
+          {
+            "value": "900",
+            "label": "900"
+          }
+          ],
+          "default": "default",
+          "label": "Font Weight"
+        },
+        {
+          "type": "select",
+          "id": "column_subtitle_text_alignment",
+          "options": [{
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Column Subtitle Text Alignment"
+        },
+        {
+          "type": "range",
+          "id": "column_subtitle_padding_horizontal",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Column Subtitle Padding Horizontal",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "column_subtitle_font_size",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Subtitle Font Size",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_subtitle_letter_spacing",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Subtitle Letter Spacing",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_subtitle_line_height",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Subtitle Line Height",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Column Subtitle Styling - Mobile"
+        },
+        {
+          "type": "select",
+          "id": "column_subtitle_text_alignment_mobile",
+          "options": [{
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Column Subtitle Text Alignment - Mobile"
+        },
+        {
+          "type": "range",
+          "id": "column_subtitle_padding_horizontal_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Column Subtitle Padding Horizontal - Mobile",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "column_subtitle_font_size_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Subtitle Font Size - Mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_subtitle_letter_spacing_mobile",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Subtitle Letter Spacing - Mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_subtitle_line_height_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Subtitle Line Height - Mobile",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Row Title Styling"
+        },
+        {
+          "type": "color",
+          "id": "row_title_color",
+          "label": "Row Title Color"
+        },
+        {
+					"type": "checkbox",
+					"id": "row_title_custom_font",
+					"label": "Use Custom Font",
+					"default": false
+				},
+        {
+					"type": "font_picker",
+					"id": "row_title_font",
+					"label": "Row Title Font",
+					"default": "mono"
+				},
+        {
+          "type": "text",
+          "id": "row_title_font_name",
+          "label": "Custom Font Family Name",
+          "info": "Add your custom font. Example: ‘Helvetica’, sans-serif."
+        },
+        {
+          "type": "select",
+          "id": "row_title_font_weight",
+          "options": [
+          {
+            "value": "default",
+            "label": "Default"
+          },
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400 (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700 (Bold)"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          },
+          {
+            "value": "900",
+            "label": "900"
+          }
+          ],
+          "default": "default",
+          "label": "Font Weight"
+        },
+        {
+          "type": "select",
+          "id": "row_title_text_alignment",
+          "options": [{
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Row Title Text Alignment"
+        },
+        {
+          "type": "range",
+          "id": "row_title_padding_horizontal",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Row Title Padding Horizontal",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "row_title_font_size",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Row Title Font Size",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "row_title_letter_spacing",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Row Title Letter Spacing",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "row_title_line_height",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Row Title Line Height",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Row Title Styling - Mobile"
+        },
+        {
+          "type": "select",
+          "id": "row_title_text_alignment_mobile",
+          "options": [{
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Row Title Text Alignment - Mobile"
+        },
+        {
+          "type": "range",
+          "id": "row_title_padding_horizontal_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Row Title Padding Horizontal - Mobile",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "row_title_font_size_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Row Title Font Size - Mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "row_title_letter_spacing_mobile",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Row Title Letter Spacing - Mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "row_title_line_height_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Row Title Line Height - Mobile",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Column Cell Styling"
+        },
+        {
+          "type": "color",
+          "id": "column_cell_background_color",
+          "label": "Column Cell Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "column_cell_color",
+          "label": "Column Cell Color"
+        },
+        {
+					"type": "checkbox",
+					"id": "column_cell_custom_font",
+					"label": "Use Custom Font",
+					"default": false
+				},
+        {
+					"type": "font_picker",
+					"id": "column_cell_font",
+					"label": "Cell Font",
+					"default": "mono"
+				},
+        {
+          "type": "text",
+          "id": "column_cell_font_name",
+          "label": "Custom Font Family Name",
+          "info": "Add your custom font. Example: ‘Helvetica’, sans-serif."
+        },
+        {
+          "type": "select",
+          "id": "column_cell_font_weight",
+          "options": [
+          {
+            "value": "default",
+            "label": "Default"
+          },
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400 (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700 (Bold)"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          },
+          {
+            "value": "900",
+            "label": "900"
+          }
+          ],
+          "default": "default",
+          "label": "Font Weight"
+        },
+        {
+          "type": "select",
+          "id": "column_cell_text_alignment",
+          "options": [{
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Column Cell Text Alignment"
+        },
+
+
+        {
+          "type": "range",
+          "id": "column_cell_min_height",
+          "min": 40,
+          "max": 200,
+          "step": 5,
+          "unit": "px",
+          "label": "Column Cell Minimum Height",
+          "default": 70
+        },
+        {
+          "type": "range",
+          "id": "column_cell_padding_vertical",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Column Cell Vertical Padding",
+          "default": 20
+        },
+
+        {
+          "type": "range",
+          "id": "column_cell_padding_horizontal",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Column Cell Padding Horizontal",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "column_cell_font_size",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Cell Font Size",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_cell_letter_spacing",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Cell Letter Spacing",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_cell_line_height",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Cell Line Height",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Column Cell Styling - Mobile"
+        },
+        {
+          "type": "select",
+          "id": "column_cell_text_alignment_mobile",
+          "options": [{
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Column Cell Text Alignment - Mobile"
+        },
+
+        {
+          "type": "range",
+          "id": "column_cell_padding_vertical_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Column Cell Vertical Padding - Mobile",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "column_cell_padding_horizontal_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Column Cell Padding Horizontal - Mobile",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "column_cell_font_size_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Cell Font Size - Mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_cell_letter_spacing_mobile",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Cell Letter Spacing - Mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "column_cell_line_height_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Column Cell Line Height - Mobile",
+          "default": 0
+        }
+    ],
+    "blocks": [
+        {
+          "type": "content_row",
+          "name": "Comparison Row",
+          "limit": 12,
+          "settings": [
+            {
+              "type": "text",
+              "id": "row_title",
+              "label": "Row Title",
+              "default": "Row Title"
+            },
+            {
+              "type": "header",
+              "content": "Cell Icon"
+            },
+            {
+              "type": "image_picker",
+              "id": "column_cell_icon",
+              "label": "Column Cell Icon (Optional)",
+              "info": "Icon to be used if cell has 'Show Icon' enabled."
+            },
+            {
+              "type": "header",
+              "content": "Columns"
+            },
+            {
+              "type": "checkbox",
+              "id": "column_icon_1",
+              "label": "Show Icon in column 1",
+              "default": false
+            },
+            {
+              "type": "richtext",
+              "id": "column_1",
+              "label": "Column 1 value",
+              "default": "<p>Column 1 Value</p>"
+            },
+            {
+              "type": "checkbox",
+              "id": "column_icon_2",
+              "label": "Show Icon in column 2",
+              "default": false
+            },
+            {
+              "type": "richtext",
+              "id": "column_2",
+              "label": "Column 2 value",
+              "default": "<p>Column 2 Value</p>"
+            },
+            {
+              "type": "checkbox",
+              "id": "column_icon_3",
+              "label": "Show Icon in column 3",
+              "default": false
+            },
+            {
+              "type": "richtext",
+              "id": "column_3",
+              "label": "Column 3 value",
+              "default": "<p>Column 3 Value</p>"
+            },
+            {
+              "type": "checkbox",
+              "id": "column_icon_4",
+              "label": "Show Icon in column 4",
+              "default": false
+            },
+            {
+              "type": "richtext",
+              "id": "column_4",
+              "label": "Column 4 value",
+              "default": "<p>Column 4 Value</p>"
+            }
+          ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "QQ - Comparison Table",
+            "blocks": [
+                {
+                  "type": "content_row"
+                },
+                {
+                  "type": "content_row"
+                },
+                {
+                  "type": "content_row"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
+

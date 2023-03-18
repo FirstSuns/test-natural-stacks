@@ -1,0 +1,248 @@
+/* PageFly Element Styles */
+						.dyORKt { display: inline-block; line-height: 1; padding: 12px 20px; text-align: center; text-decoration: none; outline: 0px; }
+.dyORKt i { margin-right: 0.3em; }
+.dyORKt:hover, .dyORKt:active, .dyORKt:focus, .dyORKt span { color: inherit; }
+.dyORKt span { display: initial; }
+.jOHUgE { word-break: break-word; }
+.jOHUgE span { font-weight: inherit; text-decoration: inherit; }
+.jOHUgE i { margin-right: 0.3em; }
+.NwVYe { min-height: 30px; }
+.Cxmgx { padding: var(--pf-s-lg); }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .Cxmgx { padding: var(--pf-s-md); }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .Cxmgx { padding: var(--pf-s-sm); }
+}
+@media (max-width: 767px) {
+  .Cxmgx { padding: var(--pf-s-xs); }
+}
+.jOyZMp { position: relative; }
+.ezvhlM { margin: 0 calc(-1 * var(--pf-s-lg)); }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .ezvhlM { margin: 0 calc(-1 * var(--pf-s-md)); }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .ezvhlM { margin: 0 calc(-1 * var(--pf-s-sm)); }
+}
+@media (max-width: 767px) {
+  .ezvhlM { margin: 0 calc(-1 * var(--pf-s-xs)); }
+}
+.giMIUk { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+.ceTxwz { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none; overflow: hidden; }
+.jbFqTk__parallax { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+.jbFqTk { padding: 15px 0px; position: relative; }
+.gzEQOZ > span:last-child { line-height: inherit; display: block; margin-right: 0px !important; }
+#editor-dnd-wrapper .sc-eySxxw span + span[contenteditable] { display: block; }
+#editor-dnd-wrapper .sc-eySxxw span + span[contenteditable]:empty::after { display: inline; }
+.gzEQOZ ol, .gzEQOZ ul { list-style-position: inside; }
+.gzEQOZ blockquote { font-size: inherit; }
+.lkyDJP { display: inline-block; }
+.lkyDJP[contenteditable="true"] { user-select: text; }
+.lkyDJP { vertical-align: baseline; word-break: break-word; }
+.lkyDJP:focus { outline: none; }
+.lkyDJP::after { display: inline; }
+						/* PageFly Styles */
+						
+@media all {
+	.__pf .pf-59591945 {
+		color: rgb(255, 255, 255);
+		 font-family: Roboto;
+		 font-size: 40px;
+		 margin-bottom: 0px;
+		 margin-top: 30px;
+	}
+	.__pf .pf-eb663f68 {
+		color: rgb(255, 255, 255);
+		 font-family: Roboto;
+		 font-size: 20px;
+		 margin-top: 15px;
+	}
+	.__pf .pf-1604740d {
+		background-color: rgb(245, 166, 35);
+		 color: rgb(255, 255, 255);
+		 font-family: Roboto;
+		 font-size: 22px;
+		 padding: 20px 30px;
+		 border-radius: 10px;
+		 font-weight: 700;
+		 margin-top: 20px;
+	}
+	.__pf .pf-d1e42ab0 {
+		text-align: center;
+	}
+	.__pf .pf-45a44334 {
+		background-image: url("https://cdn.shopify.com/s/files/1/0269/3025/t/307/assets/pf-04740d9f--Brainfood-Neurofuel1-1-Edited.jpg?v=1601505230");
+		 background-position: 0% 0%;
+		 background-size: cover;
+		 padding: 50px;
+	}
+	.__pf .pf-154305b0 {
+		text-align: center;
+		 font-family: Roboto;
+		 font-size: 29px;
+	}
+	.__pf .pf-beca0933 {
+		width: 80px;
+		 height: auto;
+		 display: block;
+		 margin: auto;
+	}
+	.__pf .pf-871fd42a {
+		text-align: center;
+		 font-family: Roboto;
+		 font-size: 20px;
+		 margin-top: 20px;
+		 margin-bottom: 20px;
+	}
+	.__pf .pf-9f623c1c {
+		font-family: Roboto;
+	}
+	.__pf .pf-1e0c3796 {
+		text-align: center;
+		 padding: 10px;
+	}
+	.__pf .pf-e7f1ca10 {
+		width: 80px;
+		 height: auto;
+		 display: block;
+		 margin: auto;
+	}
+	.__pf .pf-d24566c5 {
+		text-align: center;
+		 font-family: Roboto;
+		 font-size: 20px;
+		 margin-top: 20px;
+		 margin-bottom: 20px;
+	}
+	.__pf .pf-66c56d2e {
+		font-family: Roboto;
+	}
+	.__pf .pf-6d2e0599 {
+		text-align: center;
+		 padding: 10px;
+	}
+	.__pf .pf-1a5af3d0 {
+		width: 80px;
+		 height: auto;
+		 display: block;
+		 margin: auto;
+	}
+	.__pf .pf-06e3cbe5 {
+		text-align: center;
+		 font-family: Roboto;
+		 font-size: 20px;
+		 margin-top: 20px;
+		 margin-bottom: 20px;
+	}
+	.__pf .pf-cbe5d643 {
+		font-family: Roboto;
+	}
+	.__pf .pf-d643e7f1 {
+		text-align: center;
+		 padding: 10px;
+	}
+	.__pf .pf-0a9ed62e {
+		width: 80px;
+		 height: auto;
+		 display: block;
+		 margin: auto;
+	}
+	.__pf .pf-63741839 {
+		text-align: center;
+		 font-family: Roboto;
+		 font-size: 20px;
+		 margin-top: 20px;
+		 margin-bottom: 20px;
+	}
+	.__pf .pf-18396877 {
+		font-family: Roboto;
+	}
+	.__pf .pf-68771a5a {
+		text-align: center;
+		 padding: 10px;
+	}
+	.__pf .pf-2d2597f2 {
+		width: 80px;
+		 height: auto;
+		 display: block;
+		 margin: auto;
+	}
+	.__pf .pf-4998abfa {
+		text-align: center;
+		 font-family: Roboto;
+		 font-size: 20px;
+		 margin-top: 20px;
+		 margin-bottom: 20px;
+	}
+	.__pf .pf-b59ad2d3 {
+		font-family: Roboto;
+	}
+	.__pf .pf-18706839 {
+		text-align: center;
+		 padding: 10px;
+	}
+	.__pf .pf-ed92ea4a {
+		width: 80px;
+		 height: auto;
+		 display: block;
+		 margin: auto;
+	}
+	.__pf .pf-93a6beca {
+		text-align: center;
+		 font-family: Roboto;
+		 font-size: 20px;
+		 margin-top: 20px;
+		 margin-bottom: 20px;
+	}
+	.__pf .pf-13e76d1d {
+		font-family: Roboto;
+	}
+	.__pf .pf-892c1870 {
+		text-align: center;
+		 padding: 10px;
+	}
+	.__pf .pf-0a2e2f4b {
+		color: rgb(0, 0, 0);
+		 font-family: Roboto;
+		 font-size: 30px;
+		 margin-top: 0px;
+		 margin-bottom: 30px;
+		 font-weight: 700;
+	}
+	.__pf .pf-c73a7dfd {
+		color: rgb(0, 0, 0);
+		 font-family: Roboto;
+		 font-size: 20px;
+		 margin-top: 0px;
+		 margin-bottom: 30px;
+	}
+	.__pf .pf-ce38a6a4 {
+		background-color: rgb(245, 166, 35);
+		 color: rgb(255, 255, 255);
+		 font-family: Roboto;
+		 font-size: 36px;
+		 padding: 20px 60px 20px 50px;
+		 border-radius: 10px;
+	}
+	.__pf .pf-38c09342 {
+		text-align: center;
+	}
+	.__pf .pf-93426215 {
+		border-style: dotted;
+		 border-color: rgb(155, 155, 155);
+		 border-width: 1px;
+		 border-radius: 5px;
+		 padding-top: 20px;
+		 padding-bottom: 20px;
+		 box-shadow: rgb(158, 158, 158) 3px 3px 3px 0px;
+		 margin-top: 30px;
+	}
+	.__pf .pf-91741e0c {
+		padding-top: 0px;
+	}
+	.__pf .pf-73581d6c {
+		padding: 0px;
+	}
+}
+						

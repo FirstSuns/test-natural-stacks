@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "pf-dca723a4": {
+      "type": "pf-dca723a4",
+      "settings": {}
+    }
+  },
+  "order": [
+    "pf-dca723a4"
+  ],
+  "layout": "theme.pagefly"
+}

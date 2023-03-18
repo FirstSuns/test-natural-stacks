@@ -1,0 +1,1005 @@
+{
+  "sections": {
+    "aa99915c-afb7-4fbe-be88-430001227170": {
+      "type": "image-with-text-2",
+      "settings": {
+        "container": "w-full",
+        "hero_size": "adapt",
+        "show_overlay": false,
+        "image": "shopify:\/\/shop_images\/Untitled_design_-_2022-11-30T101809.320.png",
+        "bg_position": "center bottom",
+        "image_link": "",
+        "parallax": false,
+        "content_in_container": false,
+        "content_position": "center top",
+        "text_alignment": "center",
+        "text_size": "medium",
+        "text_color": "white",
+        "title": "BETTER BRAIN. BETTER LIFE.®",
+        "subtitle": "",
+        "text": "<p>Brain Supplements You Can Feel In Minutes<\/p>",
+        "button_label": "Shop now",
+        "button_link": "https:\/\/www.naturalstacks.com\/collections\/all?sort_by=best-selling",
+        "button_style": "sf__btn-white",
+        "button_size": "sf__btn-large",
+        "mb_image": "shopify:\/\/shop_images\/9_6.jpg",
+        "use_content_above": false,
+        "custom_class": ""
+      }
+    },
+    "b57e699f-3262-4638-83ae-d5bde215b47f": {
+      "type": "slider",
+      "blocks": {
+        "template--14651341013040__b57e699f-3262-4638-83ae-d5bde215b47f-1666360165caaac5b6-0": {
+          "type": "slider_item",
+          "settings": {
+            "background": "shopify:\/\/shop_images\/Untitled_design_-_2022-10-27T132339.345.png",
+            "mb_background": "shopify:\/\/shop_images\/Featured_mobile.png",
+            "image_alignment": "center",
+            "content_in_container": false,
+            "content_position": "center middle",
+            "text_alignment": "center",
+            "text_size": "medium",
+            "text_color": "black",
+            "subheading": "",
+            "title": "",
+            "description": "<p><\/p>",
+            "image_link": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "sf__btn-primary",
+            "button_size": "",
+            "show_footer": false,
+            "footer_alignment": "end",
+            "footer_text": "New Collection",
+            "footer_button": "Shop Now",
+            "footer_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14651341013040__b57e699f-3262-4638-83ae-d5bde215b47f-1666360165caaac5b6-0"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "slideshow_height": "adapt",
+        "show_overlay": false,
+        "dots_position": "bottom",
+        "dots_color": "dark",
+        "show_dots": false,
+        "show_arrows": false,
+        "autorotate": false,
+        "autorotate_speed": 5,
+        "use_content_above": false,
+        "custom_class": "featured_logos"
+      }
+    },
+    "1655514900c1eb0ac0": {
+      "type": "icon-box",
+      "blocks": {
+        "1655514900f976402f-0": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2022-11-01T113831.908.png",
+            "image_by_url": "",
+            "title": "Natural Ingredients",
+            "description": "<p>It's in the name and in our products. We only use the best natural ingredients found on earth.<\/p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        },
+        "1655514900f976402f-1": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2022-11-01T113950.721.png",
+            "image_by_url": "",
+            "title": "Transparent Formulas",
+            "description": "<p>Everything we do is open-source. It's your right to know what you're putting into your body.<\/p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        },
+        "1655514900f976402f-2": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2022-11-01T114109.602.png",
+            "image_by_url": "",
+            "title": "Lab Tested + Verified",
+            "description": "<p>We test for purity, potency and quality. Then share the results with you for every single batch.<\/p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "1655514900f976402f-0",
+        "1655514900f976402f-1",
+        "1655514900f976402f-2"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "#f8f8f8",
+        "item_per_row": 3,
+        "item_gap": 30,
+        "item_gap_mobile": 10,
+        "card_style": "vertical",
+        "image_max_width": "200px",
+        "content_alignment": "center",
+        "hover_effect": "zoom-in",
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "use_scroll_mobile": false,
+        "use_grid_column_mb": false,
+        "custom_class": ""
+      }
+    },
+    "165549476686868d1f": {
+      "type": "brands-list",
+      "disabled": true,
+      "blocks": {
+        "1655494766178c89ec-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-05-24_at_11.15.07_AM.png",
+            "image_by_url": "",
+            "image_link": "",
+            "max_width": "150px"
+          }
+        },
+        "1655494766178c89ec-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-05-24_at_11.14.54_AM.png",
+            "image_by_url": "",
+            "image_link": "",
+            "max_width": "150px"
+          }
+        },
+        "1655494766178c89ec-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-05-24_at_11.15.13_AM.png",
+            "image_by_url": "",
+            "image_link": "",
+            "max_width": "150px"
+          }
+        },
+        "1655494766178c89ec-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-05-24_at_11.14.48_AM.png",
+            "image_by_url": "",
+            "image_link": "",
+            "max_width": "150px"
+          }
+        },
+        "82f82d1e-701c-40b4-9a1c-b38b12f96ad8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-05-24_at_11.15.01_AM.png",
+            "image_by_url": "",
+            "image_link": "",
+            "max_width": "150px"
+          }
+        }
+      },
+      "block_order": [
+        "1655494766178c89ec-0",
+        "1655494766178c89ec-1",
+        "1655494766178c89ec-2",
+        "1655494766178c89ec-3",
+        "82f82d1e-701c-40b4-9a1c-b38b12f96ad8"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_per_row": 5,
+        "enable_slider": true,
+        "autorotate": true,
+        "autorotate_speed": 3,
+        "custom_class": "brandlogosection"
+      }
+    },
+    "165551407715f56db9": {
+      "type": "product-tabs",
+      "blocks": {
+        "361b088a-ceff-4d67-bb18-5337ffdd8414": {
+          "type": "tab",
+          "settings": {
+            "title": "Best Sellers",
+            "collection": "best-sellers"
+          }
+        },
+        "5adb0ec0-722e-4a6b-b74c-3544716222fc": {
+          "type": "tab",
+          "settings": {
+            "title": "Sleep",
+            "collection": "sleep"
+          }
+        },
+        "16555140775762d773-0": {
+          "type": "tab",
+          "settings": {
+            "title": "Mood",
+            "collection": "mood"
+          }
+        },
+        "c6d1c494-bd13-4503-8572-d98f0af63e9f": {
+          "type": "tab",
+          "settings": {
+            "title": "Focus and Memory",
+            "collection": "focus-and-memory"
+          }
+        },
+        "d3951c25-6eb2-4745-b51e-2d197cba3512": {
+          "type": "tab",
+          "settings": {
+            "title": "Essentials",
+            "collection": "essentials"
+          }
+        }
+      },
+      "block_order": [
+        "361b088a-ceff-4d67-bb18-5337ffdd8414",
+        "5adb0ec0-722e-4a6b-b74c-3544716222fc",
+        "16555140775762d773-0",
+        "c6d1c494-bd13-4503-8572-d98f0af63e9f",
+        "d3951c25-6eb2-4745-b51e-2d197cba3512"
+      ],
+      "settings": {
+        "heading": "SHOP NOW",
+        "subheading": "",
+        "description": "Trusted by 100,000's of Happy Customers",
+        "header_alignment": "left",
+        "container": "container-fluid",
+        "background_color": "#ffffff",
+        "tab_header": "inline",
+        "limit": 4,
+        "show_button": true,
+        "button_type": "link",
+        "button_label": "Shop All →",
+        "button_style": "sf__btn-primary",
+        "button_size": "",
+        "pcard_layout": "",
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "items_per_row": 4,
+        "item_gap": 30,
+        "enable_slider": false,
+        "show_navigation": true,
+        "show_pagination": false,
+        "use_scroll_mobile": true,
+        "item_gap_mobile": 16,
+        "custom_class": ""
+      }
+    },
+    "16558433039797189d": {
+      "type": "testimonials",
+      "disabled": true,
+      "blocks": {
+        "16558433028010edcc-0": {
+          "type": "testimonial",
+          "settings": {
+            "title": "They have helped me with getting closer to my potential.",
+            "description": "<p>My potential in terms of achieving goals I want\/need to achieve and living up to my potential in social interactions where I would normally be stressed out.<\/p>",
+            "footer": "<p>Ian<\/p>",
+            "image": "shopify:\/\/shop_images\/potential_80x80_crop_center_c82d4c77-9acf-40b6-9ba2-e4bf84a6e0bb.webp",
+            "image_text": "<p><\/p>",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "16558433028010edcc-1": {
+          "type": "testimonial",
+          "settings": {
+            "title": "I am motivated, happier...",
+            "description": "<p>Natural Stacks has helped me to become the person I’ve always wanted to be. I am motivated, happier ... I’ve become less pessimistic around my friends and family, who are also happier seeing I’ve made such progress.<\/p>",
+            "footer": "<p>Lisa<\/p>",
+            "image": "shopify:\/\/shop_images\/goodbye_pessimism_80x80_crop_center_587506a7-fabc-4810-af0c-e2282f6d267e.webp",
+            "image_text": "<p><\/p>",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "16558433028010edcc-2": {
+          "type": "testimonial",
+          "settings": {
+            "title": "WAY easier for me to purchase with confidence.",
+            "description": "<p>The health and wellness\/supplement industry sucks now a days and I never feel truly confident in what I’m putting in my body. I trust the 3rd party testing and overall message that Natural Stacks promotes, and they put out the sources and research to back it up.<\/p>",
+            "footer": "<p>James M<\/p>",
+            "image": "shopify:\/\/shop_images\/3rd_party_testing_80x80_crop_center_10534b10-f2e3-48d1-8ac4-2958923f5a75.webp",
+            "image_text": "<p><\/p>",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "16558433028010edcc-3": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Rarely do I feel such a connection and a tribe vibe with a company and their mission.",
+            "description": "<p>Nobody wants their products filled with cheap unhealthy fillers your body doesn't need (other companies also hide these). I've been searching for a company that doesn't load the BS, just the good stuff who is true to their customers. I've found that in Natural Stacks.<\/p>",
+            "footer": "<p>Rory B<\/p>",
+            "image": "shopify:\/\/shop_images\/RoryB_80x80_crop_center_d973a8b0-e384-40f0-b49e-07956ddcd1af.webp",
+            "image_text": "<p><\/p>",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "16558433028010edcc-4": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Products I can 100% trust EVERY SINGLE TIME",
+            "description": "<p>By offering products I can 100% trust EVERY SINGLE TIME, I feel comfortable trying out new things in order to improve my performance and just live a happier life.<\/p>",
+            "footer": "<p>Eduard E<\/p>",
+            "image": "shopify:\/\/shop_images\/EE_80x80_crop_center_008c0cd3-dd67-41ee-b73e-582ab58ab21e.webp",
+            "image_text": "<p><\/p>",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "16558433028010edcc-5": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Natural Stacks do it all with flying colors.",
+            "description": "<p>I wanted to go back to school, but had a lot on my plate. Natural Stacks do it all with flying colors. I was able to work a full time job, attend school, train in Capoeira 3 times a week and still keep a 4.0 and get a raise.<\/p>",
+            "footer": "<p>Derek B<\/p>",
+            "image": "shopify:\/\/shop_images\/DerekB_80x80_crop_center_dbb1d9f4-a9ae-417c-87da-f242af257ae6.webp",
+            "image_text": "<p><\/p>",
+            "image_link": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "16558433028010edcc-0",
+        "16558433028010edcc-1",
+        "16558433028010edcc-2",
+        "16558433028010edcc-3",
+        "16558433028010edcc-4",
+        "16558433028010edcc-5"
+      ],
+      "settings": {
+        "heading": "What People Are Saying",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "",
+        "design": "testimonials-3",
+        "show_stars": true,
+        "autorotate": true,
+        "show_navigation": true,
+        "show_pagination": true,
+        "star_color": "#fcc64a",
+        "custom_class": ""
+      }
+    },
+    "6c96d323-0c1c-4eb9-9c0f-ad573212d9a1": {
+      "type": "testimonials1",
+      "blocks": {
+        "08c07014-3afe-42e5-86e8-811ce9bb8fa4": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Katie Wells",
+            "description": "<p>\"My Go To Brand For Brain-Enhancing Supplements\"<\/p>",
+            "author": "<p>Influencer, Wellness Enthusiast<\/p>",
+            "image": "shopify:\/\/shop_images\/test1.jpg"
+          }
+        },
+        "62e52096-7485-47af-b73e-5fdd01452a9c": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Ulrike F.",
+            "description": "<p>\"It really helps me to focus, think more clearly and faster\"<\/p>",
+            "author": "<p>Dopamine Brain Food Customer<\/p>",
+            "image": "shopify:\/\/shop_images\/test3.jpg"
+          }
+        },
+        "78bda98a-3301-4191-abdd-fe55ec77eb8d": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Martin Jacobson",
+            "description": "<p>\"...gives me a mental clearness and boost to conquer the day\"<\/p>",
+            "author": "<p>WSOP Champion<\/p>",
+            "image": "shopify:\/\/shop_images\/00mar.jpg"
+          }
+        },
+        "8280adbf-5977-4a39-9342-33c6eb86820e": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Mattias Ribbing",
+            "description": "<p>\"My fastest times were all on Natural Stacks\"<\/p>",
+            "author": "<p>Grandmaster of Memory<\/p>",
+            "image": "shopify:\/\/shop_images\/MattiasNy2Small-732x1024.jpg"
+          }
+        },
+        "d4116f53-d456-4bd7-9ead-402f4dbc4789": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Kyle Lasota",
+            "description": "<p>\"It's hard to find clean supplements that work.\"<\/p>",
+            "author": "<p>Influencer, Health Coach<\/p>",
+            "image": "shopify:\/\/shop_images\/test4.jpg"
+          }
+        },
+        "40971f89-472b-449d-811a-149e7e28971f": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Keisha D.",
+            "description": "<p>\"I never go to bed without taking my GABA Brain Food!\"<\/p>",
+            "author": "<p>Dean D., Gaba Brain Food Customer<\/p>",
+            "image": "shopify:\/\/shop_images\/test2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "08c07014-3afe-42e5-86e8-811ce9bb8fa4",
+        "62e52096-7485-47af-b73e-5fdd01452a9c",
+        "78bda98a-3301-4191-abdd-fe55ec77eb8d",
+        "8280adbf-5977-4a39-9342-33c6eb86820e",
+        "d4116f53-d456-4bd7-9ead-402f4dbc4789",
+        "40971f89-472b-449d-811a-149e7e28971f"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "16226905136ce4269f": {
+      "type": "custom-content",
+      "blocks": {
+        "1dd7af76-ebfe-417a-a96d-a4f1ab210d8e": {
+          "type": "text",
+          "settings": {
+            "title": "<span class=\"leading-tight\">Support Your Brain From Sunrise to Sunset<\/span>",
+            "subheading": "<img style=\"max-width: 100px;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0269\/3025\/files\/141725.png?v=1655512176\">",
+            "text": "<p>The complete system to master your neurotransmitters, and claim ultimate control over your focus, your mood, and your life. <strong>Every batch is 3rd party lab tested and results can be felt on the first dose.<\/strong><\/p>",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "white",
+            "button_label": "Shop The Brain Food Collection",
+            "button_link": "https:\/\/www.naturalstacks.com\/collections\/brain-food",
+            "button_style": "sf__btn-white",
+            "button_size": "sf__btn-large",
+            "block_custom_class": ""
+          }
+        },
+        "fe92849d-2019-4ef9-9c96-096cd358296c": {
+          "type": "video",
+          "settings": {
+            "video_link": "https:\/\/www.youtube.com\/watch?v=DsyeWt5L0lA",
+            "ratio": "4:3",
+            "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_3.gif",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "large",
+            "autoplay": false,
+            "loop": false,
+            "muted": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "1dd7af76-ebfe-417a-a96d-a4f1ab210d8e",
+        "fe92849d-2019-4ef9-9c96-096cd358296c"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "w-full",
+        "background_color": "#fcc64a",
+        "gap": 0,
+        "use_scroll_mobile": false,
+        "gap_mobile": 16,
+        "custom_class": "sf__index-custom-content"
+      }
+    },
+    "1656269821c25dd3f4": {
+      "type": "QQ-ComparisonTable",
+      "blocks": {
+        "16562698204e5a9f58-0": {
+          "type": "content_row",
+          "settings": {
+            "row_title": "Targeting",
+            "column_icon_1": false,
+            "column_1": "<p><strong>Targeting a singular cognitive function <\/strong><\/p>",
+            "column_icon_2": false,
+            "column_2": "<p>One-size-fits-all approach<\/p>",
+            "column_icon_3": false,
+            "column_3": "<p>Column 3 Value<\/p>",
+            "column_icon_4": false,
+            "column_4": "<p>Column 4 Value<\/p>"
+          }
+        },
+        "16562698204e5a9f58-1": {
+          "type": "content_row",
+          "settings": {
+            "row_title": "Effectiveness",
+            "column_icon_1": false,
+            "column_1": "<p><strong>Results on the first dose<\/strong><\/p>",
+            "column_icon_2": false,
+            "column_2": "<p>Take for 30 days to get results<\/p>",
+            "column_icon_3": false,
+            "column_3": "<p>Column 3 Value<\/p>",
+            "column_icon_4": false,
+            "column_4": "<p>Column 4 Value<\/p>"
+          }
+        },
+        "16562698204e5a9f58-2": {
+          "type": "content_row",
+          "settings": {
+            "row_title": "Transparency",
+            "column_icon_1": false,
+            "column_1": "<p><strong>Full label disclosure & ingredient traceability<\/strong><\/p>",
+            "column_icon_2": false,
+            "column_2": "<p>“Proprietary” non-transparent  formulas<\/p>",
+            "column_icon_3": false,
+            "column_3": "<p>Column 3 Value<\/p>",
+            "column_icon_4": false,
+            "column_4": "<p>Column 4 Value<\/p>"
+          }
+        },
+        "8b1ab516-bc4d-4b68-ae15-a61c9e5e56f6": {
+          "type": "content_row",
+          "settings": {
+            "row_title": "Ingredients",
+            "column_icon_1": false,
+            "column_1": "<p><strong>4-5 synergistic ingredients<\/strong><\/p>",
+            "column_icon_2": false,
+            "column_2": "<p>10-15 different ingredients at low-doses<\/p>",
+            "column_icon_3": false,
+            "column_3": "<p>Column 3 Value<\/p>",
+            "column_icon_4": false,
+            "column_4": "<p>Column 4 Value<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16562698204e5a9f58-0",
+        "16562698204e5a9f58-1",
+        "16562698204e5a9f58-2",
+        "8b1ab516-bc4d-4b68-ae15-a61c9e5e56f6"
+      ],
+      "settings": {
+        "section_class": "showDesktop",
+        "section_title": "The Natural Stacks Difference",
+        "section_title_type": "h2",
+        "num_of_columns": 2,
+        "column_header_image_1": "shopify:\/\/shop_images\/1238943_606683946037694_365369422_n_256x256_1.png",
+        "column_header_title_1": "",
+        "column_header_text_1": "Natural Stacks",
+        "column_header_image_2": "shopify:\/\/shop_images\/Untitled_design_-_2022-06-26T120700.662.png",
+        "column_header_title_2": "",
+        "column_header_text_2": "Other Brands",
+        "column_header_title_3": "Column 3 Title",
+        "column_header_text_3": "Subtitle",
+        "column_header_title_4": "Column 4 Title",
+        "column_header_text_4": "Subtitle",
+        "column_image_margin_bottom": 20,
+        "column_image_margin_bottom_mobile": 20,
+        "navigation_icon_color": "#ffffff",
+        "navigation_icon_background_color": "#4a4b47",
+        "mobile_columns": "1",
+        "mobile_columns_margin": 20,
+        "section_background_color": "#f8f8f8",
+        "section_width": "fullwidth",
+        "content_max_width": 1280,
+        "border_width": 5,
+        "border_color": "#f8f8f8",
+        "border_vertical": true,
+        "border_horizontal": true,
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "section_padding_top": 100,
+        "section_padding_bottom": 100,
+        "section_margin_top_mobile": 0,
+        "section_margin_bottom_mobile": 0,
+        "section_padding_top_mobile": 50,
+        "section_padding_bottom_mobile": 50,
+        "section_title_color": "",
+        "section_title_custom_font": false,
+        "section_title_font": "mono",
+        "section_title_font_name": "",
+        "section_title_font_weight": "default",
+        "section_title_margin_bottom": 20,
+        "section_title_font_size": 0,
+        "section_title_letter_spacing": 0,
+        "section_title_line_height": 0,
+        "section_title_margin_bottom_mobile": 20,
+        "section_title_font_size_mobile": 0,
+        "section_title_letter_spacing_mobile": 0,
+        "section_title_line_height_mobile": 0,
+        "column_title_color": "",
+        "column_title_custom_font": false,
+        "column_title_font": "mono",
+        "column_title_font_name": "",
+        "column_title_font_weight": "default",
+        "column_title_text_alignment": "center",
+        "column_title_padding_horizontal": 20,
+        "column_title_font_size": 0,
+        "column_title_letter_spacing": 0,
+        "column_title_line_height": 0,
+        "column_title_text_alignment_mobile": "center",
+        "column_title_padding_horizontal_mobile": 20,
+        "column_title_font_size_mobile": 0,
+        "column_title_letter_spacing_mobile": 0,
+        "column_title_line_height_mobile": 0,
+        "column_subtitle_color": "",
+        "column_subtitle_custom_font": false,
+        "column_subtitle_font": "mono",
+        "column_subtitle_font_name": "",
+        "column_subtitle_font_weight": "default",
+        "column_subtitle_text_alignment": "center",
+        "column_subtitle_padding_horizontal": 20,
+        "column_subtitle_font_size": 0,
+        "column_subtitle_letter_spacing": 0,
+        "column_subtitle_line_height": 0,
+        "column_subtitle_text_alignment_mobile": "center",
+        "column_subtitle_padding_horizontal_mobile": 20,
+        "column_subtitle_font_size_mobile": 0,
+        "column_subtitle_letter_spacing_mobile": 0,
+        "column_subtitle_line_height_mobile": 0,
+        "row_title_color": "",
+        "row_title_custom_font": false,
+        "row_title_font": "mono",
+        "row_title_font_name": "",
+        "row_title_font_weight": "default",
+        "row_title_text_alignment": "center",
+        "row_title_padding_horizontal": 20,
+        "row_title_font_size": 23,
+        "row_title_letter_spacing": 0,
+        "row_title_line_height": 0,
+        "row_title_text_alignment_mobile": "center",
+        "row_title_padding_horizontal_mobile": 20,
+        "row_title_font_size_mobile": 0,
+        "row_title_letter_spacing_mobile": 0,
+        "row_title_line_height_mobile": 0,
+        "column_cell_background_color": "#ffffff",
+        "column_cell_color": "",
+        "column_cell_custom_font": false,
+        "column_cell_font": "mono",
+        "column_cell_font_name": "",
+        "column_cell_font_weight": "default",
+        "column_cell_text_alignment": "center",
+        "column_cell_min_height": 70,
+        "column_cell_padding_vertical": 20,
+        "column_cell_padding_horizontal": 20,
+        "column_cell_font_size": 0,
+        "column_cell_letter_spacing": 0,
+        "column_cell_line_height": 0,
+        "column_cell_text_alignment_mobile": "center",
+        "column_cell_padding_vertical_mobile": 20,
+        "column_cell_padding_horizontal_mobile": 20,
+        "column_cell_font_size_mobile": 0,
+        "column_cell_letter_spacing_mobile": 0,
+        "column_cell_line_height_mobile": 0
+      }
+    },
+    "165636051046bbb5b1": {
+      "type": "custom-content",
+      "blocks": {
+        "165636050935d70b38-0": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "subheading": "<center><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0269\/3025\/t\/307\/assets\/open-source_afc2b407-d8bc-49f3-9e12-61f59bdf3054-1644335778269.png?v=1644335779\" alt=\"open_source\" width=\"258\" height=\"149\"><\/center>\n<br>",
+            "text": "<p>Learn More About Our Commitment to Transparency<\/p>",
+            "width": "100%",
+            "alignment": "center",
+            "align_text": "center",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "LEARN MORE",
+            "button_link": "https:\/\/www.naturalstacks.com\/pages\/open-source",
+            "button_style": "sf__btn-primary",
+            "button_size": "sf__btn-large",
+            "block_custom_class": ""
+          }
+        },
+        "19c4f2aa-9e60-42d8-ae5a-d5a75f843d83": {
+          "type": "html",
+          "settings": {
+            "code": "<br>\n<br><br><br>",
+            "width": "50%",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "165636050935d70b38-0",
+        "19c4f2aa-9e60-42d8-ae5a-d5a75f843d83"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "w-full",
+        "background_color": "#f8f8f8",
+        "gap": 0,
+        "use_scroll_mobile": false,
+        "gap_mobile": 12,
+        "custom_class": "section-py"
+      }
+    },
+    "1622692989745ca65f": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_gap": 100,
+        "item_gap_mobile": 10,
+        "image": "shopify:\/\/shop_images\/1_7.jpg",
+        "link": "",
+        "layout": "left",
+        "image_column_size": "6",
+        "hover_effect": true,
+        "title": "<span class=\"leading-tight\">Not Sure Which Stack Is Right For You?<\/span>",
+        "sub_title": "BRAIN ASSESSMENT QUIZ",
+        "text": "<p>Take our brain assessment quiz to find out which stacks are right for you.<\/p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "Take The Quiz →",
+        "button_link": "https:\/\/www.naturalstacks.com\/pages\/brain-assessment-quiz-1",
+        "button_style": "sf__btn-primary",
+        "button_size": "sf__btn-large",
+        "custom_class": ""
+      }
+    },
+    "8d388aff-0214-4912-82e6-dff5aa45613f": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "container": "container-fluid",
+        "background_color": "#f8f8f8",
+        "item_gap": 100,
+        "item_gap_mobile": 30,
+        "image": "shopify:\/\/shop_images\/FOCUS_STACK_TEST-17.jpg",
+        "link": "",
+        "layout": "right",
+        "image_column_size": "6",
+        "hover_effect": true,
+        "title": "Get Started With a Stack Box",
+        "sub_title": "A NEW APPROACH TO SUPPLEMENTS",
+        "text": "<p>Natural Stacks was built on “stacking” multiple supplements together to support brain health, gut health, sleep, focus, and much more. Customers also love these stacks because they save big with every purchase. Find the perfect stack for you today.<\/p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "Choose Your Stack →",
+        "button_link": "https:\/\/www.naturalstacks.com\/collections\/stacks",
+        "button_style": "sf__btn-primary",
+        "button_size": "sf__btn-large",
+        "custom_class": ""
+      }
+    },
+    "f75e3c02-0af6-42c6-afa0-cae5e017d539": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_gap": 100,
+        "item_gap_mobile": 30,
+        "image": "shopify:\/\/shop_images\/Untitled_design_-_2022-11-04T090844.494.png",
+        "link": "",
+        "layout": "left",
+        "image_column_size": "6",
+        "hover_effect": true,
+        "title": "Now Available At Your Favorite Retail Locations",
+        "sub_title": "STORE LOCATOR",
+        "text": "<p>Click below to access our store locator and find our stacks at a store near you.<\/p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "Find A Store",
+        "button_link": "https:\/\/www.naturalstacks.com\/pages\/store-locator",
+        "button_style": "sf__btn-primary",
+        "button_size": "sf__btn-large",
+        "custom_class": ""
+      }
+    },
+    "1656019540ea829bd3": {
+      "type": "custom-content",
+      "blocks": {
+        "1656019539c67aae02-0": {
+          "type": "text",
+          "settings": {
+            "title": "Trusted by Hundreds of Healthcare Practitioners",
+            "subheading": "",
+            "text": "<p>Meet The Health Practitioners Building Better Brains<\/p>",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "white",
+            "button_label": "Practitioner Partner Network",
+            "button_link": "https:\/\/www.naturalstacks.com\/pages\/practitioner-partner-network",
+            "button_style": "sf__btn-primary",
+            "button_size": "sf__btn-large",
+            "block_custom_class": ""
+          }
+        },
+        "93afc72e-aadf-4096-9c5f-9ab66cb4f59d": {
+          "type": "video",
+          "settings": {
+            "video_link": "https:\/\/www.youtube.com\/watch?v=-VNn9eUOjos",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "outline",
+            "play_size": "medium",
+            "autoplay": false,
+            "loop": false,
+            "muted": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "1656019539c67aae02-0",
+        "93afc72e-aadf-4096-9c5f-9ab66cb4f59d"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "#001e60",
+        "gap": 30,
+        "use_scroll_mobile": false,
+        "gap_mobile": 16,
+        "custom_class": ""
+      }
+    },
+    "165696435102f0e802": {
+      "type": "custom-content",
+      "blocks": {
+        "b2cc7f8d-e7ae-4f46-9e96-139794dc250d": {
+          "type": "social",
+          "settings": {
+            "heading": "",
+            "description": "<p><\/p>",
+            "width": "100%",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "b2cc7f8d-e7ae-4f46-9e96-139794dc250d"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "gap": 30,
+        "use_scroll_mobile": false,
+        "gap_mobile": 16,
+        "custom_class": ""
+      }
+    },
+    "165696400614da90c7": {
+      "type": "apps",
+      "blocks": {
+        "c005ad21-7125-44cf-b993-5c1b6a573a07": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-grid\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "c005ad21-7125-44cf-b993-5c1b6a573a07"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "custom_class": ""
+      }
+    },
+    "1656363948285b7839": {
+      "type": "custom-content",
+      "blocks": {
+        "1656363948c8acd893-0": {
+          "type": "text",
+          "settings": {
+            "title": "In Search of a Cure",
+            "subheading": "",
+            "text": "<p>Natural Stacks donates to the Cure Alzheimer’s Fund, a non-profit organization that leads research with the highest probability of preventing, slowing or reversing Alzheimer’s, a neurodegenerative disease impacting approximately 30 million people.<\/p>",
+            "width": "66%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "sf__btn-primary",
+            "button_size": "",
+            "block_custom_class": ""
+          }
+        },
+        "1656363948c8acd893-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-cure_2x_1_660x440_5d8696e2-9143-4081-85c0-af68adabb1a5.webp",
+            "link": "",
+            "width": "33%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "1656363948c8acd893-0",
+        "1656363948c8acd893-1"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "#f8f8f8",
+        "gap": 30,
+        "use_scroll_mobile": false,
+        "gap_mobile": 16,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "aa99915c-afb7-4fbe-be88-430001227170",
+    "b57e699f-3262-4638-83ae-d5bde215b47f",
+    "1655514900c1eb0ac0",
+    "165549476686868d1f",
+    "165551407715f56db9",
+    "16558433039797189d",
+    "6c96d323-0c1c-4eb9-9c0f-ad573212d9a1",
+    "16226905136ce4269f",
+    "1656269821c25dd3f4",
+    "165636051046bbb5b1",
+    "1622692989745ca65f",
+    "8d388aff-0214-4912-82e6-dff5aa45613f",
+    "f75e3c02-0af6-42c6-afa0-cae5e017d539",
+    "1656019540ea829bd3",
+    "165696435102f0e802",
+    "165696400614da90c7",
+    "1656363948285b7839"
+  ]
+}

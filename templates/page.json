@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "settings": {}
+    },
+    "df61232a-769c-4876-9c39-6aca744c4353": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "heading": "PRACTITIONER PARTNER NETWORK",
+        "subheading": "Meet The Health Practitioners Building Better Brains",
+        "description": "Meet the Natural Stacks Practitioner Partners, a network of health and wellness experts leading the natural mental health movement. Together, we are sharing our knowledge and expertise to help you think clearly, focus for hours, and have a balanced mood.",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "blog": "influencer",
+        "limit": 12,
+        "column": 4,
+        "column_gap": 30,
+        "mobile_gap": 10,
+        "article_image_aspect_ratio": "3\/4",
+        "article_align_content": "text-center",
+        "article_show_tags": false,
+        "article_show_date": false,
+        "article_show_excerpt": false,
+        "article_show_button": false,
+        "button_link": "",
+        "button_text": "View More",
+        "button_style": "sf__btn-primary",
+        "button_size": "",
+        "use_scroll_mobile": false,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "df61232a-769c-4876-9c39-6aca744c4353"
+  ]
+}

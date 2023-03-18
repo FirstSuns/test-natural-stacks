@@ -1,0 +1,74 @@
+<div class="subscription-wrapper">
+  <div class='rc-tab-wrapper'>
+    {% assign ind = 0 %}
+    {% for selling_plan_gr in product.selling_plan_groups %}
+      <div class='rc-tab'>
+        <label class="rc-radio{% if ind == 0 %} rc-radio--active{% endif %} subscription-radio px-3 py-2" for="rc-radio{{ ind }}">
+          <input id="rc-radio{{ ind }}" class="rc-radio__input m-0 mr-3" type="radio" name="purchaseOption" value="subscription">
+          <span class="rc-radio__label">
+            <span class="discount-label">{% comment %}{{ selling_plan_gr.name}}{% endcomment %} Subscribe & Save 20%</span>
+          </span>
+        </label>
+      </div>
+      {% assign ind = ind | plus: 1 %}
+      {% break %}
+    {% endfor %}
+    <div class='rc-tab'>
+      <label class="rc-radio{% if ind == 0 %} rc-radio--active{% endif %} onetime-radio px-3 py-2" for="rc-radio{{ ind }}">
+        <input id="rc-radio{{ ind }}" class="rc-radio__input m-0 mr-3" type="radio" name="purchaseOption" value="onetime">
+        <span class="rc-radio__label">
+          <span class="discount-label">One-time Purchase</span>
+        </span>
+      </label>
+    </div>
+  </div>
+  
+  <div class='rc-content-wrapper'>
+    {% assign ind = 0 %}
+    {% for selling_plan_gr in product.selling_plan_groups %}
+      <div class='rc-content{% if ind == 0 %} rc-content--active{% endif %}' data-for="rc-radio{{ ind }}">
+        <div class="flexrow">
+          <strong>Deliver </strong>
+          <select class="rc-subscription_frequency">
+            {% for plan in selling_plan_gr.selling_plans %}
+              <option value="{{ plan.id }}">{{ plan.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="subscription_content">
+          <ul>
+            <li>
+              <div class="tick_LmPVG"></div>
+              <div>Free USA Shipping</div>
+            </li>
+            <li>
+              <div class="tick_LmPVG"></div>
+              <div>20% OFF on Every Order</div>
+            </li>
+            <li>
+              <div class="tick_LmPVG"></div>
+              <div>Change, Pause or Cancel Any Time</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {% assign ind = ind | plus: 1 %}
+      {% break %}
+    {% endfor %}
+
+    <div class='rc-content{% if ind == 0 %} rc-content--active{% endif %}' data-for="rc-radio{{ ind }}">
+      <div class="otp-info">
+        <div class="otp-info-icon">
+          <img src="https://cdn.shopify.com/s/files/1/0269/3025/files/Untitled-1_1_70x.png?v=1669657645" alt="OTP" loading="lazy">
+        </div>
+        <div class="otp-info-text">
+          <span class="switch-call">Switch to a subscription and save 20%</span>
+          <p>Convenient way to get <b>Free Shipping</b> and best prices. You can change or cancel your subscription any time!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <input type="hidden" name="selling_plan" value="" />
+</div>

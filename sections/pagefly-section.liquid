@@ -1,0 +1,139 @@
+
+{% if request.design_mode %}
+<style>.pf-ph{font-size:14px!important;background:#fafafa;padding:20px;text-align:center;border:1px solid #f0f0f0;border-radius:4px;margin:15px}.pf-ph span{display:block;background:#e6f7ff;padding:8px 15px;border:1px solid #91d5ff}</style>
+{% endif %}
+{% if section.settings.section_id.size > 0 %}
+  {% assign snippet_name = section.settings.section_id %}
+  {% render 'pagefly-settings' %}
+  {% include snippet_name %}
+  {% else %}
+    
+    {% if request.design_mode %}
+      <div class="pf-ph">
+        <h3>PageFly Section</h3>
+        <span>No section selected. Please select your section from the list</span>
+      </div>
+    {% endif %}
+  
+{% endif %}
+
+{% schema %}
+{
+  "name": "PageFly Section",
+  "settings": [
+    {
+      "id": "section_id",
+      "type": "select",
+      "label": "Sections",
+      "options": [
+        {
+          "label": "Select section",
+          "value": ""
+        },
+        {
+          "label": "Dopamine Ingredients",
+          "value": "pf-b1b08cf3"
+        },
+        {
+          "label": "Low D - Intro",
+          "value": "pf-02b7a1f1"
+        },
+        {
+          "label": "Low D Header",
+          "value": "pf-bbd58eb4"
+        },
+        {
+          "label": "Dopamine Ingredients",
+          "value": "pf-3004c5c1"
+        },
+        {
+          "label": "NF - Buy Box",
+          "value": "pf-5e638f65"
+        },
+        {
+          "label": "NF - Patent + Reviews",
+          "value": "pf-b0785e63"
+        },
+        {
+          "label": "NF - Suggested Use",
+          "value": "pf-785e638f"
+        },
+        {
+          "label": "NF Ingredients",
+          "value": "pf-f7b0785e"
+        },
+        {
+          "label": "NF - How it Works",
+          "value": "pf-ef1dd615"
+        },
+        {
+          "label": "MagTech Offer Top Section",
+          "value": "pf-78cbd7b6"
+        },
+        {
+          "label": "How To Manage Subscription Order",
+          "value": "pf-5b30f0d9"
+        },
+        {
+          "label": "How to manage subscription MOBILE Section 2",
+          "value": "pf-c4060223"
+        },
+        {
+          "label": "Managing account pt 2 MOBILE",
+          "value": "pf-dc155f30"
+        },
+        {
+          "label": "How To Manage Subscription MOBILE",
+          "value": "pf-bcb520fa"
+        },
+        {
+          "label": "How To Create Subscription MOBILE",
+          "value": "pf-fd762820"
+        },
+        {
+          "label": "How To Manage Subscription Order Pt 2",
+          "value": "pf-40f43d72"
+        },
+        {
+          "label": "How To Create Subscription Order",
+          "value": "pf-e74652e2"
+        },
+        {
+          "label": "Dynamic Limited Stacks",
+          "value": "pf-cbd7040c"
+        },
+        {
+          "label": "Logo Footer",
+          "value": "pf-26db21f0"
+        },
+        {
+          "label": "The Natural Stacks Difference",
+          "value": "pf-78975810"
+        },
+        {
+          "label": "NS PRO Top Section",
+          "value": "pf-100c2816"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Find and edit your section on the [section listing](https://apps.pagefly.io/sections)"
+    },
+    {
+      "type": "paragraph",
+      "content": "To add block to a section, please use the App Block element on PageFly section editor."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PageFly Section"
+    }
+  ]
+}
+{% endschema %}

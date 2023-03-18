@@ -1,0 +1,389 @@
+<script type="application/javascript">
+    window.mtBuildYourOwnStack = {
+        collection: {{ collections['build-your-own-stack'].products | json }},
+        discountThreshold: {{ section.settings.discount_threshold }},
+        collection1: {{ collections['byos-neurotransmitter-support'].products | json }},
+        collection2: {{ collections['byos-mental-performance'].products | json }},
+        collection3: {{ collections['byos-daily-essentials'].products | json }}
+    }
+</script>
+
+<div class="page" id="page">
+    <div id="mt-build-your-own-stack">
+        <mt-build-your-own-stack inline-template>
+            <div>
+                {% comment %}<header class="mt-8 md:mt-12 px-4">
+                  <h1  class="text-4xl lg:text-5xl mb-8 md:mb-12 uppercase text-center text-heading">Build Your Own Stack</h1>
+                </header>{% endcomment %}
+                <header class="mb-8">
+                    <img data-src="{{ section.settings.image_desktop | img_url: 'master' }}"
+                         class="hidden md:block lazyload blur-up w-full">
+                    <img data-src="{{ section.settings.image_mobile | img_url: 'master' }}"
+                         class="md:hidden lazyload blur-up w-full">
+                </header>
+               {% comment %} <section class="instructions mb-12 md:mb-16">
+                    <div class="container mx-auto px-4">
+                        <div class="text-heading text-3xl md:text-4xl text-center mb-2 cursor-pointer"
+                             @click="scrollIntoView('build-your-own-stack')">
+                            <span class="step"><b>Instructions:</b></span> Choose 1 (or more) from each category below and <b class="underline">get {{ section.settings.discount_amount }}% OFF</b>!
+                        </div>
+                    </div>
+                </section>{% endcomment %}
+
+                <section class="container mx-auto px-4 build-your-own-stack">
+                    <div id="build-your-own-stack"></div>
+                    <div class="flex flex-wrap xl:flex-no-wrap flex-row">
+                        <div class="collection__inner pb-12 md:pb-16">
+                            <div class="container mx-auto px-4 mb-12 md:mb-16">
+                                <div class="flex items-center justify-center mb-8 banner"><h3 class="text-heading text-center uppercase text-2xl md:text-3xl">Neurotransmitter Support</h3></div>
+
+                                <div class="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 flex grid gap-8 gap-y-12">
+                                    {% for product in collections['byos-neurotransmitter-support'].products %}
+                                        <article class="flex flex-wrap">
+                                            <h1 class="uppercase text-center mb-4 text-xl md:text-2xl w-full">
+                                                <div class="text-black title--w-decoration">
+                                                    {{ product.title }}
+                                                </div>
+                                            </h1>
+                                            <div class="flex items-center justify-center mb-4 w-full">
+                                                {% include 'okendo-reviews-product-rating-summary' %}
+                                            </div>
+                                            <figure class="product-list-item-thumbnail mx-auto mb-4 border">
+                                              <img src="{{ product.featured_image | img_url: 'master' }}" />
+                                            </figure>
+                                            <div class="text-center font-bold uppercase my-2 w-full">
+                                                Neurotransmitter Support
+                                            </div>
+                                            <div class="product-list-item-details w-full mt-auto">
+                                                <div class="pb-2 text-center text-xl md:text-2xl font-medium">
+                                                <span class="price">
+                                                  <span class="money text-black">{{ product.price_min | money }}</span>
+                                                    {% if product.compare_at_price_min > product.price_min %}
+                                                        <span class="text-red-600 line-through ml-2">
+                                                            {{ product.compare_at_price_min | money }}
+                                                        </span>
+                                                    {% endif %}
+                                                </span>
+                                                </div>
+
+                                                <div class="mb-4">
+                                                    <ul>
+                                                        <li v-for="bulletPoint in bulletPoints[{{ product.id }}]"> <span
+                                                                    class="pl-1">
+                                                            <img src="//cdn.shopify.com/s/files/1/0269/3025/t/308/assets/icon-check.svg?v=4784645647430966055"
+                                                                 class="mr-1" alt="">
+                                                            {% raw %}{{bulletPoint}}{% endraw %}</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="flex justify-center">
+                                                    <div class="product-form-submit-wrap collection-buy-button w-full"
+                                                         v-cloak>
+                                                        <button class="button collection-more-info text-white"
+                                                                @click="addToCart({{ product.id }}, 'blackFriday')">
+                                                            <span v-if="itemCountNew === 0 && adding != {{ product.id }}">Add to Stack</span>
+                                                            <span v-if="itemCountNew !== 0 && itemCountNew < config.discountThreshold && adding != {{ product.id }}">Choose {% raw %}{{ buyMissingCount }}{% endraw %} More</span>
+                                                            <span v-if="buyMissingCount <= 0 && adding != {{ product.id }}">Add to Stack</span>
+                                                            <span v-if="adding == {{ product.id }}">Adding to Cart</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="container mx-auto px-4 mb-12 md:mb-16">
+                                 <div class="flex items-center justify-center mb-8 banner"><h3 class="text-heading text-center uppercase text-2xl md:text-3xl"> Mental Performance</h3></div>
+                                <div class="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 flex grid gap-8 gap-y-12">
+                                    {% for product in collections['byos-mental-performance'].products %}
+                                        <article class="flex flex-wrap">
+                                            <h1 class="uppercase text-center mb-4 text-xl md:text-2xl w-full">
+                                                <div class="text-black title--w-decoration">
+                                                    {{ product.title }}
+                                                </div>
+                                            </h1>
+                                            <div class="flex items-center justify-center mb-4 w-full">
+                                                {% include 'okendo-reviews-product-rating-summary' %}
+                                            </div>
+                                            <figure class="product-list-item-thumbnail mx-auto mb-4 border">
+                                                {% assign image_sizes = "640px:268x268,240x240" %}
+                                                {%
+                                                        include 'rimg',
+                                                        img: product.featured_image,
+                                                        class: 'product-list-item-image',
+                                                        sizes: image_sizes,
+                                                        size: '268x268',
+                                                        crop: 'center',
+                                                        lazy: lazy
+                                                %}
+                                            </figure>
+                                            <div class="text-center font-bold uppercase my-2 w-full">
+                                                 Mental Performance
+                                            </div>
+                                            <div class="product-list-item-details w-full mt-auto">
+                                                <div class="pb-2 text-center text-xl md:text-2xl font-medium">
+                                                <span class="price">
+                                                  <span class="money text-black">{{ product.price_min | money }}</span>
+                                                    {% if product.compare_at_price_min > product.price_min %}
+                                                        <span class="text-red-600 line-through ml-2">
+                                                            {{ product.compare_at_price_min | money }}
+                                                        </span>
+                                                    {% endif %}
+                                                </span>
+                                                </div>
+
+                                                <div class="mb-4">
+                                                    <ul>
+                                                        <li v-for="bulletPoint in bulletPoints[{{ product.id }}]"> <span
+                                                                    class="pl-1">
+                                                            <img src="//cdn.shopify.com/s/files/1/0269/3025/t/308/assets/icon-check.svg?v=4784645647430966055"
+                                                                 class="mr-1" alt="">
+                                                            {% raw %}{{bulletPoint}}{% endraw %}</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="flex justify-center">
+                                                    <div class="product-form-submit-wrap collection-buy-button w-full"
+                                                         v-cloak>
+                                                        <button class="button collection-more-info text-white"
+                                                                @click="addToCart({{ product.id }}, 'blackFriday')">
+                                                            <span v-if="itemCountNew === 0 && adding != {{ product.id }}">Add to Stack</span>
+                                                            <span v-if="itemCountNew !== 0 && itemCountNew < config.discountThreshold && adding != {{ product.id }}">Choose {% raw %}{{ buyMissingCount }}{% endraw %} More</span>
+                                                            <span v-if="buyMissingCount <= 0 && adding != {{ product.id }}">Add to Stack</span>
+                                                            <span v-if="adding == {{ product.id }}">Adding to Cart</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="container mx-auto px-4 ">
+                                <div class="flex items-center justify-center mb-8 banner"><h3 class="text-heading text-center uppercase text-2xl md:text-3xl"> Daily Essentials</h3></div>
+                                <div class="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 flex grid gap-8 gap-y-12">
+                                    {% for product in collections['byos-daily-essentials'].products %}
+                                        <article class="flex flex-wrap">
+                                            <h1 class="uppercase text-center mb-4 text-xl md:text-2xl w-full">
+                                                <div class="text-black title--w-decoration">
+                                                    {{ product.title }}
+                                                </div>
+                                            </h1>
+                                            <div class="flex items-center justify-center mb-4 w-full">
+                                                {% include 'okendo-reviews-product-rating-summary' %}
+                                            </div>
+                                            <figure class="product-list-item-thumbnail mx-auto mb-4 border">
+                                                {% assign image_sizes = "640px:268x268,240x240" %}
+                                                {%
+                                                        include 'rimg',
+                                                        img: product.featured_image,
+                                                        class: 'product-list-item-image',
+                                                        sizes: image_sizes,
+                                                        size: '268x268',
+                                                        crop: 'center',
+                                                        lazy: lazy
+                                                %}
+                                            </figure>
+                                            <div class="text-center font-bold uppercase my-2 w-full">
+                                                Daily Essentials
+                                            </div>
+                                            <div class="product-list-item-details w-full mt-auto">
+                                                <div class="pb-2 text-center text-xl md:text-2xl font-medium">
+                                                <span class="price">
+                                                  <span class="money text-black">{{ product.price_min | money }}</span>
+                                                    {% if product.compare_at_price_min > product.price_min %}
+                                                        <span class="text-red-600 line-through ml-2">
+                                                            {{ product.compare_at_price_min | money }}
+                                                        </span>
+                                                    {% endif %}
+                                                </span>
+                                                </div>
+
+                                                <div class="mb-4">
+                                                    <ul>
+                                                        <li v-for="bulletPoint in bulletPoints[{{ product.id }}]"> <span
+                                                                    class="pl-1">
+                                                            <img src="//cdn.shopify.com/s/files/1/0269/3025/t/308/assets/icon-check.svg?v=4784645647430966055"
+                                                                 class="mr-1" alt="">
+                                                            {% raw %}{{bulletPoint}}{% endraw %}</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="flex justify-center">
+                                                    <div class="product-form-submit-wrap collection-buy-button w-full"
+                                                         v-cloak>
+                                                        <button class="button collection-more-info text-white"
+                                                                @click="addToCart({{ product.id }}, 'blackFriday')">
+                                                            <span v-if="itemCountNew === 0 && adding != {{ product.id }}">Add to Stack</span>
+                                                            <span v-if="itemCountNew !== 0 && itemCountNew < config.discountThreshold && adding != {{ product.id }}">Choose {% raw %}{{ buyMissingCount }}{% endraw %} More</span>
+                                                            <span v-if="buyMissingCount <= 0 && adding != {{ product.id }}">Add to Stack</span>
+                                                            <span v-if="adding == {{ product.id }}">Adding to Cart</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 xl:ml-4 byos-summary">
+                            <div class="sticky">
+                                <div class="text-center font-bold uppercase my-2 w-full text-2xl xl:text-base">
+                                    Your Stack
+                                </div>
+                                <div class="py-6 pt-4 px-4 border">
+                                    <div class="text-center"><span
+                                                class="font-bold text-3xl">{% raw %}{{ itemCountNew }}{% endraw %}</span>/{{ section.settings.discount_threshold }}
+                                        items
+                                    </div>
+                                    {{ progress }}
+                                    <div class="byos-progress-bar-wrap w-full">
+                                        {% raw %}
+                                            <div class="byos-progress-bar" :style="{width: progress}"
+                                                 :class="{'is-success' : false}"></div>
+                                        {% endraw %}
+                                    </div>
+                                    {% raw %}
+                                        <div class="byos-cart">
+                                            <div class="py-4 border-b text-sm" v-for="(item, forloop) in cartItems"
+                                                 :key="forloop">
+                                                <div class="flex flex-wrap md:flex-no-wrap items-center">
+                                                    <div class="w-full flex flex-wrap md:flex-no-wrap items-center">
+                                                        <div class="flex items-center w-full">
+                                                            <figure class="line-item-figure flex-shrink-0 mr-2">
+                                                                <a class="line-item-anchor" :href="item.url">
+                                                                    <img :src="getImageSrc(item.image, '70x70')"
+                                                                         :alt="item.product_title">
+                                                                </a>
+                                                            </figure>
+                                                            <div class="w-full">
+                                                                <div class="line-item-title break-normal w-full">
+                                                                    {{ item.product_title ? item.product_title : item.title
+                                                                    }}
+                                                                </div>
+                                                                <div class="flex items-center justify-between mt-8 md:mt-0 cart-item-padding w-full">
+                                                                    <span>{{ item.quantity }}x </span>
+                                                                    <div class="md:text-right"
+                                                                         v-if="item.original_price !== item.final_price">
+                                                                        <div class="money line-through mr-2">
+                                                                            {{ item.original_price | money | currency}}
+                                                                        </div>
+                                                                        <div class="text-accent money">
+                                                                            {{ item.final_price | money | currency}}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="md:text-right"
+                                                                         v-if="item.original_price === item.final_price">
+                                                                        <div class="">
+                                                                            {{ item.final_price | money | currency}}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="text-right md:text-left"
+                                                                         v-if="isInteractive(item)">
+                                                                        <div class="cursor-pointer text-accent line-item-remove cursor-pointer bg-transparent border-transparent text-accent p-0 text-sm font-normal normal-case tracking-normal "
+                                                                             @click="removeItem(item)">
+                                                                            Remove
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endraw %}
+                                    {% raw %}
+                                    <button class="text-2xl md:text-3xl sm:px-20 xl:text-base mx-auto w-full xl:px-4 text-center mt-4"
+                                            v-if="cartItems.length > 0"
+                                            @click="submit" v-cloak>{% endraw %}
+                                        {% include 'icon-padlock', class: 'mr-2 mb-1' %}
+                                        <span>{% raw %} {{ submitting ? 'Submitting...' : 'Checkout'}}{% endraw %}</span>
+                                        {% raw %}
+                                    </button>
+                                    <p v-if="cartItems.length === 0" class="text-center"> Start Building Your Stack</p>
+                                    {% endraw %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="checkout  xl:pt-20 pb-12 md:pb-12 px-4 sm:px-auto mb-8" id="checkout-section" v-cloak>
+                    <button class="text-2xl md:text-3xl mx-auto w-full sm:w-auto sm:px-20 flex items-center justify-center hidden xl:block"
+                            @click="submit">
+                        {% include 'icon-padlock', class: 'mr-2 mb-1' %} {% raw %} {{ submitting ? 'Submitting...' : 'Checkout'}}{% endraw %}</button>
+                    <div class="hidden">
+                        <button class="hidden"
+                                type="submit"
+                                name="checkout"
+                                value="checkout">checkout
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </mt-build-your-own-stack>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "BYOS",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Main image (Desktop)",
+      "info": "3000 x 400px .png recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Main image (Mobile)",
+      "info": "600 x 300px .png recommended"
+    },
+    {
+      "type": "text",
+      "id": "page_title",
+      "label": "Title",
+      "default": "Build your own stack"
+    },
+    {
+      "type": "text",
+      "id": "page_description",
+      "label": "Description",
+      "default": "Build your own stack"
+    },
+    {
+      "type": "range",
+      "id": "discount_threshold",
+      "label": "Discount qty threshold",
+      "info": "Example, after 4 items apply the discount - don't forget to update the automatic discount",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "discount_amount",
+      "label": "Discount (%)",
+      "info": "15%",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 15
+    }
+  ]
+}
+{% endschema %}

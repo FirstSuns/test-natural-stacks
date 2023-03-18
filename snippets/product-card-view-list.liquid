@@ -1,0 +1,28 @@
+<div class="content-view-list mt-5{% unless for_tabs %} hidden{% endunless %}">
+  <div class="leading-7 text-color-secondary mb-4 short_description">
+    {{ product.description | strip_html | truncatewords: 15, '...' }}
+  </div>
+  <div class="flex items-start addtocart"> 
+    {%- if settings.show_cart_button or for_tabs -%}
+      {%- if product.has_only_default_variant or product.variants.size == 1 -%}
+        {% render 'product-atc', product: product, btn_text: "Add to Cart", class: 'sf__btn-primary' %}
+      {% else %}
+        {% if settings.select_option_button_action == 'popup' %}
+          <button class="sf-pqv__button quick-add sf__btn sf__btn-primary" data-product-handle="{{ product.handle }}">
+            <span>{{ quick_add_text }}</span>
+          </button>
+        {% else %}
+          <a class="sf__btn sf__btn-primary" href="{{ product.url }}">
+            <span>{{ quick_add_text }}</span>
+          </a>
+        {% endif %}
+      {% endif %}
+    {%- endif -%}
+    {% comment %}
+    <div class="grid grid-cols-3 gap-2.5 ml-2.5">
+      {% render 'product-card-tooltips', product: product, position: 'bottom' %}
+    </div>
+    {% endcomment %}
+  </div>
+</div>
+

@@ -1,0 +1,228 @@
+{% assign f_cart_countdown = shop.metafields.foxecom-bs-kit.cart-countdown.value | default: shop.metafields.foxecom-bs-kit.cart-countdown %}
+<div
+  style="--tw-bg-opacity: 0;"
+  class="scd__wrapper scd__cart touch-none hidden transition-colors duration-300 bg-black fixed z-[100] inset-0{% if cart.item_count <= 0 %} empty{% endif %}"
+>
+  <div class="scd__content transition-transform duration-300 translate-x-0 translate-x-full ml-auto min-h-full md:w-[450px] bg-white z-50">
+    <button class="scd__close p-2 cursor-pointer absolute">
+      {% render 'icon', name: 'times', size: 'large' %}
+    </button>
+    <form action="{{ routes.cart_url }}" method="post" class="checkout-form flex flex-col h-full" novalidate>
+      <div class="scd__header mx-6 py-4 md:pt-6">
+        <h3 class="text-2xl font-medium">{{ 'cart.general.title' | t }}</h3>
+        {% if f_cart_countdown.show_on_drawer == true and template.name != 'cart' %}
+          {% render 'foxkit-cart-countdown' %}
+        {% endif %}
+        {% render 'foxkit-cart-goal' %}
+      </div>
+      {% assign freeshipping_price = settings.freeshipping_price | plus: 0 %}
+      {% if settings.show_freeshipping_widget and freeshipping_price > 0 %}
+        {% assign progress = cart.total_price | times: 100 | divided_by: settings.freeshipping_price %}
+        {% assign away_price = settings.freeshipping_price | plus: 0 | minus: cart.total_price %}
+        <div class="scd__freeshipping mx-6 py-4 md:pt-6{% if away_price <= 0 %} complete{% endif %}" data-freeshipping_price="{{ freeshipping_price }}">
+          <div class='freeshipping_comment'>
+            <div class='missing_text'> You are <strong class='away_price'>{{ away_price | money }}</strong> away from <strong>Free Shipping</strong>. </div>
+            <div class='complete_text'><strong>Congratulations! You've earned Free Shipping.</strong></div>
+          </div>
+          <div class='freeshipping_progress_bar'>
+            <div class='progress_amount' style="width:{{ progress }}%;"></div>
+          </div>
+        </div>
+      {% endif %}
+      {% if settings.show_freegift_widget %}
+        <div class="scd__giftrow mx-6 py-4 md:pt-6">
+          {% assign lim_price = 0 %}
+          {% assign ind = 0 %}
+          {% assign cnt = 0 %}
+          {% assign away_price = 0 %}
+          {% assign away_title = '' %}
+          {% assign gift_product_cnt = 0 %}
+          {% for i in (1..4) %}
+            {% assign hdl = 'freegift' | append: i | append: '_price' %}
+            {% assign title_hdl = 'freegift' | append: i | append: '_title' %}
+            {% if settings[title_hdl] == blank %} {% continue %} {% endif %}
+            
+            {% assign cnt = cnt | plus: 1 %}
+            {% assign p = settings[hdl] | plus: 0 %}
+            {% if cart.total_price >= p %}
+              {% assign ind = ind | plus: 1 %}
+            {% else %}
+              {% if away_price == 0 %}
+                {% assign away_price = p | minus: cart.total_price %}
+                {% assign hdl1 = 'freegift' | append: i | append: '_product' %}
+                {% if all_products[settings[hdl1]] != blank %}
+                  {% assign gift_product_cnt = gift_product_cnt | plus: 1 %}
+                {% endif %}
+                {% assign away_title = settings[title_hdl] %}
+              {% endif %}
+            {% endif %}
+            {% if p > lim_price %}
+              {% assign lim_price = p %}
+            {% endif %}
+          {% endfor %}
+          <div class="gift_comment{% if away_price <= 0 %} complete{% endif %}{% if gift_product_cnt <= 0 %} noproduct{% endif %}">
+            <div class='missing_text'> You are <span class='away_price'>{{ away_price | money }}</span> away from a <span class='away_title'>{{ away_title }}</span>. </div>
+            <div class='complete_text'>Congratulations! You've got all free gifts.</div>
+          </div>
+          {% assign progress = ind | times: 100 | divided_by: cnt %}
+          <div class='gift_progress_bar{% if away_price <= 0 and gift_product_cnt <= 0 %} hide{% endif %}' data-limit="{{ lim_price }}">
+            <div class='progress_amount' style="width:{{ progress }}%;"></div>
+          </div>
+          <div class='gift_wrapper{% if away_price <= 0 and gift_product_cnt <= 0 %} hide{% endif %}'>
+            {% assign cnt = 0 %}
+            {% for i in (1..4) %}
+              {% assign hdl = 'freegift' | append: i | append: '_product' %}
+              {% assign title_hdl = 'freegift' | append: i | append: '_title' %}
+              {% if settings[title_hdl] != blank %} 
+                {% assign cnt = cnt | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+  
+            {% assign ind = -1 %}
+            {% for i in (1..4) %}
+              {% assign hdl = 'freegift' | append: i | append: '_product' %}
+              {% assign title_hdl = 'freegift' | append: i | append: '_title' %}
+              {% if settings[title_hdl] == blank %} {% continue %} {% endif %}
+              
+              {% assign ind = ind | plus: 1 %}
+              {% assign hdl1 = 'freegift' | append: i | append: '_price' %}
+              {% assign p = settings[hdl1] | plus: 0 %}
+  
+              {% assign gift = all_products[settings[hdl]] %}
+              <div class='gift-item{% if cart.total_price > p %} added{% endif %}' {% unless gift.handle == 'free-shipping' %}data-variantid='{{ gift.selected_or_first_available_variant.id }}' {% endunless %}data-price="{{ settings[hdl1] }}" data-title="{{ settings[title_hdl] }}" style="left: {{ ind | times: 100 | divided_by: cnt }}%;">
+                {% if gift and gift.featured_image != blank %}
+                  <img src="{{ gift.featured_image | img_url: '200x' }}" />
+                  <span class='item-price'>{{ settings[hdl1] | money_without_trailing_zeros }}</span>
+                {% endif %}
+              </div>              
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      <div class="scd__body sf__custom_scroll overscroll-contain px-6 pb-4 flex flex-col flex-grow">
+        {%- if cart.items.size > 0 -%}
+          <div class="scd__items">
+            {% for item in cart.items %}
+              {% render 'cart-drawer-item', item: item, ind: forloop.index %}
+            {% endfor %}
+          
+            {%- liquid 
+               assign recommend_col = cart.items.first.product.collections.first
+               assign cnt = recommend_col.products.size 
+               assign random = "now" | date: '%N' | modulo: cnt
+
+               for i in (0..100)
+                if i >= cnt
+                  break
+                endif
+
+                assign n = random | plus: i | modulo: cnt
+                assign recommend1 = recommend_col.products[n]
+                assign f = 0
+
+                if recommend1.tags contains 'not_recommend'
+                  assign f = 1
+                endif
+
+                for it in cart.items
+                  if it.product.handle == recommend1.handle
+                    assign f = 1
+                    break
+                  endif
+                endfor
+
+                unless recommend1.available
+                  assign f = 1
+                endunless
+
+                if f == 0
+                  assign recommend = recommend1
+                  break
+                endif
+               endfor
+            -%}
+
+            {% if recommend %}
+              <hr class="my-3">
+              <div class="scd-item addon-item">
+                <div class='item-image'>
+                  <img src="{{ recommend | img_url: '108x' }}" />
+                </div>
+                <div class='item-content'>
+                  <div class='item-row'>
+                    <a href="{{ recommend.url }}" class="font-medium hover:underline item-title">{{ recommend.title }}</a>
+                  </div>
+                  {% if recommend.variants.size > 1 %}
+                    <div class='item-row'>
+                      <select class='item-variants'>
+                        {% for va in recommend.variants %}
+                          <option value="{{ va.id }}" data-price="{{ va.price | money }}">
+                            {{ va.title }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  {% endif %}
+                  <div class='item-row'>
+                    <span class='item-price'>{{ recommend.selected_or_first_available_variant.price | money }}</span>
+                    <a class='item-add' data-id="{{ recommend.selected_or_first_available_variant.id }}">Add</a>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        {%- else -%}
+          <div class="scd-empty-msg">
+            {{ 'cart.general.empty' | t }}
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="scd__footer py-4 px-6">
+        {% render 'cart-addons' %}
+        <div class="scd__summary mb-4 pt-4" data-cart-summary>
+          <div data-discounts>
+            <ul class="scd-cart__discounts" role="list" data-discounts-list>
+            {% unless cart.cart_level_discount_applications.size == 0 %}
+                {% for discount in cart.cart_level_discount_applications %}
+                  <li>
+                    {% render 'icon', name: 'discount' %}
+                    <span>{{ discount.title | upcase }}&nbsp;(-{{ discount.total_allocated_amount | money }})</span>
+                  </li>
+                {% endfor %}
+            {% endunless %}
+            </ul>
+          </div>
+          <div class="scd__subtotal flex justify-between" data-cart-subtotal>
+            <span class="font-medium">{{ 'cart.general.subtotal' | t }}</span>
+            <span class="scd__subtotal-price font-medium sf-currency" data-cart-subtotal-price>{{ cart.total_price | money }}</span>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          {% assign show_terms = false %}
+          {% if settings.agree_text != blank and settings.show_agree_on_cart %}
+            {% render 'agree-terms-checkbox' %}
+            {% assign show_terms = true %}
+          {% endif %}
+          <button type="submit" class="sf__btn sf__btn-primary w-full scd__checkout relative" name="checkout"{% if show_terms %} data-terms-action disabled{% endif %}>
+            <span>{{ 'cart.general.checkout' | t }}</span>
+            {% render 'icon', name: 'spinner', size: 'medium-small' %}
+          </button>
+          {%- if settings.cart_drawer_show_accelerated_button and additional_checkout_buttons -%}
+            <div class="additional-checkout-buttons w-full">
+              {{ content_for_additional_checkout_buttons }}
+            </div>
+          {%- endif -%}
+          <a class="underline mt-2" href="{{ routes.cart_url }}">
+            {{ 'cart.general.viewcart' | t }}
+          </a>
+        </div>
+        {% if settings.cart_drawer_trust_badge %}
+        <div class="scd__trust-badge mt-2">
+          <img src="{{ settings.cart_drawer_trust_badge | img_url: '840x' }}" loading="lazy" width="400" height="100" alt="Trust secure badge">
+        </div>
+        {% endif %}
+      </div>
+      <div class="scd__overlay inset-0"></div>
+    </form>
+  </div>
+</div>

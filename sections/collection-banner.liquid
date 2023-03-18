@@ -1,0 +1,34 @@
+<div class="banner-wrapper light-blue">
+  <div class="collection-header-wrapper">
+      <div class="collection-bg relative {{ settings.product-banner }}  bg-center {{ collection_bg_class }}" style="background-image: url({{ collection.featured_image | img_url: 'master' }});">
+          <div class="collection-bg-mask absolute inset-0"></div>
+          <div class="collection-overlay absolute inset-0 z-0 flex items-center">
+              <div class="container mx-auto px-4">
+                  <h1 class="text-white text-4xl md:text-5xl lg:text-6xl">
+                      {% if collection.handle == 'all' %}
+                          {{ collection.title }}
+                      {% elsif collection.title == 'Build Your Bundle' %}
+                          {% include 'tracking-bundle' %}
+                      {% else %}
+                          {{ collection.title }}
+                      {% endif %}
+                  </h1>
+
+                  {% if collection.description != blank %}
+                      <div class="text-white text-xl max-w-2xl">
+                          {{ collection.description }}
+                      </div>
+                  {% endif %}
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collection banner",
+    "settings": [
+    ]
+  }
+{% endschema %}

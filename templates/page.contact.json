@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-contact",
+      "settings": {
+        "container": "container"
+      }
+    },
+    "maps": {
+      "type": "maps",
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "map_height": "large",
+        "textx": "40.6700",
+        "texty": "-73.9400",
+        "zoom": "11",
+        "text2": "New York"
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "blocks": {
+        "text-block-4": {
+          "type": "textblock",
+          "settings": {
+            "title": "Email Us:",
+            "content": "<p>support@naturalstacks.com<\/p>"
+          }
+        },
+        "text-block-2": {
+          "type": "textblock",
+          "settings": {
+            "title": "Call Us:",
+            "content": "<p>1-855-NSTACKS<\/p>"
+          }
+        },
+        "text-block-3": {
+          "type": "socialmedia",
+          "settings": {
+            "title": "Social Media"
+          }
+        },
+        "text-block-1": {
+          "type": "textblock",
+          "settings": {
+            "title": "Address",
+            "content": "<p>4241 24th Ave West Seattle, WA 98199<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text-block-4",
+        "text-block-2",
+        "text-block-3",
+        "text-block-1"
+      ],
+      "settings": {
+        "container": "container",
+        "title": "We would love to hear from you.",
+        "description": "<p>At Natural Stacks, we look to go above and beyond what is expected to ensure that our customers have the best experience possible.  Reach out to us using the form below or give us a call and we'll be sure to help you live optimally as best we can.<\/p>",
+        "show_name": true,
+        "show_phone": true,
+        "show_signup_email": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "maps",
+    "contact-form"
+  ]
+}
