@@ -267,14 +267,14 @@
                     <input type='radio' id="quantity-1" class='select_quantity' name='quantity' value='1' data-reg_price="{{ product.price | money }}" data-saving_price="0" data-saving_price_sub="{{ product.price | times: 0.2 | money }}" data-total_price="{{ product.price | money }}" data-total_price_sub="{{ product.price | times: 0.8 | money }}" checked>
                     <label class='option-item for_quantity' for="quantity-1" data-quantity="1">
                       <span class='text-wrapper'>
-                        <span>1 Bottle</span>
+                        <span>1 Pack</span>
                         <span class='each_price'><span class='one_time{% unless product.selling_plan_groups == blank %} hide{% endunless %}'>{{ product.price | money }}</span><span class='sub{% if product.selling_plan_groups == blank %} hide{% endif %}'>{{ product.price | times: 0.8 | money }}</span></span>
                       </span>
                     </label>
                     <input type='radio' id="quantity-3" class='select_quantity' name='quantity' value='3' data-reg_price="{{ product.price | times: 3 | money }}" data-saving_price="{{ product.price | times: 0.3 | money }}" data-saving_price_sub="{{ product.price | times: 0.6 | money }}" data-total_price="{{ product.price | times: 2.7 | money }}" data-total_price_sub="{{ product.price | times: 2.4 | money }}">
                     <label class='option-item for_quantity most_popular' for="quantity-3" data-quantity="3">
                       <span class='text-wrapper'>
-                        <span>3 Bottles</span>
+                        <span>3 Pack</span>
                         <span class='each_price'><span class='one_time{% unless product.selling_plan_groups == blank %} hide{% endunless %}'>{{ product.price | times: 0.9 | money }} Each</span><span class='sub{% if product.selling_plan_groups == blank %} hide{% endif %}'>{{ product.price | times: 0.8 | money }} Each</span></span>
                       </span>
                       <span class='discount_badge{% unless product.selling_plan_groups == blank %} hide{% endunless %}'>-10%</span>
@@ -282,7 +282,7 @@
                     <input type='radio' id="quantity-6" class='select_quantity' name='quantity' value='6' data-reg_price="{{ product.price | times: 6 | money }}" data-saving_price="{{ product.price | times: 0.9 | money }}" data-saving_price_sub="{{ product.price | times: 1.2 | money }}" data-total_price="{{ product.price | times: 5.1 | money }}" data-total_price_sub="{{ product.price | times: 4.8 | money }}">
                     <label class='option-item for_quantity' for="quantity-6" data-quantity="6">
                       <span class='text-wrapper'>
-                        <span>6 Bottles</span>
+                        <span>6 Pack</span>
                         <span class='each_price'><span class='one_time{% unless product.selling_plan_groups == blank %} hide{% endunless %}'>{{ product.price | times: 0.85 | money }} Each</span><span class='sub{% if product.selling_plan_groups == blank %} hide{% endif %}'>{{ product.price | times: 0.8 | money }} Each</span></span>
                       </span>
                       <span class='discount_badge{% unless product.selling_plan_groups == blank %} hide{% endunless %}'>-15%</span>

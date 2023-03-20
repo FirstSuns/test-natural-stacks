@@ -81,7 +81,7 @@
                                     {% endif %}
                                     {% if block.settings.button_label != blank %}
                                         <div class="sf-custom__text-cta mt-8">
-                                            <a href="{{ block.settings.button_link }}" class="sf__btn {{ block.settings.button_style }} {{ block.settings.button_size }}">{{ block.settings.button_label }}</a>
+                                            <a href="{{ block.settings.button_link }}" class="sf__btn {{ block.settings.button_style }} {{ block.settings.button_size }}" {% if template contains 'product' %} target="_blank" {% endif %}>{{ block.settings.button_label }}</a>
                                         </div>
                                     {% endif %}
                                 </div>

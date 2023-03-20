@@ -12,9 +12,12 @@
           </div>
         {%- endif -%}
         {% render 'product-card-countdown', product: product %}
-        {%- if sold_out == false -%}
+        
+        {% comment %} {%- if sold_out == false -%}
           {% render 'product-card-quick-add-btn', product: product, quick_add_text: quick_add_text %}
-        {% endif %}
+        {% endif %} {% endcomment %}
+        {% render 'product-card-quick-add-btn', product: product, quick_add_text: quick_add_text %}
+        
       </div>
     </div>
     <div class="sf__pcard-content text-{{ settings.pcard_alignment }}">

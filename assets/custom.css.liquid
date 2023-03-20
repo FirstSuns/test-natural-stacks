@@ -941,7 +941,12 @@ ul.sf__list-inline li {
 .ingredient1-item.col-2 {
   width: calc(50% - 15px);
 }
-
+@media screen and (max-width: 749px) {
+  .ingredient1-item.col-2 {
+    width: 100%;
+    padding-right: 35%;
+  }
+}
 .ingredient1-item .item-title {
   margin-bottom: 10px;
   font-size: 1.4em;
@@ -2155,4 +2160,10 @@ body .rc-radio-group__options .rc-radio .rc-radio__input {
   .variant_options_row .option-item:before {
     display: none;
   }
+}
+
+.scroll-down.stuck .header__wrapper{
+  background: var(--color-header-background,#fff);
+  box-shadow: 0 4px 20px rgba(0,0,0,.04);
+  transform: none;
 }
