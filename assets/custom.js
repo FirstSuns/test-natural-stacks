@@ -175,6 +175,29 @@ jQuery(document).ready(function($) {
       });
     }
   });
+  setInterval(() => {
+    if($("[data-section-id]").hasClass("scroll-up"))
+    {
+      if(!$("#shopify-section-annoucement").hasClass("fs-scroll-up-section-announcement"))
+      {
+        $("#shopify-section-annoucement").addClass("fs-scroll-up-section-announcement");
+      }
+      if(!$("#fs-header__wrapper").hasClass("fs-scroll-up-header__wrapper"))
+      {
+        $("#fs-header__wrapper").addClass("fs-scroll-up-header__wrapper");
+      }
+    }
+    else{
+      if($("#shopify-section-annoucement").hasClass("fs-scroll-up-section-announcement"))
+      {
+        $("#shopify-section-annoucement").removeClass("fs-scroll-up-section-announcement");
+      }
+      if($("#fs-header__wrapper").hasClass("fs-scroll-up-header__wrapper"))
+      {
+        $("#fs-header__wrapper").removeClass("fs-scroll-up-header__wrapper");
+      }
+    }
+  }, 100);
 });
 
 document.querySelectorAll(".ingredients .navs .nav-item").forEach(function(obj) {
