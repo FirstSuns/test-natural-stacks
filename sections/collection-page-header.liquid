@@ -1,6 +1,27 @@
 {%- assign header_height = section.settings.header_height -%}
 {%- assign text_alignment = section.settings.text_alignment -%}
 {%- assign bg_image = section.settings.bg_image -%}
+{% assign custom_class = '' %}
+{%- if header_height == 'adapt' -%}
+  {%- if bg_image.aspect_ratio == blank -%}
+    {%- assign min_aspect_ratio = 7 -%}
+    {% assign custom_class = ' collection-header--noimage' %}
+  {%- else -%}
+    {%- assign min_aspect_ratio = bg_image.aspect_ratio -%}
+  {%- endif -%}
+  {% assign wrapper_height = 100 | divided_by: min_aspect_ratio %}
+{%- endif -%}
+
+
+{% if collection.metafields.custom.desktop_banner %}
+  {%- assign bg_image = collection.metafields.custom.desktop_banner -%}
+{% endif %}
+{%- assign bg_image_mob = section.settings.bg_image_mob -%}
+{% if collection.metafields.custom.mobile_banner %}
+  {%- assign bg_image_mob = collection.metafields.custom.mobile_banner -%}
+{% endif %}
+
+
 {%- assign layout = section.settings.layout -%}
 {%- assign enable_parallax = section.settings.enable_parallax -%}
 {%- assign show_breadcrumb = true -%}
@@ -20,7 +41,7 @@
   {% assign collection_desc = section.settings.collection_all_desc %}
 {% endif %}
 
-{% assign custom_class = '' %}
+{% comment %} {% assign custom_class = '' %}
 {%- if header_height == 'adapt' -%}
   {%- if bg_image.aspect_ratio == blank -%}
     {%- assign min_aspect_ratio = 7 -%}
@@ -29,13 +50,17 @@
     {%- assign min_aspect_ratio = bg_image.aspect_ratio -%}
   {%- endif -%}
   {% assign wrapper_height = 100 | divided_by: min_aspect_ratio %}
-{%- endif -%}
+{%- endif -%} {% endcomment %}
 
+{% assign has_mobile_bg = false %}
+{% if bg_image_mob != blank %}
+  {% assign has_mobile_bg = true %}
+{% endif %}
 <div
     data-section-type="collection-header"
     data-section-id="{{ section.id }}"
     data-enable-parallax="{{ enable_parallax }}"
-    class="collection-header overflow-hidden collection-header--{{ header_height }} flex items-{{ section.settings.vertical_alignment }} justify-center relative{{ custom_class }}"
+    class="{% if has_mobile_bg == true %} fs-desktop-only {% endif %} collection-header overflow-hidden collection-header--{{ header_height }} flex items-{{ section.settings.vertical_alignment }} justify-center relative{{ custom_class }}"
     style="--bg-color: {{ section.settings.bg_color | default: 'transparent' }}; {% if bg_image != blank %}--bg-image: url({{ bg_image | img_url: 'master' }}){% endif %};{% if header_height == 'adapt' %}height: {{- wrapper_height -}}vw{% endif %}"
 >  
     <div class="collection-header__bg absolute -inset-0 bg-color bg-no-repeat bg-cover bg-center pointer-events-none {% if enable_parallax %} bg-fixed{% endif %}"></div>
@@ -56,7 +81,33 @@
         </div>
     </div>
 </div>
-
+{% if has_mobile_bg == true %} 
+<div
+    data-section-type="collection-header"
+    data-section-id="{{ section.id }}"
+    data-enable-parallax="{{ enable_parallax }}"
+    class="fs-mobile-only collection-header overflow-hidden collection-header--{{ header_height }} flex items-{{ section.settings.vertical_alignment }} justify-center relative{{ custom_class }}"
+    style="--bg-color: {{ section.settings.bg_color | default: 'transparent' }}; {% if bg_image_mob != blank %}--bg-image: url({{ bg_image_mob | img_url: 'master' }}){% endif %};{% if header_height == 'adapt' %}height: {{- wrapper_height -}}vw{% endif %}"
+>  
+    <div class="collection-header__bg absolute -inset-0 bg-color bg-no-repeat bg-cover bg-center pointer-events-none {% if enable_parallax %} bg-fixed{% endif %}"></div>
+    <div class="{{ section.settings.container }} text-{{ text_alignment }}">
+        <div class="sf__collection-headerContent relative z-1 text-{{ section.settings.text_color }}">
+            <h1 class="collection-header__title lg:text-[42px] text-2xl {% if section.settings.upper_title %}uppercase{% else %}capitalize{% endif %}">{{ collection.title }}</h1>
+            {% if show_breadcrumb and layout == 'inside' %}
+                <div class="collection-header__breadcrumb">
+                    {% capture justify %}{% if text_alignment == 'right' %}end{% else %}{{ text_alignment }}{% endif %}{% endcapture %}
+                    {% render 'breadcrumb', container: '', justify: justify %}
+                </div>
+            {% endif %}
+            {% if section.settings.show_desc and collection_desc != blank %}
+              <div class="collection-header__description mt-3">
+                {{ collection_desc }}
+              </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endif %} 
 {% if show_breadcrumb and layout == 'outside' %}
 <div class="sf__collection-breadcrumb">
     {% render 'breadcrumb', container: section.settings.container %}
@@ -198,6 +249,11 @@
         "type": "image_picker",
         "id": "bg_image",
         "label": "Background image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image_mob",
+        "label": "Mobile Background image"
       },
       {
         "type": "checkbox",

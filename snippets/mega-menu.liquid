@@ -9,32 +9,60 @@
 >
     <div class="sf-menu__content overscroll-contain transition-transform -translate-x-full duration-300 md:w-[450px] z-50 bg-white text-black overflow-x-hidden h-full overflow-y-scroll">
         <div class="flex flex-col">
-            <div class="sf-menu-content flex-grow flex flex-col justify-between transition-all opacity-0 opacity-100 duration-300">
-                <div class="w-full sf-menu-links pt-8">
+            {% comment %} <div class="sf-menu-content flex-grow flex flex-col justify-between transition-all opacity-0 opacity-100 duration-300"> {% endcomment %}
+            <div class="sf-menu-content flex-grow flex flex-col transition-all opacity-0 opacity-100 duration-300"> 
+              <div class="drawer_top">
+                <div class="top_first">
+                <button class="menu__close p-2 cursor-pointer">
+                    <svg class="w-[24px] h-[24px]" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"></path>
+                    </svg>
+                </button>
+                 {% render 'header-logo-mobile', header_settings: section.settings, box_size: 'w-1/2' %}
+                 <div class="flex justify-center items-center p-2" data-open-search-popup>
+                <span class="sf__search-mb-icon">{% render 'icon', name: 'search', size: 'medium' %}</span>
+              </div>
+                </div>
+                <div class="mobile_banner-main">
+                <div class="mobile_banner">
+              {% for block in section.blocks %}
+                {% if block.type == 'mobile_banner' %}
+                  <a href="{{ block.settings.link }}">
+                    <div class="mobile-banner-img-wrap">
+                    <img src="{{ block.settings.image | img_url:'master' }}"></div></a>
+                  {% endif %}
+              {% endfor %}  
+                </div></div>
+              </div>
+              <div class="w-full sf-menu-links pb-8">
                   {% for link in linklists[menu].links %}
                     {% if link.links != blank %}
-                        <li class="list-none sf-link flex items-center" data-url="{{ link.url }}">
-                            <a href="{{ link.url }}" class="w-full px-4 py-3 flex items-center justify-between relative"{% if link.url contains '#' %} data-toggle-submenu="1"{% endif %}>
+                        <li class="main-li list-none sf-link flex items-center" data-url="{{ link.url }}">
+                        <div class="main-menu-new active">
+                          <a href="{{ link.url }}" class="main-link w-full px-4 py-3 flex items-center justify-between relative"{% if link.url contains '#' %} data-toggle-submenu="1"{% endif %}>
                                 <span>{{ link.title }}</span>
                             </a>
                             <span class="sf__toggle-submenu-mb flex items-center justify-center" data-toggle-submenu="1">{% render 'icon', name: 'chevron-right', size: 'small' %}</span>
+                        </div>
                             <div class="sf-sub-links hidden absolute inset-y-0 bg-white flex-col left-full w-full">
                                 <div class="h-full overflow-y-scroll overscroll-contain">
-                                    <button class="back p-4 font-medium flex items-center" data-level="1">
+                                    <button class="back p-4 font-medium flex items-center" data-level="1" style="display:none;">
                                       {% render 'icon', name: 'arrow-left', size: 'small' %}
                                       <span class="ml-3">{% render 'new-locale', key: 'layout.back' %}</span>
                                     </button>
                                   <ul class="sf-sub-links--level-2 pb-4">
                                     {% for child in link.links %}
                                       <li class="list-none sf-link flex items-center" data-url="{{ link.url }}">
+                                        <div class="main-menu-new active">
                                         <a href="{{ child.url }}" class="w-full px-4 py-3 flex items-center justify-between relative"{% if child.url contains '#' %} data-toggle-submenu="2"{% endif %}>
                                           <span>{{ child.title }}</span>
                                         </a>
                                         {% if child.links != blank %}
                                         <span class="sf__toggle-submenu-mb flex items-center justify-center" data-toggle-submenu="2">{% render 'icon', name: 'chevron-right', size: 'small' %}</span>
-                                        <div class="sf-sub-links hidden absolute inset-y-0 bg-white flex-col left-full w-full">
+                                        </div>
+                                          <div class="sf-sub-links hidden absolute inset-y-0 bg-white flex-col left-full w-full">
                                           <div class="h-full overflow-y-scroll overscroll-contain">
-                                            <button class="back p-4 font-medium flex items-center" data-level="2">
+                                            <button class="back p-4 font-medium flex items-center" data-level="2" style="display:none;">
                                               {% render 'icon', name: 'arrow-left', size: 'small' %}
                                               <span class="ml-3">{% render 'new-locale', key: 'layout.back' %}</span>
                                             </button>

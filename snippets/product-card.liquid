@@ -54,7 +54,7 @@
 {% assign quick_add_text = 'Learn More' %}
 
 {% assign sold_number = product.metafields.foxkit.sold_number %}
-{%- if column_wrapper -%}<div class="sf-column">{%- endif -%}
+{%- if column_wrapper -%}<div class="sf-column fs-mob-sf-column">{%- endif -%}
   {%- case card_style -%}
     {%- when '1' -%}
       {% render 'product-card-1',

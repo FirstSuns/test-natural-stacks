@@ -1,5 +1,39 @@
 jQuery(document).ready(function($) {
   console.log("ready");
+  $(".fs-slider-sf-grid").slick({
+    prevArrow: "<button type='button' class='slick-prev'><</button>",
+    nextArrow: "<button type='button' class='slick-next'>></button>",
+    draggable: true,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    responsive: [
+          {
+              breakpoint: 768,
+              settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: true
+              }
+          },
+      ]
+  });
+  $(".fs-slider-sf-grid").css("opacity", 1);
+
+  $('.menu__close').click(function(){
+    $('.sf-menu-wrapper-mobile').addClass('hidden');
+     $('.sf-menu__content').addClass('-translate-x-full');
+});
+
+  $('.main-menu-new').click(function(){
+    $(this).toggleClass('active');
+  });
+  $(document).on('click','.main-menu-new.active',function(){
+     $(this).parent('li').find('.sf-sub-links .overscroll-contain button.back').trigger('click');
+
+    
+  });
   if($(".slick_slider").length > 0) {
     $(".slick_slider").slick({
       prevArrow: "<button type='button' class='slick-prev'><</button>",
@@ -539,3 +573,21 @@ document.querySelectorAll(".sticky-bottom-atc .add-to-cart").forEach(function(ob
     document.querySelector(".product-template .add-to-cart").click();
   });
 });
+
+document.addEventListener('octane.quiz.completed', function (e) {
+  // your code for building and handling the results page
+  console.log("test----", e.detail.answers);
+  for ( key in e.detail.answers) {
+    if(key == "Octane: What is your main goal? ")
+    {
+      if(e.detail.answers[key] == "Improve focus")
+        location.href = 'https://www.naturalstacks.com/pages/brain-quiz-focus';
+      else if(e.detail.answers[key] == "Stress relief" || e.detail.answers[key] == "Feel happier")
+        location.href = 'https://www.naturalstacks.com/pages/brain-quiz-mood';
+      else if(e.detail.answers[key] == "Sleep better")
+        location.href = 'https://www.naturalstacks.com/pages/brain-quiz-sleep';
+      else if(e.detail.answers[key] == "Boost of energy" || e.detail.answers[key] == "Boost memory")
+        location.href = 'https://www.naturalstacks.com/pages/brain-quiz-energy ';
+    } 
+  }
+}, false);

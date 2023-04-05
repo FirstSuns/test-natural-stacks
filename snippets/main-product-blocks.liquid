@@ -43,6 +43,10 @@
   %}
 
   <div class="main-product__blocks{% if product.selling_plan_groups == blank %} nosubscription{% endif %}">
+    <div class="single-random-review okeReviews medium-down--hide p-4 text-center bg-white">
+      <div class="single-review-content"></div>
+      <div class="single-review-author"></div>
+    </div>
     <input hidden name="id" data-productid="{{ product.id }}" required value="{{ selected_variant.id }}">
     {% assign horizontal_tab_placed = 0 %}
     {%- for block in section.blocks -%}
@@ -373,6 +377,7 @@
                     {{ form | payment_button }}
                   </div>
                 {% endif %}
+                <a class="btn klaviyo-bis-trigger" href="#">Notify Me When Available</a>
               </div>
 
               {% if product.metafields.custom.selling_points.value.size > 0 %}

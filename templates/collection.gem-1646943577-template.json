@@ -84,7 +84,7 @@
           "type": "subcollection",
           "settings": {
             "title": "",
-            "filtergroup": "Shop All:all,\nMood:mood,\nSleep:sleep,\nFocus and Memory:focus-and-memory,\nEnergy:energy,\nEssentials:essentials,\nSale:sale"
+            "filtergroup": "Shop All:all,\nMood:mood,\nSleep:sleep,\nFocus and Memory:focus-and-memory,\nEnergy:energy,\nEssentials:essentials,\nProfessional Line:professional-formula-line"
           }
         }
       },

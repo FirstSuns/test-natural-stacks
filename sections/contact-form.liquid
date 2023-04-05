@@ -41,7 +41,9 @@
             <label for="save-info" class="ml-[12px] mt-[-4px]">{{ 'contact.form.save_infor_message' | t }}</label>
           </div>
           {% endif %}
-          <button type="submit" class="sf__btn sf__btn-primary">{{ 'contact.form.send' | t }}</button>
+           <div id="re-captcha"></div > <br>
+          <button type="submit" class="contact_submit sf__btn sf__btn-primary" disabled >{{ 'contact.form.send' | t }}</button>
+     
         {%- endform -%}
       </div>
       {% if section.blocks.size > 0 %}
@@ -66,6 +68,7 @@
     </div>
   </div>
 </section>
+
 {% schema %}
 {
   "name": "Contact form",

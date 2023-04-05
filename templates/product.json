@@ -21,6 +21,10 @@
         },
         "ac794702-714f-4dba-8393-e6a2406ea50d": {
           "type": "description",
+          "settings": {}
+        },
+        "2ca3dc78-f287-472f-94a1-fffc5e334e3f": {
+          "type": "short_description",
           "disabled": true,
           "settings": {}
         },
@@ -105,6 +109,7 @@
         "e471692e-ca2a-4fe6-9f8e-cc64052eb22b",
         "price",
         "ac794702-714f-4dba-8393-e6a2406ea50d",
+        "2ca3dc78-f287-472f-94a1-fffc5e334e3f",
         "fea49fdb-38dc-492d-8976-79368cb712ee",
         "e1933521-ea31-49fa-ab2d-72a14b8a5718",
         "buy_buttons",

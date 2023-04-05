@@ -48,7 +48,7 @@
         "abd1544e-94ad-4a1b-a277-cf6182934a8a": {
           "type": "text",
           "settings": {
-            "text": "100% money back guarantee | Free Shipping on orders $30+",
+            "text": "100% money back guarantee | Free Shipping on orders $50+",
             "text_style": "body",
             "additional_class": "guarantee_text"
           }
@@ -164,32 +164,6 @@
         "custom_class": "core_benefits section-py"
       }
     },
-    "25bc96bf-c970-4915-bac7-f0f812399174": {
-      "type": "image-with-text",
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "container": "container-fluid",
-        "background_color": "#f8f8f8",
-        "item_gap": 100,
-        "item_gap_mobile": 30,
-        "image": "{{ product.metafields.custom.image_text_1_image.value }}",
-        "link": "",
-        "layout": "left",
-        "image_column_size": "6",
-        "hover_effect": false,
-        "title": "{{ product.metafields.custom.image_text_1_heading.value }}",
-        "sub_title": "",
-        "text": "<p>{{ product.metafields.custom.image_text_1_body | metafield_tag }}<\/p>",
-        "text_size": "medium",
-        "content_alignment": "left",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "sf__btn-link",
-        "button_size": "",
-        "custom_class": ""
-      }
-    },
     "f5bf9c5a-21b8-4340-9153-5bdc880162ce": {
       "type": "image-with-text",
       "settings": {
@@ -207,6 +181,32 @@
         "title": "{{ product.metafields.custom.image_text_2_heading.value }}",
         "sub_title": "",
         "text": "<p>{{ product.metafields.custom.image_text_2_body | metafield_tag }}<\/p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "sf__btn-link",
+        "button_size": "",
+        "custom_class": ""
+      }
+    },
+    "25bc96bf-c970-4915-bac7-f0f812399174": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "container": "container-fluid",
+        "background_color": "#f8f8f8",
+        "item_gap": 100,
+        "item_gap_mobile": 30,
+        "image": "{{ product.metafields.custom.image_text_1_image.value }}",
+        "link": "",
+        "layout": "left",
+        "image_column_size": "6",
+        "hover_effect": false,
+        "title": "{{ product.metafields.custom.image_text_1_heading.value }}",
+        "sub_title": "",
+        "text": "<p>{{ product.metafields.custom.image_text_1_body | metafield_tag }}<\/p>",
         "text_size": "medium",
         "content_alignment": "left",
         "button_label": "",
@@ -558,9 +558,10 @@
         "25423866-8892-4710-9d5a-10d89ac314d0": {
           "type": "ingredient_item",
           "settings": {
-            "title1": "",
-            "shorttext1": "",
-            "text1": "",
+            "title1": "Rhodiola Rosea (root) extract",
+            "shorttext1": "Standardized to 3% total Rosavins, 1% Salidroside",
+            "text1": "Used in traditional Chinese medicine for hundreds of years, this well-studied adaptogenic herb supports recovery and may reduce feelings of stress.*",
+            "image1": "shopify:\/\/shop_images\/1224337615_-_Edited_f3f2a867-161f-4428-8bb1-336ccaebd14c.png",
             "title2": "",
             "shorttext2": "",
             "text2": ""
@@ -927,7 +928,7 @@
         "b86d26ff-146c-4982-a2a3-0ebc54f5d66c": {
           "type": "text",
           "settings": {
-            "title": "",
+            "title": "<br>Results You Can Feel. Lab Tests You Can See.",
             "subheading": "",
             "text": "",
             "width": "100%",
@@ -935,21 +936,30 @@
             "align_text": "center",
             "text_size": "medium",
             "text_color": "black",
-            "button_label": "View Ingredient Suppliers & 3rd Party Test Results",
+            "button_label": "View 3rd Party Test results for The Current Batch",
             "button_link": "{{ product.metafields.custom.healthloq_link.value }}",
             "button_style": "sf__btn-primary",
-            "button_size": "",
+            "button_size": "sf__btn-large",
             "block_custom_class": ""
+          }
+        },
+        "12de4ab3-1401-48e6-878a-048efab66369": {
+          "type": "html",
+          "settings": {
+            "code": "<br><br><center>Natural Stacks “Open Source” transparency program provides ingredient traceability and 3rd party lab test results for every batch. It’s powered by blockchain technology and secured by HealthLoq™ on transparent, tamperproof, trusted data. <br><br><strong><p><a href=\"https:\/\/www.naturalstacks.com\/pages\/open-source\" target=\"_blank\">Learn More About Our Commitment to Transparency<\/a><\/p><\/strong>\n<br><br>\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0269\/3025\/t\/307\/assets\/open-source_afc2b407-d8bc-49f3-9e12-61f59bdf3054-1644335778269.png?v=1644335779\" alt=\"open_source\" width=\"258\" height=\"149\">\n<\/center>",
+            "width": "50%",
+            "block_custom_class": "opensourcetext"
           }
         }
       },
       "block_order": [
-        "b86d26ff-146c-4982-a2a3-0ebc54f5d66c"
+        "b86d26ff-146c-4982-a2a3-0ebc54f5d66c",
+        "12de4ab3-1401-48e6-878a-048efab66369"
       ],
       "settings": {
-        "heading": "Open Source Transparency",
-        "subheading": "The First Open Source Supplement Company",
-        "description": "<center><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0269\/3025\/t\/307\/assets\/open-source_afc2b407-d8bc-49f3-9e12-61f59bdf3054-1644335778269.png?v=1644335779\" alt=\"open_source\" width=\"258\" height=\"149\"><\/center>\n<br>\nNatural Stacks “Open Source” transparency program provides ingredient traceability and 3rd party lab test results for every batch. It’s powered by blockchain technology and secured by HealthLoq™ for transparent, tamperproof, trusted data. <p><a href=\"https:\/\/www.naturalstacks.com\/pages\/open-source\" target=\"_blank\">Learn More About Our Commitment to Transparency<\/a><\/p>",
+        "heading": "",
+        "subheading": "",
+        "description": "",
         "header_alignment": "center",
         "container": "container",
         "background_color": "#f8f8f8",
@@ -989,8 +999,8 @@
     "main",
     "165996683072f83839",
     "d868f9d4-c24d-477f-b740-76bb5fb80fd5",
-    "25bc96bf-c970-4915-bac7-f0f812399174",
     "f5bf9c5a-21b8-4340-9153-5bdc880162ce",
+    "25bc96bf-c970-4915-bac7-f0f812399174",
     "6455f514-e2ee-4ac9-b002-71562aca1bb1",
     "product-details-tabs",
     "90bd53fe-8ec6-4efe-89f1-980c66c84a20",

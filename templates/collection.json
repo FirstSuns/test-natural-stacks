@@ -2,19 +2,21 @@
   "sections": {
     "collection-banner": {
       "type": "collection-banner",
+      "disabled": true,
       "settings": {}
     },
     "collection-header": {
       "type": "collection-page-header",
-      "disabled": true,
       "settings": {
         "container": "container",
         "layout": "without_breadcrumb",
-        "header_height": "small",
+        "header_height": "adapt",
         "text_alignment": "center",
         "vertical_alignment": "center",
         "text_color": "dark",
         "bg_color": "#ffffff",
+        "bg_image": "shopify:\/\/shop_images\/3600x1500_Desktop_Spring_Sale_Gen_1.png",
+        "bg_image_mob": "shopify:\/\/shop_images\/800x800_Desktop_Spring_Sale_Gen_1.png",
         "enable_parallax": false,
         "upper_title": false,
         "show_desc": false,

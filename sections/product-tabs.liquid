@@ -122,7 +122,7 @@
                          data-total-items="{{ paginate.items }}"
                     >
                         <div class="{% if button_type == 'link' %}sf__ms{% endif %}{% if enable_slider %} sf__ms--slider{% endif %}{% unless use_scroll_mobile %} sf__ms--mb-grid{% endunless %}">
-                            <div class="sf-grid{% if button_type == 'link' %} sf__ms-wrapper{% endif %} grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-{{ section.settings.items_per_row }}{% if enable_slider %} swiper-container{% endif %}" data-products-container>
+                            <div class="fs-mob-sf-grid sf-grid{% if button_type == 'link' %} sf__ms-wrapper{% endif %} grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-{{ section.settings.items_per_row }}{% if enable_slider %} swiper-container{% endif %}" data-products-container>
                                 {% if enable_slider == true %}<!-- Start .swiper-wrapper --><div class="swiper-wrapper">{% endif %}
                                 {% for product in current_collection.products limit: product_limit %}
                                     {% if enable_slider %}
