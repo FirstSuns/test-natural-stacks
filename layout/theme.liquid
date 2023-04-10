@@ -224,7 +224,19 @@ jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLT
     });
         
   }
-        
+    $(window).on('load', function(){
+     $(document).on('change','.mobile-sec .relative.sf__sortmb-list.touch-none select', function(){
+        var opt_val = $('.mobile-sec .relative.sf__sortmb-list.touch-none select option:selected').text().trim();
+     console.log('iffff');
+      $('.select-items div').each(function(){
+        var txt_t = $(this).text().trim();
+        if(opt_val == txt_t){
+          console.log('iff')
+          $(this).trigger('click');
+        }
+      })
+        })
+    })    
 </script>
 </body>
 </html>

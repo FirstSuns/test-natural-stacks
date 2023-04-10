@@ -52,29 +52,7 @@
             {% endfor %}
           </div>
         </div>
-        <div class='subcollections showMobile'>
-          {% if block.settings.title != blank %}
-          <div class='subcollection-label'>
-            {{ block.settings.title }}:
-          </div>
-          {% endif %}
-          <select class='subcollection-list' onChange="window.location.href=this.value">
-            {% for tag in tags_list %}
-              {% assign tag_arr = tag | strip | split: ':' %}
-              {% if tag_arr[0] %}
-                {% assign tag_title = tag_arr[0] %}
-              {% endif %}
-              {% if tag_arr[0] %}
-                {% assign tag_handle = tag_arr[1] | handleize | downcase %}
-              {% endif %}
-              {% if collections[tag_arr[1]].url != blank %}
-                <option value="{{ shop.url }}{{ collections[tag_arr[1]].url }}" class="tag-subcollection1 hover-underline"{% if tag_handle == collection.handle %} selected{% endif %}>
-                  {{ tag_arr[0] }}
-                </option>
-              {% endif %}
-            {% endfor %}
-          </select>
-        </div>
+       
       {% endif %}
     {% endif %}
   {% endfor %}
@@ -129,10 +107,10 @@
       </div>
     </div>
   </div>
-
+{% comment %}
   {% if st.show_sorting %}
     {%- render 'sort-by-mobile' -%}
-  {% endif %}
+  {% endif %}{% endcomment %}
 </section>
 
 {% schema %}

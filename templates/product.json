@@ -49,6 +49,12 @@
             "show_dynamic_checkout": false
           }
         },
+        "b5f7bd2a-ebb4-4bd8-8c7c-edeecc62791d": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"fs-pdp-single-review md:hidden\">\n{% render 'other-review-app-snippet' %}\n<\/div>"
+          }
+        },
         "abd1544e-94ad-4a1b-a277-cf6182934a8a": {
           "type": "text",
           "settings": {
@@ -113,6 +119,7 @@
         "fea49fdb-38dc-492d-8976-79368cb712ee",
         "e1933521-ea31-49fa-ab2d-72a14b8a5718",
         "buy_buttons",
+        "b5f7bd2a-ebb4-4bd8-8c7c-edeecc62791d",
         "abd1544e-94ad-4a1b-a277-cf6182934a8a",
         "d3dc445e-529b-4e26-b635-1fa8126587dd",
         "2345d74a-2bc5-4f10-ae12-4f4659301929",

@@ -10,7 +10,42 @@
 
   <div class="sf__collection-toolbar">
     <div class="sf__toolbar-wrapper">
-      <div class="sf__toggle-filter flex {% unless st.sidebar == 'fixed' %}xl:hidden{% endunless %}">
+      <div class="filter-main sf__toggle-filter flex {% unless st.sidebar == 'fixed' %}xl:hidden{% endunless %}">
+ 
+          {% for block in section.blocks %}
+    {% if block.type == 'subcollection' %}
+      {% if block.settings.filtergroup != blank %}
+        {% assign tags_list = block.settings.filtergroup | split: ',' %}
+        <div class="filter-main">
+        <span class="filter-title">Shop By Benefit</span>
+        <div class='subcollections showMobile'>
+          {% if block.settings.title != blank %}
+          <div class='subcollection-label'>
+            {{ block.settings.title }}:
+          </div>
+          {% endif %}
+          <select class='subcollection-list' onChange="window.location.href=this.value">
+            {% for tag in tags_list %}
+              {% assign tag_arr = tag | strip | split: ':' %}
+              {% if tag_arr[0] %}
+                {% assign tag_title = tag_arr[0] %}
+              {% endif %}
+              {% if tag_arr[0] %}
+                {% assign tag_handle = tag_arr[1] | handleize | downcase %}
+              {% endif %}
+              {% if collections[tag_arr[1]].url != blank %}
+                <option value="{{ shop.url }}{{ collections[tag_arr[1]].url }}" class="tag-subcollection1 hover-underline"{% if tag_handle == collection.handle %} selected{% endif %}>
+                  {{ tag_arr[0] }}
+                </option>
+              {% endif %}
+            {% endfor %}
+          </select>
+        </div> </div>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+   <div class="filter-main">
+        <span class="filter-title">Sort By</span>
         {%- if st.show_filter -%}
           <button class="sf__sidebar-open {% unless show_filter %}hidden{% else %}flex items-center font-medium mr-4 md:mr-8{% endunless %}">
               <span class="mr-2">{{ 'collections.toolbar.show_filter' | t }}</span>
@@ -18,14 +53,15 @@
           </button>
         {%- endif -%}
         {% if st.show_sorting %}
-          <button class="sf__sortmb-icon md:hidden flex items-center font-medium">
+          <button class="sf__sortmb-icon md:hidden flex items-center font-medium mobile-hide">
             <span data-sortby-option>{{ sort_by_name }}</span>
             {% render 'icon', name: 'chevron-down', size: 'custom', class: 'ml-2 w-[12px] h-[12px]' %}
-          </button>
+   </button>
+           {%- render 'sort-by-mobile' -%}
         {% endif %}
-      </div>
+      </div>  </div>
       {%- if st.show_sorting or st.show_columns_switcher -%}
-        <div class="flex flex-1 items-center justify-between">
+        <div class="list-type-main flex flex-1 items-center justify-between">
           {% if st.show_sorting %}
             <div class="font-medium hidden md:block" data-toolbar-sorting>
               <div class="sf__custom-select">
