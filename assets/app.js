@@ -430,6 +430,99 @@ Shopify.onCartUpdate = async function (cart) {
   } catch (err) {
     console.error("Failed to trigger Shopify.onCartUpdate()", err);
   }
+  
+  console.log("---Test Cart Update",cart);
+  var f = 0;
+  var progress_cnt = 0;
+  var gift_cnt = 0;
+  document.querySelectorAll(".scd__giftrow .gift-item").forEach(function(obj) {
+    gift_cnt ++;
+    var p = obj.getAttribute("data-price");
+    if(cart.total_price > p) {
+      progress_cnt++;
+    }
+    if(obj.classList.contains("added")) {  
+      if(cart.total_price < p) {
+        obj.classList.remove("added");
+        f = 1;
+        var fs_vid = obj.getAttribute("data-variantid");
+        var fs_title = obj.getAttribute("data-title");
+        if(fs_title == "Free U.S. Shipping"){
+          fs_vid = 40423449886768;
+        }
+        if(fs_vid)
+        {
+          $.ajax({
+            type: "POST",
+            url: "/cart/change.js",
+            dataType: "json",
+            data: {
+              id: parseFloat(fs_vid),
+              quantity: 0,
+            },
+          }).then((data) => {
+            $.getJSON('/cart.json').then(cart => {
+              Shopify.onCartUpdate(cart)
+            });
+          });
+        }
+      }
+    }
+    else {  
+      if(cart.total_price > p) {
+        obj.classList.add("added");
+        f = 1;
+        var fs_vid = obj.getAttribute("data-variantid");
+        var fs_title = obj.getAttribute("data-title");
+        if(fs_title == "Free U.S. Shipping"){
+          fs_vid = 40423449886768;
+        }
+        if(fs_vid)
+        {
+          $.ajax({
+            type: 'POST',
+            url: '/cart/add.js',
+            data: {
+              quantity: 1,
+              id: parseFloat(fs_vid)
+            },
+            dataType: 'json', 
+            success: function (cartdata) { 
+              $.getJSON('/cart.json').then(cart => {
+                Shopify.onCartUpdate(cart)
+              });
+            },
+            error: function(resp) 
+            {
+            } 
+          });
+        }
+      }
+    }
+  });
+  
+  console.log(progress_cnt);
+  console.log(gift_cnt);
+  var progress_percent = progress_cnt * 100 / gift_cnt;
+  document.querySelector(".gift_progress_bar .progress_amount").style.width = progress_percent + "%";
+
+  if(progress_percent >= 100) {
+    document.querySelector(".gift_comment").classList.add("complete");
+  }
+  else {
+    document.querySelector(".gift_comment").classList.remove("complete");
+  }
+
+  var ff = 0;
+  document.querySelectorAll(".scd__giftrow .gift-item").forEach(function(obj) {
+    var p = parseInt(obj.getAttribute("data-price"));
+    if(cart.total_price < p && ff == 0) {
+      document.querySelector(".away_price").textContent = "$" + (parseFloat(p - cart.total_price)/100).toFixed(2);
+      document.querySelector(".away_title").textContent = obj.getAttribute("data-title");
+      ff = 1;
+    }
+  });
+  
 };
 
 Shopify.onCartShippingRatesUpdate = function (rates, shipping_address) {
