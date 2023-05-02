@@ -14,6 +14,10 @@
         {% endif %}
       </a>
     </div>
+    {% assign is_free = false %}
+    {% if item.product.tags contains "free_product" %}
+      {% assign is_free = true %}
+    {% endif %}
     <div class="scd-item__info">
       <a href="{{- item.url -}}" class="font-medium hover:underline">
         {{- item.product.title -}}
@@ -104,7 +108,7 @@
         </ul>
       {%- endif -%}
       <div class="flex items-center mt-[10px]">
-        <div class="scd-item__quantity flex justify-between rounded">
+        <div class="scd-item__quantity flex justify-between rounded" {% if is_free == true %} style="display: none;" {% endif %}>
           <button class="scd-item__btn" data-id="{{- item.key -}}" data-qty-change="dec">-</button>
           <input
             class="py-1 scd-item__qty_input w-9 text-center"

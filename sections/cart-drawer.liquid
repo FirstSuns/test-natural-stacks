@@ -164,6 +164,9 @@
           <div class="scd__items">
             {% for item in cart.items %}
               {% render 'cart-drawer-item', item: item, ind: forloop.index %}
+<!--               <style>
+              .{{ item.product.title | handle }}{display:none !important;}
+              </style> -->
             {% endfor %}
           
             {%- liquid 
@@ -202,20 +205,28 @@
                endfor
             -%}
 
-            {% if recommend %}
+            {% assign addon_coll_01 = all_products[settings.addons_product_01] %}
+            {% assign addon_coll_02 = all_products[settings.addons_product_02] %}
+            {% assign addon_coll_03 = all_products[settings.addons_product_03] %}
+            {% assign addon_coll_04 = all_products[settings.addons_product_04] %}
+            {% if addon_coll_01 != blank or addon_coll_02 != blank or addon_coll_03 != blank or addon_coll_04 != blank %}
               <hr class="my-3">
-              <div class="scd-item addon-item">
+              <div class="addon-main-section">
+              <h2 class="recomment-title">RECOMMENDED PRODUCTS</h2>
+              <h3 class="recomment-title-small">You May Also Like</h3>
+              <div class="scd-item addon-item {{ addon_coll_01.title | handle }}">
                 <div class='item-image'>
-                  <img src="{{ recommend | img_url: '108x' }}" />
+                  <img src="{{ addon_coll_01 | img_url: '108x' }}" />
                 </div>
                 <div class='item-content'>
                   <div class='item-row'>
-                    <a href="{{ recommend.url }}" class="font-medium hover:underline item-title">{{ recommend.title }}</a>
-                  </div>
-                  {% if recommend.variants.size > 1 %}
+                    <a href="{{ addon_coll_01.url }}" class="font-medium hover:underline item-title">{{ addon_coll_01.title }}</a>
+               <span class='item-price'>{{ addon_coll_01.selected_or_first_available_variant.price | money }}<s>{{ addon_coll_01.selected_or_first_available_variant.compare_at_price | money }}</s></span>   
+              </div>
+                  {% if addon_coll_01.variants.size > 1 %}
                     <div class='item-row'>
                       <select class='item-variants'>
-                        {% for va in recommend.variants %}
+                        {% for va in addon_coll_01.variants %}
                           <option value="{{ va.id }}" data-price="{{ va.price | money }}">
                             {{ va.title }}
                           </option>
@@ -224,10 +235,93 @@
                     </div>
                   {% endif %}
                   <div class='item-row'>
-                    <span class='item-price'>{{ recommend.selected_or_first_available_variant.price | money }}</span>
-                    <a class='item-add' data-id="{{ recommend.selected_or_first_available_variant.id }}">Add</a>
+                   
+                    <a class='item-add' data-id="{{ addon_coll_01.selected_or_first_available_variant.id }}">Add</a>
                   </div>
                 </div>
+              </div>
+
+                <div class="scd-item addon-item {{ addon_coll_02.title | handle }}">
+                <div class='item-image'>
+                  <img src="{{ addon_coll_02 | img_url: '108x' }}" />
+                </div>
+                <div class='item-content'>
+                  <div class='item-row'>
+                    <a href="{{ addon_coll_02.url }}" class="font-medium hover:underline item-title">{{ addon_coll_02.title }}</a>
+              <span class='item-price'>{{ addon_coll_02.selected_or_first_available_variant.price | money }}<s>{{ addon_coll_02.selected_or_first_available_variant.compare_at_price | money }}</s></span>
+                  </div>
+                  {% if addon_coll_02.variants.size > 1 %}
+                    <div class='item-row'>
+                      <select class='item-variants'>
+                        {% for va in addon_coll_02.variants %}
+                          <option value="{{ va.id }}" data-price="{{ va.price | money }}">
+                            {{ va.title }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  {% endif %}
+                  <div class='item-row'>
+                    
+                    <a class='item-add' data-id="{{ addon_coll_02.selected_or_first_available_variant.id }}">Add</a>
+                  </div>
+                </div>
+              </div>
+
+                <div class="scd-item addon-item {{ addon_coll_03.title | handle }}">
+                <div class='item-image'>
+                  <img src="{{ addon_coll_03 | img_url: '108x' }}" />
+                </div>
+                <div class='item-content'>
+                  <div class='item-row'>
+                    <a href="{{ addon_coll_03.url }}" class="font-medium hover:underline item-title">{{ addon_coll_03.title }}</a>
+              <span class='item-price'>{{ addon_coll_03.selected_or_first_available_variant.price | money }}<s>{{ addon_coll_03.selected_or_first_available_variant.compare_at_price | money }}</s></span>
+                  </div>
+                  {% if addon_coll_03.variants.size > 1 %}
+                    <div class='item-row'>
+                      <select class='item-variants'>
+                        {% for va in addon_coll_03.variants %}
+                          <option value="{{ va.id }}" data-price="{{ va.price | money }}">
+                            {{ va.title }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  {% endif %}
+                  <div class='item-row'>
+                    
+                    <a class='item-add' data-id="{{ addon_coll_03.selected_or_first_available_variant.id }}">Add</a>
+                  </div>
+                </div>
+              </div>
+
+                <div class="scd-item addon-item {{ addon_coll_04.title | handle }}">
+                <div class='item-image'>
+                  <img src="{{ addon_coll_04 | img_url: '108x' }}" />
+                </div>
+                <div class='item-content'>
+                  <div class='item-row'>
+                    <a href="{{ addon_coll_04.url }}" class="font-medium hover:underline item-title">{{ addon_coll_04.title }}</a>
+                    <span class='item-price'>{{ addon_coll_04.selected_or_first_available_variant.price | money }}<s>{{ addon_coll_04.selected_or_first_available_variant.compare_at_price | money }}</s></span>
+                  </div>
+                  {% if addon_coll_04.variants.size > 1 %}
+                    <div class='item-row'>
+                      <select class='item-variants'>
+                        {% for va in addon.variants %}
+                          <option value="{{ va.id }}" data-price="{{ va.price | money }}">
+                            {{ va.title }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  {% endif %}
+                  <div class='item-row'>
+                    
+                    <a class='item-add' data-id="{{ addon_coll_04.selected_or_first_available_variant.id }}">Add</a>
+                  </div>
+                </div>
+              </div>
+                
               </div>
             {% endif %}
           </div>
@@ -238,7 +332,8 @@
         {%- endif -%}
       </div>
       <div class="scd__footer py-4 px-6">
-        {% render 'cart-addons' %}
+        {% comment %}{% render 'cart-addons' %}
+        {% render 'upsell-custom' %}{% endcomment %}
         <div class="scd__summary mb-4 pt-4" data-cart-summary>
           <div data-discounts>
             <ul class="scd-cart__discounts" role="list" data-discounts-list>

@@ -2343,6 +2343,36 @@
         "content": "Cart addons"
       },
       {
+        "type": "product",
+        "id": "addons_product_01",
+        "label": "Addons Product 01"
+      },
+      {
+        "type": "product",
+        "id": "addons_product_02",
+        "label": "Addons Product 02"
+      },
+      {
+        "type": "product",
+        "id": "addons_product_03",
+        "label": "Addons Product 03"
+      },
+      {
+        "type": "product",
+        "id": "addons_product_04",
+        "label": "Addons Product 04"
+      },
+      {
+        "type": "product",
+        "id": "checkout_product_01",
+        "label": "Checkout Product 01"
+      },
+      {
+        "type": "product",
+        "id": "checkout_product_02",
+        "label": "Checkout Product 02"
+      },
+      {
         "type": "checkbox",
         "id": "cart_notes_enable",
         "label": "Show cart note",

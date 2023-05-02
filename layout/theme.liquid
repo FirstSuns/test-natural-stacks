@@ -100,7 +100,7 @@ jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLT
 
 <body
   id="sf-theme" style="opacity: 0;"
-  class="{{ body_classes }} relative min-h-screen{% if customer %} customer-logged-in{% endif %}"
+  class="{{ template | handleize }} {{ body_classes }} relative min-h-screen{% if customer %} customer-logged-in{% endif %}"
   {% if template.name == 'product' %}data-product-id="{{ product.id }}"{% endif %}
 >
   {% render 'theme-data' %}
@@ -238,6 +238,7 @@ jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLT
         })
     })    
 </script>
+  cart
 </body>
 </html>
 

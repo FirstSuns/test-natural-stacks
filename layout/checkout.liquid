@@ -8,12 +8,13 @@
 
     <title>{{ page_title }}</title>
 
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
     {{ content_for_header }}
 
     {{ checkout_stylesheets }}
     {{ checkout_scripts }}
   </head>
-  <body>
+  <body class="checout-page {{ template | handleize }}">
     {{ skip_to_content_link }}
 
     <header class="banner" data-header role="banner">
@@ -34,6 +35,8 @@
           <main class="main__content" role="main">
             {{ content_for_layout }}
           </main>
+
+
           <footer class="main__footer" role="contentinfo">
             {{ content_for_footer }}
           </footer>
@@ -44,6 +47,7 @@
           </div>
           <div class="sidebar__content">
             {{ content_for_order_summary }}
+           
           </div>
         </aside>
       </div>
@@ -53,12 +57,123 @@
 
   <div data-rebuy-id="392"></div>
 <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop=natural-stacks.myshopify.com"></script>
+  <style>
+    .item-add{cursor:pointer}
+    </style>
 </body>
 </html>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script type='text/javascript'>
   jQuery(document).ready(function($) {
+     setTimeout(function(){
+      $.ajax({
+          url:'/cart',
+          type:'GET',
+          success: function(data){
+            var parsed = $.parseHTML(data), 
+                result = $(parsed).find(".upsell-custom-section").html(),
+            	upsellchildren = $('.upsell-custom-section').children().length;
+            if($(result).length > 0){ 
+              if(result != null && result != '' && result != undefined){ 
+                console.log('result',result);
+                $('.order-summary__section.order-summary__section--product-list').after(result)
+              }
+            }
+          }
+})
+    }, 2000);
+    $(document).on('click','.item-add',function(e){
+      e.preventDefault();
+      var data_id = $(this).attr('data-id');
+      setTimeout(function(){
+      $.ajax({
+			url: "/cart/add",
+			type: "post",
+			data: 'quantity=1&id=' + data_id,
+        beforeSend: function() {
+        $('body').css({"opacity": "0.3"});
+    },
+			success: function(){ 
+      $('.sidebar__content').load(' .sidebar__content', function(){
+         $.ajax({
+          url:'/cart',
+          type:'GET',
+          success: function(data){
+            var parsed = $.parseHTML(data), 
+                result = $(parsed).find(".upsell-custom-section").html(),
+            	upsellchildren = $('.upsell-custom-section').children().length;
+            if($(result).length > 0){ 
+              if(result != null && result != '' && result != undefined){ 
+                console.log('result',result);
+                $('.order-summary__section.order-summary__section--product-list').after(result)
+              }
+            }
+            setTimeout(function(){
+              $('body').css({"opacity": "1"});
+            }, 200)
+          }
+});
+        const bullet_html = "<div class='bullet_point'>"
+              + "<h3>WHY CUSTOMERS LOVE NATURAL STACKS</h3>"
+              + "<ul>"
+                + "<li>"
+                  + "<div class='col col-img'>"
+                    + "<img src='https://cdn.shopify.com/s/files/1/0269/3025/files/WHY_BUY_FROM_NATURAL_STACKS_9.png?v=1662093161' />"
+                  + "</div> "
+                  + "<div class='col col-text'>"
+                    + "<label>100% MONEY BACK GUARANTEE</label>"
+                    + "<p>We offer a 30 day, 100% money back guarantee. If you don't love it, reach out to us at support@naturalstacks.com</p>"
+                  + "</div>"
+                + "</li>"
+                + "<li>"
+                  + "<div class='col col-img'>"
+                    + "<img src='https://cdn.shopify.com/s/files/1/0269/3025/files/WHY_BUY_FROM_NATURAL_STACKS_10.png?v=1662093162' />"
+                  + "</div> "
+                  + "<div class='col col-text'>"
+                    + "<label>ALL-NATURAL INGREDIENTS</label>"
+                    + "<p>Made with unrivaled transparency because it's your right to know exactly what you're putting into your body.</p>"
+                  + "</div>"
+                + "</li>"
+                + "<li>"
+                  + "<div class='col col-img'>"
+                    + "<img src='https://cdn.shopify.com/s/files/1/0269/3025/files/WHY_BUY_FROM_NATURAL_STACKS_11.png?v=1662093162' />"
+                  + "</div> "
+                  + "<div class='col col-text'>"
+                    + "<label>FREE AND FAST SHIPPING</label>"
+                    + "<p>Free U.S. shipping on orders over $50 and on all subscription orders.</p>"
+                  + "</div>"
+                + "</li>"
+                + "<li>"
+                  + "<div class='col col-img'>"
+                    + "<img src='https://cdn.shopify.com/s/files/1/0269/3025/files/WHY_BUY_FROM_NATURAL_STACKS_12.png?v=1662093161' />"
+                  + "</div> "
+                  + "<div class='col col-text'>"
+                    + "<label>3RD PARTY TESTED</label>"
+                    + "<p>Our innovative formulas feature ingredient traceability, full label disclosure, and 3rd party lab testing on every single batch.</p>"
+                  + "</div>"
+                + "</li>"
+              + "</ul>"
+            + "</div>";
+    $(".order-summary__sections").append(bullet_html);
+
+    var prices = [0, 0, 0, 0];
+    var handles = [0, 0, 0, 0];
+    {% for i in (1..4) %}
+      {% assign hdl = 'freegift' | append: i | append: '_price' %}
+      {% assign hdl1 = 'freegift' | append: i | append: '_product' %}
+      {% if settings[hdl] == blank or settings[hdl1] == blank %} {% continue %} {% endif %}
+      
+      prices[{{ i | minus: 1 }}] = {{ settings[hdl] }};
+      handles[{{ i | minus: 1 }}] = '{{ settings[hdl1]}}';
+    {% endfor %}
+   });
+              
+		}, error: function(){
+			}
+		});
+        }, 100);
+    })
     const bullet_html = "<div class='bullet_point'>"
               + "<h3>WHY CUSTOMERS LOVE NATURAL STACKS</h3>"
               + "<ul>"
@@ -113,84 +228,84 @@
       handles[{{ i | minus: 1 }}] = '{{ settings[hdl1]}}';
     {% endfor %}
 
-    jQuery.getJSON('/cart.js', function(cart) {
-      var items = cart.items;
-      var add_flag = 0;
-      var added_flag = 0;
-      for(var i = 0; i < prices.length; i ++) {
-        if(prices[i] == 0 || handles[i] == 'free-shipping') {
-          continue;
-        }
+    // jQuery.getJSON('/cart.js', function(cart) {
+    //   var items = cart.items;
+    //   var add_flag = 0;
+    //   var added_flag = 0;
+    //   for(var i = 0; i < prices.length; i ++) {
+    //     if(prices[i] == 0 || handles[i] == 'free-shipping') {
+    //       continue;
+    //     }
 
-        if(prices[i] <= cart.total_price) {
-          var f = 0;
-          for(var j = 0; j < items.length; j ++) {
-            if(items[j].handle == handles[i]) {
-              f = 1;
-            }
-          }
-          var datas = {};
-          datas['items'] = [];
-          if(f == 0) {
-            add_flag ++;
-            jQuery.getJSON('/products/' + handles[i], function(obj) {
-              console.log(obj);
-              data = {
-                "quantity": 1,
-                "id": obj.product.variants[0].id
-              };
-              datas['items'].push(data);
-              added_flag ++;
-              if(add_flag == added_flag) {
-                console.log("reload");
-                console.log(datas);
-                jQuery.ajax({
-                  type: 'POST',
-                  url: '/cart/add.js',
-                  data: datas,
-                  dataType: 'json',
-                  success: function(cart1) {
-                    console.log("added");
-                    location.reload();
-                  }
-                });
-              }
-            });
-          }
-        }
-        else {
-          var f = 0;
-          for(var j = 0; j < items.length; j ++) {
-            if(items[j].handle == handles[i]) {
-              f = 1;
-            }
-          }
+    //     if(prices[i] <= cart.total_price) {
+    //       var f = 0;
+    //       for(var j = 0; j < items.length; j ++) {
+    //         if(items[j].handle == handles[i]) {
+    //           f = 1;
+    //         }
+    //       }
+    //       var datas = {};
+    //       datas['items'] = [];
+    //       if(f == 0) {
+    //         add_flag ++;
+    //         jQuery.getJSON('/products/' + handles[i], function(obj) {
+    //           console.log(obj);
+    //           data = {
+    //             "quantity": 1,
+    //             "id": obj.product.variants[0].id
+    //           };
+    //           datas['items'].push(data);
+    //           added_flag ++;
+    //           if(add_flag == added_flag) {
+    //             console.log("reload");
+    //             console.log(datas);
+    //             jQuery.ajax({
+    //               type: 'POST',
+    //               url: '/cart/add.js',
+    //               data: datas,
+    //               dataType: 'json',
+    //               success: function(cart1) {
+    //                 console.log("added");
+    //                 location.reload();
+    //               }
+    //             });
+    //           }
+    //         });
+    //       }
+    //     }
+    //     else {
+    //       var f = 0;
+    //       for(var j = 0; j < items.length; j ++) {
+    //         if(items[j].handle == handles[i]) {
+    //           f = 1;
+    //         }
+    //       }
           
-          if(f == 1) {
-            add_flag ++;
-            var datas = {};
-            jQuery.getJSON('/products/' + handles[i], function(obj) {
-              added_flag ++;
-              console.log(obj);
-              datas[obj.product.variants[0].id] = 0;
+    //       if(f == 1) {
+    //         add_flag ++;
+    //         var datas = {};
+    //         jQuery.getJSON('/products/' + handles[i], function(obj) {
+    //           added_flag ++;
+    //           console.log(obj);
+    //           datas[obj.product.variants[0].id] = 0;
 
-              if(add_flag == added_flag) {
-                console.log("update", datas);
-                jQuery.ajax({
-                  type: 'POST',
-                  url: '/cart/update.js',
-                  data: {updates : datas},
-                  dataType: 'json',
-                  success: function(cart) {
-                    location.reload();
-                  }
-                });
-              }
-            });
-          }
-        }
-      }
-    });
+    //           if(add_flag == added_flag) {
+    //             console.log("update", datas);
+    //             jQuery.ajax({
+    //               type: 'POST',
+    //               url: '/cart/update.js',
+    //               data: {updates : datas},
+    //               dataType: 'json',
+    //               success: function(cart) {
+    //                 location.reload();
+    //               }
+    //             });
+    //           }
+    //         });
+    //       }
+    //     }
+    //   }
+    // });
   });
 </script>
 

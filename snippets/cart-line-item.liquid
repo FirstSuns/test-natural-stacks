@@ -178,9 +178,14 @@
     </div>
   </div>
 
+  {% if item.product.tags contains "free_product" %}
+    <div class="sf-cart__table-col sf-cart__table-quantity hidden md:block">
+    </div>
+  {% else %}
   <div class="sf-cart__table-col sf-cart__table-quantity hidden md:block">
     {% render 'cart-item__qty-btn', item: item %}
   </div>
+  {% endif %} 
 
   <div class="sf-cart__table-col sf-cart__table-subtotal text-right hidden md:block">
     {%- comment -%}

@@ -377,7 +377,10 @@
                     {{ form | payment_button }}
                   </div>
                 {% endif %}
-                <a class="btn klaviyo-bis-trigger" href="#">Notify Me When Available</a>
+                {% if product.available %}
+                {% else %}
+                  <a class="btn klaviyo-bis-trigger" href="#">Notify Me When Available</a>
+                {% endif %}
               </div>
 
               {% if product.metafields.custom.selling_points.value.size > 0 %}

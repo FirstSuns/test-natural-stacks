@@ -9,6 +9,7 @@
     {% render 'foxkit-cart-goal' %}
 
     <form action="{{ routes.cart_url }}" method="post" novalidate class="checkout-form asdasd sf-cart__form scd__content">
+      {% include 'upsell-custom' %}
       <div class="sf-cart__table w-full">
         <div class="sf-cart__table-head flex mb-1">
           <div class="sf-cart__table-col sf-cart__table-product">{{ 'cart.label.product' | t }}</div>
