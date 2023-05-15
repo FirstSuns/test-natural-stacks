@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
   $('.menu__close').click(function(){
     $('.sf-menu-wrapper-mobile').addClass('hidden');
      $('.sf-menu__content').addClass('-translate-x-full');
-});
+  });
 
   $('.main-menu-new').click(function(){
     $(this).toggleClass('active');
@@ -34,6 +34,7 @@ jQuery(document).ready(function($) {
 
     
   });
+
   if($(".slick_slider").length > 0) {
     $(".slick_slider").slick({
       prevArrow: "<button type='button' class='slick-prev'><</button>",
@@ -590,7 +591,7 @@ document.addEventListener('octane.quiz.completed', function (e) {
     {
       if(e.detail.answers[key] == "Improve focus" || e.detail.answers[key] == "Boost Memory ")
         location.href = 'https://www.naturalstacks.com/pages/brain-quiz-focus';
-      else if(e.detail.answers[key] == "Feel Happier" || e.detail.answers[key] == "Stress relief")
+      else if(e.detail.answers[key] == "Feel Happier" || e.detail.answers[key] == "Stress Relief")
         location.href = 'https://www.naturalstacks.com/pages/brain-quiz-mood';
       else if(e.detail.answers[key] == "Sleep better")
         location.href = 'https://www.naturalstacks.com/pages/brain-quiz-sleep';

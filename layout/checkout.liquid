@@ -76,7 +76,7 @@
             	upsellchildren = $('.upsell-custom-section').children().length;
             if($(result).length > 0){ 
               if(result != null && result != '' && result != undefined){ 
-                console.log('result',result);
+                //console.log('result',result);
                 $('.order-summary__section.order-summary__section--product-list').after(result)
               }
             }
@@ -96,6 +96,7 @@
     },
 			success: function(){ 
       $('.sidebar__content').load(' .sidebar__content', function(){
+        location.reload();
          $.ajax({
           url:'/cart',
           type:'GET',
@@ -105,7 +106,7 @@
             	upsellchildren = $('.upsell-custom-section').children().length;
             if($(result).length > 0){ 
               if(result != null && result != '' && result != undefined){ 
-                console.log('result',result);
+                //console.log('---result',result);
                 $('.order-summary__section.order-summary__section--product-list').after(result)
               }
             }
@@ -141,7 +142,7 @@
                   + "</div> "
                   + "<div class='col col-text'>"
                     + "<label>FREE AND FAST SHIPPING</label>"
-                    + "<p>Free U.S. shipping on orders over $50 and on all subscription orders.</p>"
+                    + "<p>Free U.S. shipping on orders over $60 and on all subscription orders.</p>"
                   + "</div>"
                 + "</li>"
                 + "<li>"
@@ -201,7 +202,7 @@
                   + "</div> "
                   + "<div class='col col-text'>"
                     + "<label>FREE AND FAST SHIPPING</label>"
-                    + "<p>Free U.S. shipping on orders over $50 and on all subscription orders.</p>"
+                    + "<p>Free U.S. shipping on orders over $60 and on all subscription orders.</p>"
                   + "</div>"
                 + "</li>"
                 + "<li>"

@@ -93,7 +93,7 @@
       </div>
     </div>
   </div>
-
+  
   <div class="sf-cart__table-col sf-cart__table-price">
     {%- assign has_discount = false -%}
     {%- if item.original_price != item.final_price -%}
@@ -169,15 +169,15 @@
         </li>
       {%- endfor -%}
     </ul>
-
+    
     <div class="sf-cart__quantity mt-2 md:hidden">
       <div class="flex items-center justify-end">
         <span class="mr-2 text-sm hidden sm:block">{{ 'cart.label.qty' | t }}</span>
         {% render 'cart-item__qty-btn', item: item %}
       </div>
     </div>
+    
   </div>
-
   {% if item.product.tags contains "free_product" %}
     <div class="sf-cart__table-col sf-cart__table-quantity hidden md:block">
     </div>
@@ -185,7 +185,7 @@
   <div class="sf-cart__table-col sf-cart__table-quantity hidden md:block">
     {% render 'cart-item__qty-btn', item: item %}
   </div>
-  {% endif %} 
+  {% endif %}
 
   <div class="sf-cart__table-col sf-cart__table-subtotal text-right hidden md:block">
     {%- comment -%}

@@ -27,9 +27,9 @@ template-{{ template.name | handle }} {{ template.name }}-{{ template.suffix }} 
 <head>
 <script type="text/javascript" data-squaredance="mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZMQUcaqGU5fT6w6Ya8IEOVb" data-sqdv="1.0.1">
 try{squaredanceCart={{cart.items|json}}}catch(e){}
-;!function(j,u,m,b,l,e){var n="jumbleberry",i="3.2.1",o=function(){o.v==i&&o.e?o.e.apply(o,arguments):o.q.push(arguments)}
+;!function(j,u,m,b,l,e){var n="jumbleberry",i="3.2.2",o=function(){o.v==i&&o.e?o.e.apply(o,arguments):o.q.push(arguments)}
 ,a=encodeURIComponent,t=decodeURIComponent,d=j.location;(o.push=o).l=!1,o.q=[],o.v=i,o.duid=function(n){return(
-n=n&&u.cookie.match(RegExp(t("%5Cb")+n.substr(0,21)+"id=([^;]+)")))?t(n[1].split(".")[0]):""},o.g=function(n,i){return!!(
+n=n&&u.cookie.match(RegExp(t("%5Cs*")+n.substr(0,21)+"id=([^;]+)")))?t(n[1].split(".")[0]):""},o.g=function(n,i){return!!(
 i=RegExp("^[^#]*[?&]"+n+"=([^&#]+)").exec(i||d.href))&&t(i[1].replace(/\+/g," "))},o.s=function(n){for(var i=Math.round((
 new Date).getTime()/1e3),t=d.hostname.split("."),r=t.length-1;0<r--&&/^(([a-z0-9]{4}-?){8}|[0-9]+)$/i.test(n)&&n!=o.duid(
 o.p);)u.cookie=o.p.substr(0,21)+"id="+a(n)+"."+i+".0."+i+".; path=/; max-age=63072000; domain=."+t.slice(r,t.length
@@ -44,6 +44,7 @@ i.parentNode.insertBefore(n,i))},j[n]=j[n]||o,j[n].d=b}(window,document,"script"
 
 jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLTRXLYx248phDN-0TgHyY6XxE-XkB1CASM7yJK-zlt-_3XNRSA~", jumbleberry.g("sqdid") || jumbleberry.g("click_id"));
 </script>
+{% include 'replo-head.liquid' %}
 <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
 <link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
 <script>
@@ -51,7 +52,8 @@ jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLT
 ~function(W,H,A,L,E,_,B,N){function O(U,T,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET",U,!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):N[B]=R):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),W},E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",0),O("//triplewhale-pixel.web.app/triplefw.txt?",5)))}}("","TriplePixel",localStorage);
 /* << TriplePixel :: end*/
 </script>
-<link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin/>{% render 'pagefly-head' %}
+
+{% render 'pagefly-head' %}
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
@@ -85,16 +87,12 @@ jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLT
 {% render 'gem-app-header-scripts' %}
 <!--End_Gem_Page_Header_Script-->
 
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "g54dikudda");
-</script>
-
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
+
+{% if content_for_header contains 'fastbundle.co' %}
+    {% render 'fast_bundle_service' %}
+{% endif %}
 
 </head>
 
@@ -224,7 +222,7 @@ jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLT
     });
         
   }
-    $(window).on('load', function(){
+           $(window).on('load', function(){
      $(document).on('change','.mobile-sec .relative.sf__sortmb-list.touch-none select', function(){
         var opt_val = $('.mobile-sec .relative.sf__sortmb-list.touch-none select option:selected').text().trim();
      console.log('iffff');
@@ -236,9 +234,10 @@ jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLT
         }
       })
         })
-    })    
+    })  
 </script>
-  cart
+
+ 
 </body>
 </html>
 

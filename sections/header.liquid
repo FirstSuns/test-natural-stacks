@@ -84,7 +84,7 @@
     data-sticky="{{ section.settings.header_sticky }}"
 >
     {% render 'header__topbar', header: section %}
-    <div class="absolute inset-x-0 z-[70] header__wrapper {% if transparent_on_top %} transparent-on-top{% endif %}" id="fs-header__wrapper">
+    <div class="absolute inset-x-0 z-[70] header__wrapper {% if transparent_on_top %} transparent-on-top{% endif %}"  id="fs-header__wrapper">
         {% render 'header__mobile', section: section, transparent_on_top: transparent_on_top %}
         {% render 'header__desktop', section: section, transparent_on_top: transparent_on_top %}
     </div>

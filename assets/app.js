@@ -430,7 +430,8 @@ Shopify.onCartUpdate = async function (cart) {
   } catch (err) {
     console.error("Failed to trigger Shopify.onCartUpdate()", err);
   }
-  console.log("---Test Cart Update",cart);
+    
+  //console.log("---Test Cart Update",cart);
   var f = 0;
   var progress_cnt = 0;
   var gift_cnt = 0;
@@ -456,21 +457,6 @@ Shopify.onCartUpdate = async function (cart) {
         if(fs_vid)
         {
           remove_items.push({ id: parseFloat(fs_vid), quantity: 0});
-          /*
-          $.ajax({
-            type: "POST",
-            url: "/cart/change.js",
-            dataType: "json",
-            data: {
-              id: parseFloat(fs_vid),
-              quantity: 0,
-            },
-          }).then((data) => {
-            $.getJSON('/cart.json').then(cart => {
-              Shopify.onCartUpdate(cart)
-            });
-          });
-          */
         }
       }
     }
@@ -487,31 +473,12 @@ Shopify.onCartUpdate = async function (cart) {
         if(fs_vid)
         {
           add_items.push({ quantity: 1, id: parseFloat(fs_vid) });
-          /*
-          $.ajax({
-            type: 'POST',
-            url: '/cart/add.js',
-            data: {
-              quantity: 1,
-              id: parseFloat(fs_vid)
-            },
-            dataType: 'json', 
-            success: function (cartdata) { 
-              $.getJSON('/cart.json').then(cart => {
-                Shopify.onCartUpdate(cart)
-              });
-            },
-            error: function(resp) 
-            {
-            } 
-          });
-          */
         }
       }
     }
   });
-  console.log("add---", add_items);
-  console.log("remove--", remove_items);
+  //console.log("add---", add_items);
+  //console.log("remove--", remove_items);
   if(add_items.length > 0){
     $.ajax({
       type: 'POST',
@@ -519,7 +486,6 @@ Shopify.onCartUpdate = async function (cart) {
       data: { items: add_items },
       dataType: 'json', 
       success: function (cartdata) { 
-        console.info('add---success');
         $.getJSON('/cart.json').then(cart => {
           Shopify.onCartUpdate(cart)
         });
@@ -540,7 +506,6 @@ Shopify.onCartUpdate = async function (cart) {
       data: removed_data,
       dataType: 'json', 
       success: function (cartdata) { 
-        console.info('removed---success');
         $.getJSON('/cart.json').then(cart => {
           Shopify.onCartUpdate(cart)
         });
@@ -552,8 +517,9 @@ Shopify.onCartUpdate = async function (cart) {
     
   }
 
-  console.log(progress_cnt);
-  console.log(gift_cnt);
+  
+  //console.log(progress_cnt);
+  //console.log(gift_cnt);
   var progress_percent = progress_cnt * 100 / gift_cnt;
   document.querySelector(".gift_progress_bar .progress_amount").style.width = progress_percent + "%";
 
@@ -573,6 +539,7 @@ Shopify.onCartUpdate = async function (cart) {
       ff = 1;
     }
   });
+  
 };
 
 Shopify.onCartShippingRatesUpdate = function (rates, shipping_address) {

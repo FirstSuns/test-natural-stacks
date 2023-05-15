@@ -6,9 +6,9 @@
         "container": "w-full",
         "hero_size": "adapt",
         "show_overlay": false,
-        "image": "shopify:\/\/shop_images\/Desktop_3600x1884_8a92aeb5-9760-443d-952f-f91b5039fbb9.png",
+        "image": "shopify:\/\/shop_images\/3600x1250_6.png",
         "bg_position": "center bottom",
-        "image_link": "https:\/\/www.naturalstacks.com\/products\/zen-magnesium-gummies",
+        "image_link": "https:\/\/www.naturalstacks.com\/collections\/all",
         "parallax": false,
         "content_in_container": false,
         "content_position": "center top",
@@ -19,10 +19,10 @@
         "subtitle": "",
         "text": "",
         "button_label": "",
-        "button_link": "https:\/\/www.naturalstacks.com\/products\/zen-magnesium-gummies",
+        "button_link": "",
         "button_style": "sf__btn-white",
         "button_size": "sf__btn-large",
-        "mb_image": "shopify:\/\/shop_images\/Desktop_Mobile_800x800_3c5a5f35-6a0b-47db-9b1f-f3f2d8270720.png",
+        "mb_image": "shopify:\/\/shop_images\/800x800_2.png",
         "use_content_above": false,
         "custom_class": ""
       }
@@ -195,6 +195,14 @@
             "image_link": "",
             "max_width": "150px"
           }
+        },
+        "26ed8297-ec62-4c0d-8146-81f6d4791769": {
+          "type": "image",
+          "settings": {
+            "image_by_url": "",
+            "image_link": "",
+            "max_width": "150px"
+          }
         }
       },
       "block_order": [
@@ -202,7 +210,8 @@
         "1655494766178c89ec-1",
         "1655494766178c89ec-2",
         "1655494766178c89ec-3",
-        "82f82d1e-701c-40b4-9a1c-b38b12f96ad8"
+        "82f82d1e-701c-40b4-9a1c-b38b12f96ad8",
+        "26ed8297-ec62-4c0d-8146-81f6d4791769"
       ],
       "settings": {
         "heading": "",
@@ -922,7 +931,7 @@
         "background_color": "rgba(0,0,0,0)",
         "item_gap": 100,
         "item_gap_mobile": 30,
-        "image": "shopify:\/\/shop_images\/Untitled_design_-_2022-11-04T090844.494.png",
+        "image": "shopify:\/\/shop_images\/Untitled_700_x_467_px.png",
         "link": "",
         "layout": "left",
         "image_column_size": "6",

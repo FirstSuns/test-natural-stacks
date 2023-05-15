@@ -2,22 +2,24 @@
   "sections": {
     "collection-banner": {
       "type": "collection-banner",
+      "disabled": true,
       "settings": {}
     },
     "collection-header": {
       "type": "collection-page-header",
-      "disabled": true,
       "settings": {
         "container": "container",
         "layout": "without_breadcrumb",
-        "header_height": "small",
-        "text_alignment": "center",
+        "header_height": "large",
+        "text_alignment": "left",
         "vertical_alignment": "center",
-        "text_color": "dark",
+        "text_color": "white",
         "bg_color": "#ffffff",
+        "bg_image": "shopify:\/\/shop_images\/Untitled_design_23.png",
+        "bg_image_mob": "shopify:\/\/shop_images\/Untitled_375_x_300_px.png",
         "enable_parallax": false,
-        "upper_title": false,
-        "show_desc": false,
+        "upper_title": true,
+        "show_desc": true,
         "collection_all_desc": ""
       }
     },

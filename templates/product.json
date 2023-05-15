@@ -21,10 +21,6 @@
         },
         "ac794702-714f-4dba-8393-e6a2406ea50d": {
           "type": "description",
-          "settings": {}
-        },
-        "2ca3dc78-f287-472f-94a1-fffc5e334e3f": {
-          "type": "short_description",
           "disabled": true,
           "settings": {}
         },
@@ -49,16 +45,10 @@
             "show_dynamic_checkout": false
           }
         },
-        "b5f7bd2a-ebb4-4bd8-8c7c-edeecc62791d": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"fs-pdp-single-review md:hidden\">\n{% render 'other-review-app-snippet' %}\n<\/div>"
-          }
-        },
         "abd1544e-94ad-4a1b-a277-cf6182934a8a": {
           "type": "text",
           "settings": {
-            "text": "100% money back guarantee | Free Shipping on orders $50+",
+            "text": "100% money back guarantee | Free Shipping on orders $60+",
             "text_style": "body",
             "additional_class": "guarantee_text"
           }
@@ -115,11 +105,9 @@
         "e471692e-ca2a-4fe6-9f8e-cc64052eb22b",
         "price",
         "ac794702-714f-4dba-8393-e6a2406ea50d",
-        "2ca3dc78-f287-472f-94a1-fffc5e334e3f",
         "fea49fdb-38dc-492d-8976-79368cb712ee",
         "e1933521-ea31-49fa-ab2d-72a14b8a5718",
         "buy_buttons",
-        "b5f7bd2a-ebb4-4bd8-8c7c-edeecc62791d",
         "abd1544e-94ad-4a1b-a277-cf6182934a8a",
         "d3dc445e-529b-4e26-b635-1fa8126587dd",
         "2345d74a-2bc5-4f10-ae12-4f4659301929",
@@ -379,7 +367,7 @@
           "settings": {
             "title1": "Grape Seed Extract",
             "shorttext1": "<p>Supports healthy cellular function. <\/p>",
-            "text1": "Similar to L-citrulline, grape seed extract is used to increase nitric oxide production to help GABA pass across the blood-brain barrier and enter the brain.",
+            "text1": "Similar to L-citrulline, grape seed extract is used to increase nitric oxide production to help GABA pass across the blood-brain barrier and enter the brain.*",
             "image1": "shopify:\/\/shop_images\/shutterstock_2085944014_-_Edited_aaf6f620-90ba-4294-a9fa-8b05907bfb5a.png",
             "title2": "L-Citrulline",
             "shorttext2": "<p>Found in foods like watermelon, dairy, beef and pork. <\/p>",
@@ -582,12 +570,14 @@
         "2646ea4a-d6d8-411a-a2dd-467952bdebc4": {
           "type": "ingredient_item",
           "settings": {
-            "title1": "",
-            "shorttext1": "",
-            "text1": "",
-            "title2": "",
-            "shorttext2": "",
-            "text2": ""
+            "title1": "Pycnogenol®",
+            "shorttext1": "Advanced circulation support, improving the overall health of your body and brain.*",
+            "text1": "20mg of this super ingredient gives you advanced circulation support, improving the overall health of your body and brain.*",
+            "image1": "shopify:\/\/shop_images\/Untitled_design_-_2023-03-23T090700.782.png",
+            "title2": "Beet Root Extract",
+            "shorttext2": "Supports blood flow to the entire body.*",
+            "text2": "This has been shown in studies to increase natural nitric oxide production and support blood flow to the entire body.*",
+            "image2": "shopify:\/\/shop_images\/Untitled_design_-_2023-03-23T091849.729.png"
           }
         },
         "d90c9e62-8662-4e2c-818c-920d177363cd": {
@@ -1007,10 +997,10 @@
         "enable_slider": true
       }
     },
-    "4872bc57-15d4-490a-a443-3ddaf004dfd9": {
+    "e17f289a-3b79-4660-8ba8-9ff0b35f9a77": {
       "type": "product-tabs",
       "blocks": {
-        "template--15040077004848__4872bc57-15d4-490a-a443-3ddaf004dfd9-16830872042cfa85c9-0": {
+        "template--15048534130736__e17f289a-3b79-4660-8ba8-9ff0b35f9a77-1683135125a6bfaea8-0": {
           "type": "tab",
           "settings": {
             "title": "Tab 1",
@@ -1019,7 +1009,7 @@
         }
       },
       "block_order": [
-        "template--15040077004848__4872bc57-15d4-490a-a443-3ddaf004dfd9-16830872042cfa85c9-0"
+        "template--15048534130736__e17f289a-3b79-4660-8ba8-9ff0b35f9a77-1683135125a6bfaea8-0"
       ],
       "custom_css": [
         ".product-tabs__header {display: none;}"
@@ -1065,6 +1055,6 @@
     "c2774ad7-b345-493d-85a4-e7596ac9b961",
     "16566965268aec6a01",
     "4d57c2de-672a-4d4f-9958-5280ee4ea5d0",
-    "4872bc57-15d4-490a-a443-3ddaf004dfd9"
+    "e17f289a-3b79-4660-8ba8-9ff0b35f9a77"
   ]
 }
