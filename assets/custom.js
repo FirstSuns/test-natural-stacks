@@ -570,9 +570,17 @@ document.querySelectorAll(".switch-subscribe").forEach(function(obj) {
 document.querySelectorAll(".sticky-bottom-atc .add-to-cart").forEach(function(obj) {
   obj.addEventListener("click", function(e) {
     e.preventDefault();
+    if ($(window).width() > 766 ) {
     document.querySelector(".product-template .add-to-cart").click();
+    }
+    else{
+     $('html, body').animate({
+        scrollTop: $(".variant_options_widget").offset().top - 50
+    }, 2000); 
+    }
   });
 });
+
 
 document.addEventListener('octane.quiz.completed', function (e) {
   // your code for building and handling the results page
@@ -580,13 +588,13 @@ document.addEventListener('octane.quiz.completed', function (e) {
   for ( key in e.detail.answers) {
     if(key == "Octane: What is your main goal? ")
     {
-      if(e.detail.answers[key] == "Improve focus")
+      if(e.detail.answers[key] == "Improve focus" || e.detail.answers[key] == "Boost Memory ")
         location.href = 'https://www.naturalstacks.com/pages/brain-quiz-focus';
-      else if(e.detail.answers[key] == "Stress relief" || e.detail.answers[key] == "Feel happier")
+      else if(e.detail.answers[key] == "Feel Happier" || e.detail.answers[key] == "Stress relief")
         location.href = 'https://www.naturalstacks.com/pages/brain-quiz-mood';
       else if(e.detail.answers[key] == "Sleep better")
         location.href = 'https://www.naturalstacks.com/pages/brain-quiz-sleep';
-      else if(e.detail.answers[key] == "Boost of energy" || e.detail.answers[key] == "Boost memory")
+      else if(e.detail.answers[key] == "Boost of energy")
         location.href = 'https://www.naturalstacks.com/pages/brain-quiz-energy ';
     } 
   }

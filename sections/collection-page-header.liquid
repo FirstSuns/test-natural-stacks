@@ -66,7 +66,7 @@
     <div class="collection-header__bg absolute -inset-0 bg-color bg-no-repeat bg-cover bg-center pointer-events-none {% if enable_parallax %} bg-fixed{% endif %}"></div>
     <div class="{{ section.settings.container }} text-{{ text_alignment }}">
         <div class="sf__collection-headerContent relative z-1 text-{{ section.settings.text_color }}">
-            <h1 class="collection-header__title lg:text-[42px] text-2xl {% if section.settings.upper_title %}uppercase{% else %}capitalize{% endif %}">{{ collection.title }}</h1>
+            <h1 class="collection-header__title lg:text-[42px] text-2xl {% if section.settings.upper_title %}uppercase{% else %}capitalize{% endif %}" {% if collection.metafields.custom.desktop_banner != blank %} style="display:none;" {% endif %}>{{ collection.title }}</h1>
             {% if show_breadcrumb and layout == 'inside' %}
                 <div class="collection-header__breadcrumb">
                     {% capture justify %}{% if text_alignment == 'right' %}end{% else %}{{ text_alignment }}{% endif %}{% endcapture %}
@@ -87,12 +87,12 @@
     data-section-id="{{ section.id }}"
     data-enable-parallax="{{ enable_parallax }}"
     class="fs-mobile-only collection-header overflow-hidden collection-header--{{ header_height }} flex items-{{ section.settings.vertical_alignment }} justify-center relative{{ custom_class }}"
-    style="--bg-color: {{ section.settings.bg_color | default: 'transparent' }}; {% if bg_image_mob != blank %}--bg-image: url({{ bg_image_mob | img_url: 'master' }}){% endif %};{% if header_height == 'adapt' %}height: {{- wrapper_height -}}vw{% endif %}"
+    style="--bg-color: {{ section.settings.bg_color | default: 'transparent' }}; {% if bg_image_mob != blank %}--bg-image: url({{ bg_image_mob | img_url: 'master' }}){% endif %};{% if header_height == 'adapt' %}height: {{- wrapper_height -}}vw;{% endif %} min-height: 375px;"
 >  
     <div class="collection-header__bg absolute -inset-0 bg-color bg-no-repeat bg-cover bg-center pointer-events-none {% if enable_parallax %} bg-fixed{% endif %}"></div>
     <div class="{{ section.settings.container }} text-{{ text_alignment }}">
         <div class="sf__collection-headerContent relative z-1 text-{{ section.settings.text_color }}">
-            <h1 class="collection-header__title lg:text-[42px] text-2xl {% if section.settings.upper_title %}uppercase{% else %}capitalize{% endif %}">{{ collection.title }}</h1>
+            <h1 class="collection-header__title lg:text-[42px] text-2xl {% if section.settings.upper_title %}uppercase{% else %}capitalize{% endif %}" {% if collection.metafields.custom.mobile_banner != blank %} style="display:none;" {% endif %}>{{ collection.title }}</h1>
             {% if show_breadcrumb and layout == 'inside' %}
                 <div class="collection-header__breadcrumb">
                     {% capture justify %}{% if text_alignment == 'right' %}end{% else %}{{ text_alignment }}{% endif %}{% endcapture %}
