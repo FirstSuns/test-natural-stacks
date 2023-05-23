@@ -1,0 +1,64 @@
+{% if size != blank %}
+    {% assign rimg_size = size %}
+{% else %}
+    {% assign rimg_size = 'master' %}
+{% endif %}
+
+{% if crop != blank %}
+    {% assign src = img | img_url: rimg_size, crop: crop %}
+{% else %}
+    {% assign src = img | img_url: rimg_size %}
+{% endif %}
+
+{% if background %}
+
+{% if class != blank %}class="{{ class }}"{% endif %}
+style="
+  {% if format == '' %}
+    background-image: url('{{ img | img_url: size, crop: crop }}');
+  {% else %}
+    background-image: url('{{ img | img_url: size, format: format }}');
+  {% endif %}
+
+  {% if style != blank %}{{ style }}{% endif %}
+"
+{% if attr != blank %}{{ attr }}{% endif %}
+
+{% else %}
+
+    {% if image_sizes != blank %}
+        {% assign image_sizes = image_sizes | split: ',' %}
+        <picture class="rimg">
+            {% for image_size in image_sizes %}
+                {% assign p_size = image_size | split: ':' %}
+                {% if p_size[0] contains 'px' %}
+                    {% if crop != blank %}
+                        <source media="(max-width: {{ p_size[0] }})" data-srcset="{{ img | img_url: p_size[1], crop: crop }}">
+                    {% else %}
+                        <source media="(max-width: {{ p_size[0] }})" data-srcset="{{ img | img_url: p_size[1] }}">
+                    {% endif %}
+                {% else %}
+                    {% if crop != blank %}
+                        <source media="(max-width: 380px)" data-srcset="{{ img | img_url: p_size[0], crop: crop }}">
+                    {% else %}
+                        <source media="(max-width: 380px)" data-srcset="{{ img | img_url: p_size[0] }}">
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            <img data-src="{{ src }}"
+                 {% if alt != blank %}alt="{{ alt }}"{% endif %}
+                {% if style != blank %}style="{{ style }}"{% endif %}
+                    {% if attr != blank %}{{ attr | escape }}{% endif %}
+                 class="{{ class }} lazyload blur-up">
+        </picture>
+    {% else %}
+        <img
+                data-src="{{ src }}"
+                {% if alt != blank %}alt="{{ alt }}"{% endif %}
+                class="{{ class }}  lazyload blur-up"
+            {% if style != blank %}style="{{ style }}"{% endif %}
+                {% if attr != blank %}{{ attr | escape }}{% endif %}
+        />
+    {% endif %}
+
+{% endif %}

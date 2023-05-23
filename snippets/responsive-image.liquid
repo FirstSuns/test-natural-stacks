@@ -43,13 +43,13 @@
   {% endif %}
 {%- endcapture -%}
 
-<div data-image-id="{{ image.id }}" class="sf-image {{ wrapper_class }}" data-image-wrapper data-image-loading {{ wrapper_attributes }} style="{{ style | strip | strip_newlines }}">
+<div data-image-id="{{ image.id }}" data-logo="{{ image | img_url: 'master' }}" class="sf-image sf-desktop-cst {{ wrapper_class }}" data-image-wrapper data-image-loading {{ wrapper_attributes }} style="{{ style | strip | strip_newlines }}">
   <img
       class="lazyload {{ image_class }}"
       {% comment %}
-      src="{{ image | img_url: '100x' }}"
+      src="{{ image | img_url: '2048x2048' }}"
       {% endcomment %}
-      data-src="{{ img_url }}"
+      data-src="{{ image | img_url: '2048x2048' }}"
       data-widths="[{{ image_widths }}]"
       data-aspectratio="{{ image.aspect_ratio }}"
       data-sizes="auto"

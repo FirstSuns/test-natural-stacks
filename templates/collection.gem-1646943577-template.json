@@ -10,7 +10,7 @@
       "settings": {
         "container": "container",
         "layout": "without_breadcrumb",
-        "header_height": "large",
+        "header_height": "adapt",
         "text_alignment": "left",
         "vertical_alignment": "center",
         "text_color": "white",

@@ -21,7 +21,7 @@
   {% if default_logo != blank or logo_svg != blank or logo_transparent_svg != blank or logo_transparent != blank %}
       <a href="{{ routes.root_url }}" class="block py-2.5 logo-img relative" title="{{ shop.name }}">
         {% if logo_svg != blank %}
-          <div class="sf-image sf-logo-default">
+          <div class="sf-image sf-logo-default" {{ logo_svg }}>
             <img src="{{ logo_svg }}" alt="{{ logo_alt }}">
           </div>
         {% else %}

@@ -1,0 +1,191 @@
+{% raw %}
+<div id="c-rp" v-bind:class="{ showPopup: showPopup }">
+    <div class="c-rp--box" v-if="data.length > 0">
+        <h2>Upgrade and Save!</h2>
+        <div class="flex">
+            <div class="rp-image-container">
+                <img v-bind:src="data[0].image.src" alt="">
+            </div>
+            <div>
+                <p class="rp-title"> {{ data[0].title }}</p>
+                <p class="rp-price">
+                    <span>${{ data[0].variants[0].price }}</span><span>${{ data[0].variants[0].compare_at_price}}</span>
+                </p>
+                <button v-on:click="addNew()">Upgrade and Save!</button>
+                <button v-on:click="addOriginal()">No Thanks</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endraw %}
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<style>
+#c-rp {
+	 background-color: rgba(0, 0, 0, 0.4);
+	 position: fixed;
+	 width: 100%;
+	 height: 100%;
+	 z-index: 8010;
+	 display: none;
+	 justify-content: center;
+	 align-items: center;
+	 max-height: 100vh;
+     margin-top: -70px;
+}
+ #c-rp .c-rp--box {
+	 max-width: 971px;
+	 background-color: white;
+	 position: relative;
+	 padding: 40px 0px;
+	 cursor: pointer;
+	 font-family: 'Montserrat';
+	 border-radius: 10px;
+}
+ #c-rp .c-rp--box h2 {
+	 font-size: 40px;
+	 text-align: center;
+	 font-weight: normal;
+	 line-height: 1.25;
+	 letter-spacing: normal;
+	 margin: 0px;
+     font-weight: bold;
+}
+ #c-rp .c-rp--box select {
+	 max-width: 350px;
+	 color: black;
+}
+ #c-rp .c-rp--box button {
+	 cursor: pointer;
+	 max-width: 350px;
+	 border-radius: 10px;
+	 background: #ffb405;
+	 margin-top: 10px;
+	 width: 100%;
+	 font-size: 16px;
+	 font-size: 1rem;
+	 font-weight: bold;
+	 line-height: 1.25;
+	 letter-spacing: 2px;
+	 text-align: center;
+	 color: #fff;
+	 font-family: "Palanquin", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	 border: 2px solid transparent;
+	 padding: 13px 15px;
+	 text-transform: uppercase;
+}
+ #c-rp .c-rp--box p {
+	 font-size: 22px;
+	 text-align: center;
+}
+ #c-rp .c-rp--box p span {
+	 font-weight: bold;
+}
+ #c-rp .c-rp--box .rp-price {
+	 margin: 5px 0px;
+	 margin-top: 15px;
+	 font-size: 28px;
+	 font-weight: bold;
+}
+
+ #c-rp .c-rp--box .rp-price span:last-of-type {
+	 text-decoration: line-through;
+}
+ #c-rp .c-rp--box .rp-price span {
+	 margin: 0px 5px;
+}
+ #c-rp .c-rp--box .rp-description span {
+	 text-align: left;
+	 font-size: 16px;
+	 font-size: 1rem;
+	 font-weight: normal;
+	 line-height: 1.25;
+	 letter-spacing: normal;
+	 margin: 0;
+}
+ #c-rp .c-rp--box .rp-title {
+	 text-align: center;
+	 font-size: 24px;
+	 font-weight: bold;
+	 font-weight: normal;
+	 line-height: 1.25;
+	 letter-spacing: normal;
+}
+ #c-rp .c-rp--box .rp-stars {
+	 filter: invert(92%) sepia(17%) saturate(7498%) hue-rotate(1deg) brightness(102%) contrast(114%);
+	 margin-bottom: 10px;
+}
+ #c-rp .c-rp--box button:nth-of-type(2) {
+	 background-color: white;
+	 color: black;
+	 border: 2px solid #ffb405;
+}
+
+ #c-rp .flex {
+	 display: flex;
+}
+ #c-rp .flex > div {
+	 width: 50%;
+	 display: flex;
+	 padding: 20px;
+	 flex-direction: column;
+	 align-items: center;
+}
+ #c-rp .flex .rp-image-container {
+	 justify-content: center;
+}
+ #c-rp .flex .rp-image-container img {
+	 max-height: 350px;
+	 height: auto;
+	 align-self: center;
+}
+ .showPopup {
+	 display: flex !important;
+}
+ @media only screen and (max-width: 700px) {
+	 #c-rp .c-rp--box {
+		 width: 100%;
+		 padding: 20px 10px;
+		 border-radius: 0px;
+		 max-height: 100vh;
+         margin-top: 10vh;
+	}
+	 #c-rp .c-rp--box .flex {
+		 flex-direction: column;
+		 align-items: center;
+		 margin-top: 0px;
+	}
+	 #c-rp .c-rp--box .flex > div {
+		 width: 90%;
+		 justify-content: center;
+	}
+	 #c-rp .c-rp--box h2 {
+		 font-size: 24px;
+		 line-height: 1.5em;
+	}
+	 #c-rp .c-rp--box p {
+		 font-size: 18px;
+	}
+	 #c-rp .c-rp--box .rp-price {
+		 font-size: 24px;
+	}
+	 #c-rp .c-rp--box .rp-description {
+		 font-size: 16px;
+	}
+	 #c-rp .c-rp--box .rp-image-container img {
+		 margin-right: 0px;
+		 max-height: 150px;
+	}
+}
+ .atc-text {
+	 text-align: right;
+	 font-weight: 700;
+	 text-transform: uppercase;
+	 font-size: 14px;
+	 letter-spacing: 2px;
+	 margin-top: 10px;
+	 font-size: 14px !important;
+}
+
+</style>

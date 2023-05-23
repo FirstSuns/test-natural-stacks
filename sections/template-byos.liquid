@@ -49,7 +49,16 @@
                                                 {% include 'okendo-reviews-product-rating-summary' %}
                                             </div>
                                             <figure class="product-list-item-thumbnail mx-auto mb-4 border">
-                                              <img src="{{ product.featured_image | img_url: 'master' }}" />
+                                                {% assign image_sizes = "640px:268x268,240x240" %}
+                                                {%
+                                                        include 'rimg',
+                                                        img: product.featured_image,
+                                                        class: 'product-list-item-image',
+                                                        sizes: image_sizes,
+                                                        size: '268x268',
+                                                        crop: 'center',
+                                                        lazy: lazy
+                                                %}
                                             </figure>
                                             <div class="text-center font-bold uppercase my-2 w-full">
                                                 Neurotransmitter Support
@@ -163,7 +172,7 @@
                                 </div>
                             </div>
                             <div class="container mx-auto px-4 ">
-                                <div class="flex items-center justify-center mb-8 banner"><h3 class="text-heading text-center uppercase text-2xl md:text-3xl"> Daily Essentials</h3></div>
+                                <div class="flex items-center justify-center mb-8 mt-8 banner"><h3 class="text-heading text-center uppercase text-2xl md:text-3xl"> Daily Essentials</h3></div>
                                 <div class="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 flex grid gap-8 gap-y-12">
                                     {% for product in collections['byos-daily-essentials'].products %}
                                         <article class="flex flex-wrap">

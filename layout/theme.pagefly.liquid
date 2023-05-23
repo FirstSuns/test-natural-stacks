@@ -48,6 +48,7 @@ i.parentNode.insertBefore(n,i))},j[n]=j[n]||o,j[n].d=b}(window,document,"script"
 
 jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLTRXLYx248phDN-0TgHyY6XxE-XkB1CASM7yJK-zlt-_3XNRSA~", jumbleberry.g("sqdid") || jumbleberry.g("click_id"));
 </script>
+
 {% include 'replo-head.liquid' %}
 <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
 <link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
@@ -64,7 +65,9 @@ jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLT
 	<meta name="theme-color" content="{{ settings.color_primary }}">
 
 {{ 'slick.min.css' | asset_url | stylesheet_tag }} 
-  
+  {% if page.url == '/pages/build-your-own-stack' %}
+    {{ 'build_own.css' | asset_url | stylesheet_tag }}
+  {% endif %}
   {% render 'preload' %}
   {% render 'SEO' %}
   {% render 'social-meta-tags' %}
@@ -97,7 +100,100 @@ jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLT
 {% if content_for_header contains 'fastbundle.co' %}
     {% render 'fast_bundle_service' %}
 {% endif %}
-
+{% if page.url == '/pages/build-your-own-stack' %}
+<script type="application/javascript">
+    window.mtcart = {{ cart | json }};
+  </script>
+  <style>
+    :root {
+        --background-color: {{ settings.background-color }};
+        --text-color: {{ settings.text-color }};
+        --accent-color: {{ settings.accent-color }};
+        --heading-color: {{ settings.heading-color }};
+        --border-color: {{ settings.border-color }};
+        --button-default-text-color: {{ settings.button-default-text }};
+        --button-default-background-color: {{ settings.button-default-background }};
+        --button-default-border-color: {{ settings.button-default-border }};
+        --button-default-icon-color: {{ settings.button-default-icon }};
+        --button-primary-text-color: {{ settings.button-primary-text }};
+        --button-default-background-hover-color: {{ settings.button-default-hover-background }};
+        --button-default-text-hover-color: {{ settings.button-default-hover-text }};
+        --button-default-border-hover-color: {{ settings.button-default-hover-border }};
+        --button-primary-background-hover-color: {{ settings.button-primary-hover-background }};
+        --button-primary-text-hover-color: {{ settings.button-primary-hover-text }};
+        --button-primary-border-hover-color: {{ settings.button-primary-hover-border }};
+        --button-accent-background-hover-color: {{ settings.button-accent-hover-background }};
+        --button-accent-text-hover-color: {{ settings.button-accent-hover-text }};
+        --button-accent-border-hover-color: {{ settings.button-accent-hover-border }};
+        --button-primary-background-color: {{ settings.button-primary-background }};
+        --button-primary-border-color: {{ settings.button-primary-border }};
+        --button-primary-icon-color: {{ settings.button-primary-icon }};
+        --button-accent-text-color: {{ settings.button-accent-text }};
+        --button-accent-background-color: {{ settings.button-accent-background }};
+        --button-accent-border-color: {{ settings.button-accent-border }};
+        --button-accent-icon-color: {{ settings.button-accent-icon }};
+        --style-default-background-color: {{ settings.style-default-background }};
+        --style-default-text-color: {{ settings.style-default-text }};
+        --style-default-heading-color: {{ settings.style-default-heading }};
+        --style-default-link-color: {{ settings.style-default-link }};
+        --style-default-accent-color: {{ settings.style-default-accent }};
+        --style-default-border-color: {{ settings.style-default-border }};
+        --style-default-icon-color: {{ settings.style-default-icon }};
+        --style-primary-background-color: {{ settings.style-primary-background }};
+        --style-primary-text-color: {{ settings.style-primary-text }};
+        --style-primary-heading-color: {{ settings.style-primary-heading }};
+        --style-primary-link-color: {{ settings.style-primary-link }};
+        --style-primary-accent-color: {{ settings.style-primary-accent }};
+        --style-primary-border-color: {{ settings.style-primary-border }};
+        --style-primary-icon-color: {{ settings.style-primary-icon }};
+        --style-secondary-background-color: {{ settings.style-secondary-background }};
+        --style-secondary-text-color: {{ settings.style-secondary-text }};
+        --style-secondary-heading-color: {{ settings.style-secondary-heading }};
+        --style-secondary-link-color: {{ settings.style-secondary-link }};
+        --style-secondary-accent-color: {{ settings.style-secondary-accent }};
+        --style-secondary-border-color: {{ settings.style-secondary-border }};
+        --style-secondary-icon-color: {{ settings.style-secondary-icon }};
+        --style-accent-background-color: {{ settings.style-accent-background }};
+        --style-accent-text-color: {{ settings.style-accent-text }};
+        --style-accent-heading-color: {{ settings.style-accent-heading }};
+        --style-accent-link-color: {{ settings.style-accent-link }};
+        --style-accent-accent-color: {{ settings.style-accent-accent }};
+        --style-accent-border-color: {{ settings.style-accent-border }};
+        --style-accent-icon-color: {{ settings.style-accent-icon }};
+        --style-contrast-background-color: {{ settings.style-contrast-background }};
+        --style-contrast-text-color: {{ settings.style-contrast-text }};
+        --style-contrast-heading-color: {{ settings.style-contrast-heading }};
+        --style-contrast-link-color: {{ settings.style-contrast-link }};
+        --style-contrast-accent-color: {{ settings.style-contrast-accent }};
+        --style-contrast-border-color: {{ settings.style-contrast-border }};
+        --style-contrast-icon-color: {{ settings.style-contrast-icon }};
+        --style-alt-background-color: {{ settings.style-alt-background }};
+        --style-alt-text-color: {{ settings.style-alt-text }};
+        --style-alt-heading-color: {{ settings.style-alt-heading }};
+        --style-alt-link-color: {{ settings.style-alt-link }};
+        --style-alt-accent-color: {{ settings.style-alt-accent }};
+        --style-alt-border-color: {{ settings.style-alt-border }};
+        --style-alt-icon-color: {{ settings.style-alt-icon }};
+        --font-body: {{ settings.font_body.family }};
+        --font-body-weight: {{ settings.font_body.weight }};
+        --font-heading: {{ settings.font_heading.family }};
+        --font-heading-weight: {{ settings.font_heading.weight }};
+        --font-logo: {{ settings.font_logo.family }};
+        --font-logo-weight: {{ settings.font_logo.weight }};
+        --font-heading-text-transform: {% if settings.font_heading_capitalize  %} capitalize {% else %} normal{% endif %};
+        --font-section-heading-font-weight: {{ settings.font_section_heading_bold }};
+        --font-section-heading-text-transform: {% if settings.font_section_heading_capitalize  %} capitalize {% else %} normal{% endif %};
+        --font-button: {{ settings.font_button.family }};
+        --font-button-weight: {{ settings.font_button.weight }};
+        --font-button-text-transform: {% if settings.font_button_capitalize  %} capitalize {% else %} normal{% endif %};
+        --style-product-banner: {{settings.product-banner}};
+        --style-product-section-one: {{settings.product-section-one}};
+        --style-product-section-two: {{settings.product-section-two}};
+        --style-product-section-three: {{settings.product-section-three}};
+        --style-product-section-four: {{settings.product-section-four}};
+      }
+  </style>
+    {% endif %}
 </head>
 
 <body

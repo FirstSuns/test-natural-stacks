@@ -583,12 +583,14 @@
         "d90c9e62-8662-4e2c-818c-920d177363cd": {
           "type": "ingredient_item",
           "settings": {
-            "title1": "",
-            "shorttext1": "",
-            "text1": "",
-            "title2": "",
-            "shorttext2": "",
-            "text2": ""
+            "title1": "Pyrroloquinoline Quinone Disodium Salt",
+            "shorttext1": "It’s found in fruits and vegetables, helping the body produce energy at a cellular level.*",
+            "text1": "Despite its long name, PQQ is known as a simple longevity vitamin. It’s found in fruits and vegetables, helping the body produce energy at a cellular level.*",
+            "image1": "shopify:\/\/shop_images\/Untitled_design_25.png",
+            "title2": "Organic Lion’s Mane (Hericium erinaceus)",
+            "shorttext2": "1000mg of Organic Lion’s Mane extracted from the fruiting body acts as a neurohealth formula to support cognitive function, memory, focus, and mood.",
+            "text2": "1000mg of Organic Lion’s Mane extracted from the fruiting body acts as a neurohealth formula to support cognitive function, memory, focus, and mood. Lion’s Mane+ formula is created with Nammex extracts, the only true organic formula sourced from the original fruiting body.*",
+            "image2": "shopify:\/\/shop_images\/Untitled_design_26.png"
           }
         },
         "458252bc-4a58-40da-b623-ab4d0b7f1143": {
