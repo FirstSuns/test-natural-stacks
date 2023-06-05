@@ -10,8 +10,8 @@
                     <div>
                         {% raw %}
                         <transition name="fade">
-                                <span class="" v-if="itemCountNew < config.discountThreshold">Choose <span class="font-semibold">{{ buyMissingCount }}</span> or more items</span>
-                                <span class="" v-if="readyForCheckout">Click the <span class="font-semibold"> CHECKOUT </span> button to finish the order 🎉</span>
+                                <span class="" v-if="itemCountNew < config.discountThreshold">&nbsp;&nbsp;&nbsp;Choose <span class="font-semibold">{{ buyMissingCount }}</span> or more items</span>
+                                <span class="" v-if="readyForCheckout">&nbsp;&nbsp;&nbsp;Click the <span class="font-semibold"> CHECKOUT </span> button to finish the order 🎉</span>
                         </transition>
                         {% endraw %}
                     </div>

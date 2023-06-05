@@ -631,7 +631,7 @@
   "shopify": {
     "checkout": {
       "marketing": {
-        "accept_sms_checkbox_label": "Join our VIP text list for exclusive discounts and cart reminders."
+        "accept_sms_checkbox_label": "Join our VIP text & call list for exclusive discounts and cart reminders."
       }
     }
   }

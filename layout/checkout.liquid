@@ -54,6 +54,7 @@ jumbleberry("shopify", "enable");
             {{ alternative_payment_methods }}
           </header>
           <main class="main__content" role="main">
+            <script src="https://cdn.shoppinggives.com/cc-utilities/shopify-add-on.js?sid=3ef0cf92-88a1-4340-8030-5c5495c11482&variants=40844355239984-1,40844355272752-3,40844355305520-5,40844355338288-10"></script>
             {{ content_for_layout }}
           </main>
 
@@ -81,12 +82,22 @@ jumbleberry("shopify", "enable");
   <style>
     .item-add{cursor:pointer}
     </style>
+
 </body>
 </html>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script type='text/javascript'>
   jQuery(document).ready(function($) {
+    setTimeout(function(){
+     //$(".sg-addon-title").text("Would you like to make a donation to the Cure Alzheimer's Fund?");
+     //$(".order-summary__section--product-list").after($(".sg-widget"));
+     $(".addon-main-section").after($(".sg-widget"));
+     $(".sg-addon-title").text("Would you like to make a donation to the Cure Alzheimer's Fund?");
+    }, 4000);
+    setTimeout(function(){
+     $(".sg-addon-title").text("Would you like to make a donation to the Cure Alzheimer's Fund?");
+    }, 5000);
      setTimeout(function(){
       $.ajax({
           url:'/cart',
@@ -364,5 +375,15 @@ jumbleberry("shopify", "enable");
   
   .bullet_point ul li .col-text label {
     font-weight: 900;
+  }
+  .shoppinggives-tag.addon{
+    background: #fff !important;
+    border: 2px solid #001E60 !important;
+  }
+  .sg-add-on-donation-wrapper .sg-add-on-donation{
+    background: #fafafa !important;
+  }
+  .sg-add-on-donation-wrapper .sg-add-on-donation.selected-addon{
+    background: #ffb405 !important;
   }
 </style>

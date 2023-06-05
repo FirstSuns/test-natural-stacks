@@ -25,6 +25,14 @@ template-{{ template.name | handle }} {{ template.name }}-{{ template.suffix }} 
   {% if enable_rtl %}dir="rtl"{% endif %}
 >
 <head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KSKC8D');</script>
+<!-- End Google Tag Manager -->
+  
 <script type="text/javascript" data-squaredance="mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZMQUcaqGU5fT6w6Ya8IEOVb" data-sqdv="1.0.1">
 try{squaredanceCart={{cart.items|json}}}catch(e){}
 ;!function(j,u,m,b,l,e){var n="jumbleberry",i="3.2.2",o=function(){o.v==i&&o.e?o.e.apply(o,arguments):o.q.push(arguments)}
@@ -197,6 +205,11 @@ jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLT
   class="{{ template | handleize }} {{ body_classes }} relative min-h-screen{% if customer %} customer-logged-in{% endif %}"
   {% if template.name == 'product' %}data-product-id="{{ product.id }}"{% endif %}
 >
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSKC8D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
   {% render 'theme-data' %}
   {% section 'annoucement' %}
   {% section 'header' %}
