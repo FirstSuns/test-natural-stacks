@@ -6,9 +6,9 @@
         "container": "w-full",
         "hero_size": "adapt",
         "show_overlay": false,
-        "image": "shopify:\/\/shop_images\/Artboard_2_8.png",
+        "image": "shopify:\/\/shop_images\/FD_3600x1250_copy.png",
         "bg_position": "center bottom",
-        "image_link": "https:\/\/www.naturalstacks.com\/collections\/magnesium-gummies",
+        "image_link": "shopify:\/\/collections\/all",
         "parallax": false,
         "content_in_container": false,
         "content_position": "center top",
@@ -22,7 +22,7 @@
         "button_link": "",
         "button_style": "sf__btn-white",
         "button_size": "sf__btn-large",
-        "mb_image": "shopify:\/\/shop_images\/Artboard_3.png",
+        "mb_image": "shopify:\/\/shop_images\/FD_800x800_1637cf98-cc63-4dc3-93ab-dd686bc4717a.png",
         "use_content_above": false,
         "custom_class": ""
       }

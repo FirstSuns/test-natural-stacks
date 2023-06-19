@@ -334,10 +334,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     $('.contact_submit').prop("disabled", true);
         
   };
-        
-        
-  var onloadCallback = function () {
-        
+  var onloadCallback = function () {   
     var widget = grecaptcha.render(document.getElementById("re-captcha"), {
         
       'sitekey' : "6LccYzklAAAAAAqzR6skOFdJVf7helxZt3otBqhd", // Sitekey, Retrieving from reCaptcha
@@ -351,14 +348,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
         
   }
-           $(window).on('load', function(){
+$(window).on('load', function(){
      $(document).on('change','.mobile-sec .relative.sf__sortmb-list.touch-none select', function(){
         var opt_val = $('.mobile-sec .relative.sf__sortmb-list.touch-none select option:selected').text().trim();
      console.log('iffff');
       $('.select-items div').each(function(){
         var txt_t = $(this).text().trim();
         if(opt_val == txt_t){
-          console.log('iff')
           $(this).trigger('click');
         }
       })
