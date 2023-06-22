@@ -30,9 +30,14 @@
             "size_title": "Size"
           }
         },
+        "68cd2665-b446-4326-97a9-692f7062964b": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<br\/>\n<h4 class=\"row_label\">2. Purchase Options<\/h4>"
+          }
+        },
         "e1933521-ea31-49fa-ab2d-72a14b8a5718": {
           "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
-          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
@@ -106,6 +111,7 @@
         "price",
         "ac794702-714f-4dba-8393-e6a2406ea50d",
         "fea49fdb-38dc-492d-8976-79368cb712ee",
+        "68cd2665-b446-4326-97a9-692f7062964b",
         "e1933521-ea31-49fa-ab2d-72a14b8a5718",
         "buy_buttons",
         "abd1544e-94ad-4a1b-a277-cf6182934a8a",

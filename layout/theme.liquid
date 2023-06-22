@@ -25,16 +25,8 @@ template-{{ template.name | handle }} {{ template.name }}-{{ template.suffix }} 
   {% if enable_rtl %}dir="rtl"{% endif %}
 >
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KSKC8D');</script>
-<!-- End Google Tag Manager -->
-  
 <script type="text/javascript" data-squaredance="mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZMQUcaqGU5fT6w6Ya8IEOVb" data-sqdv="1.0.1">
-try{squaredanceCart={{cart.items|json}}}catch(e){}
+try{squaredanceCart=JSON.parse(decodeURIComponent("{{cart.items|json|url_encode}}"))}catch(e){}
 ;!function(j,u,m,b,l,e){var n="jumbleberry",i="3.2.2",o=function(){o.v==i&&o.e?o.e.apply(o,arguments):o.q.push(arguments)}
 ,a=encodeURIComponent,t=decodeURIComponent,d=j.location;(o.push=o).l=!1,o.q=[],o.v=i,o.duid=function(n){return(
 n=n&&u.cookie.match(RegExp(t("%5Cs*")+n.substr(0,21)+"id=([^;]+)")))?t(n[1].split(".")[0]):""},o.g=function(n,i){return!!(
@@ -52,6 +44,16 @@ i.parentNode.insertBefore(n,i))},j[n]=j[n]||o,j[n].d=b}(window,document,"script"
 
 jumbleberry("init", "mL1B9tkpAXkjmoQntiHKd9Ki3qoF_qjiw7f0r5mIBZPR9et1CjjUi5k9YLTRXLYx248phDN-0TgHyY6XxE-XkB1CASM7yJK-zlt-_3XNRSA~", jumbleberry.g("sqdid") || jumbleberry.g("click_id"));
 </script>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KSKC8D');</script>
+<!-- End Google Tag Manager -->
+  
+
 
 {% include 'replo-head.liquid' %}
 <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
@@ -334,7 +336,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     $('.contact_submit').prop("disabled", true);
         
   };
-  var onloadCallback = function () {   
+        
+        
+  var onloadCallback = function () {
+        
     var widget = grecaptcha.render(document.getElementById("re-captcha"), {
         
       'sitekey' : "6LccYzklAAAAAAqzR6skOFdJVf7helxZt3otBqhd", // Sitekey, Retrieving from reCaptcha
@@ -348,13 +353,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
         
   }
-$(window).on('load', function(){
+           $(window).on('load', function(){
      $(document).on('change','.mobile-sec .relative.sf__sortmb-list.touch-none select', function(){
         var opt_val = $('.mobile-sec .relative.sf__sortmb-list.touch-none select option:selected').text().trim();
      console.log('iffff');
       $('.select-items div').each(function(){
         var txt_t = $(this).text().trim();
         if(opt_val == txt_t){
+          console.log('iff')
           $(this).trigger('click');
         }
       })

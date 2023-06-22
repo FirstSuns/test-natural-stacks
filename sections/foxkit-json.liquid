@@ -1,6 +1,6 @@
 {% if collection %}
 <script data-collection-json>
-{% paginate collection.products by 5 %}
+{% paginate collection.products by 12 %}
   {{collection.products | json }}
 {% endpaginate %}
 </script>

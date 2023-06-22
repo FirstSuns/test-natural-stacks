@@ -126,6 +126,7 @@
       </div>
     </div>
   </div>
+
   {% if item.selling_plan_allocation.selling_plan.group_id == blank and item.product.selling_plan_groups != blank %}
     <a class="upgrade-to-subscription" data-variantid="{{ item.variant_id }}" data-qty="{{ item.quantity }}" data-sellingplan="{{ item.product.selling_plan_groups[0].selling_plans[0].id }}" data-index="{{ ind }}"> <img src="https://cdn.shopify.com/s/files/1/0269/3025/files/cart_arrow_up.webp?v=1669124361" class='icon-arrow-up' /> click here to upgrade to subscription and save 20% + FREE Shipping</a>
   {% endif %}

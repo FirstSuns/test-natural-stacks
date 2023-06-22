@@ -289,16 +289,15 @@
                     </label>
                   </div>
                 </div>
-          
+
+          {% comment %}
                 {% if product.selling_plan_groups != blank %}
                   <div class='variant_options_row'>
                     <h4 class='row_label'>2. Purchase Options</h4>
-                    {% render 'smartrr-product' %}
                     {% comment %}
                     {% if product.available %}{% render 'subscription-product-custom' %}{% endif %}
                     {% endcomment %}
                     
-                    {% comment %}{% render 'smartrr-product' %}{% endcomment %}
                     <div class="product__variant-picker product-options">
                       {% if product.variants.size > 1 %}
                       {% render 'product-option-design', product: product, size_title: size_title, design: 'button' %}
@@ -319,8 +318,10 @@
                     </div>
                   </div>
                 {% endif %}
+          {% endcomment %}
               </div>
           {%- when 'buy_buttons' -%}
+      <br/>
             {% assign show_dynamic_checkout = block.settings.show_dynamic_checkout %}
             {% if image_field.size > 0 %}
               {% assign show_dynamic_checkout = false %}

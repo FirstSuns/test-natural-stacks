@@ -1,0 +1,330 @@
+{% comment %}
+  This file is maintained by Smartrr. 
+  Use the "Theming" section of the Smartrr app to configure theme settings. 
+{% endcomment %}
+<script>
+if (!window.smartrr) {
+  window.smartrr = {};
+}
+window.smartrr.theme = {
+  "overrideCSS": "*{\n  font-family: var(--font-body),sans-serif;\n}\n.smartrr-portal-upcoming-deliveries .smartrr-portal-group-item-price-line:nth-child(3) span{\n  font-weight: 600;\n}\n.smartrr-portal-order-history .smartrr-portal-group-item-price-lines > .smartrr-portal-group-item-price-line:last-child span{\n  font-weight: 600;\n}\n.smartrr-portal-primary-button.smartrr-portal-send-now:hover {\n  opacity: 1;\n}\n\n.smartrr-portal-delivery-group-item-header button, .smartrr-portal-edit-item-button{\n  background:var(--accent-color);\n  color:var(--button-default-text-color);\n  border:1px solid transparent;\n  transition:.3s all ease;\n}\n.smartrr-portal-delivery-group-item-header button:hover, .smartrr-portal-edit-item-button:hover{\n  color: var(--text-color);\n  opacity:1;\n  border:1px solid var(--button-default-background-color);\n  transition:.3s all ease;\n}\n.smartrr-portal-delivery-group-item-header button div{\n  text-transform:capitalize;\n}\n.smartrr-portal-edit-subscription-apply-discount{\n  width:100%;\n}\n.smartrr-portal-delivery-addresses-address-form-wrapper select{\n  width:100%;\n  background:transparent;\n}\n.smartrr-portal-delivery-addresses-address-form-wrapper input:focus{\n  border-bottom:2px solid var(--text-color);\n}\n.smartrr-portal-edit-subscription-apply-discount:focus{\n  border-bottom:2px solid var(--text-color);\n}\n.smartrr-portal-delivery-addresses-back-button{\n  width:100%;\n  padding:10px;\n  display:flex;\n  justify-content:center;\n  background:var(--accent-color);\n  border:1px solid transparent;\n  color:var(--button-default-text-color);\n  border-radius:5px;\n  transition:.3s all ease;\n}\n.smartrr-portal-delivery-addresses-back-button:hover{\n  color: var(--text-color);\n  opacity:1;\n  border:1px solid var(--button-default-background-color);\n  transition:.3s all ease;\n}\n.smartrr-portal-delivery-addresses-form-row\n.smartrr-portal-slide-panel-footer > div:first-child{\n  padding:0px;\n}\n.smartrr-portal-slide-panel-body{\n  margin-bottom:20px;\n}\n.smartrr-portal-delivery-addresses-editable-section-content{\n  font-size:14px;\n}\n.smartrr-portal-delivery-group-date-text span{\n  display:contents;\n}\n.smartrr-portal-edit-item-button div{\n  text-transform:capitalize;\n}\n.smartrr-portal-slide-panel-header .smartrr-portal-heading-3, .smartrr-portal-manage-settings-text{\n  font-weight:600;\n}\n.smartrr-portal-slide-panel-content-edit-item select{\n  background:#FFF;\n\tcolor:var(--text-color);\n}\n.smartrr-portal-slide-panel-content-edit-item label::after{\n  border-color:var(--text-color);\n}",
+  "primaryColor": "#ffb405",
+  "secondaryColor": "#e4e4e4",
+  "mainContentBackgroundColor": "#FAFAFA",
+  "mainContentBorderRadius": 5,
+  "mainContentBorderColor": "#cbc8c4",
+  "mainContentBorderWidth": 1,
+  "bodyBackgroundColor": "#ffffff",
+  "bodyTextFontFamily": "Sans-serif",
+  "bodyTextFontWeight": "normal",
+  "bodyTextColor": "#24254e",
+  "bodyTextFontSize": 14,
+  "accentTextColor": "#313943",
+  "accentTextFontFamily": "Sans-serif",
+  "accentTextFontWeight": "bold",
+  "accentTextFontSize": 14,
+  "heading1TextFontFamily": "Arial",
+  "heading1TextFontSize": 22,
+  "heading1FontWeight": "bolder",
+  "heading1TextColor": "#24254e",
+  "heading2TextFontFamily": "Sans-serif",
+  "heading2TextFontSize": 16,
+  "heading2FontWeight": "normal",
+  "heading2TextColor": "#24254e",
+  "heading3TextFontFamily": "Sans-serif",
+  "heading3TextFontSize": 16,
+  "heading3FontWeight": "normal",
+  "heading3TextColor": "#24254e",
+  "heading4TextFontFamily": "Sans-serif",
+  "heading4TextFontSize": 14,
+  "heading4FontWeight": "normal",
+  "heading4TextColor": "#24254e",
+  "buttonBackgroundColor": "#ffb405",
+  "buttonFontFamily": "Sans-serif",
+  "buttonFontSize": 16,
+  "buttonFontWeight": "normal",
+  "buttonTextColor": "#FFFFFF",
+  "buttonBorderRadius": 5,
+  "buttonBorderColor": "#ffb405",
+  "buttonBorderWidth": 1,
+  "dropdownBackgroundColor": "#FFFFFF",
+  "dropdownTextColor": "#24254e",
+  "dropdownBorderRadius": 18,
+  "dropdownBorderColor": "#fcb315",
+  "dropdownBorderWidth": 1,
+  "dropdownFontFamily": "Sans-serif",
+  "dropdownFontSize": 15,
+  "dropdownFontWeight": "normal",
+  "smallProductImageBorderRadius": 17,
+  "mediumProductImageBorderRadius": 17,
+  "largeProductImageBorderRadius": 18,
+  "largestProductImageBorderRadius": 20,
+  "themeName": "modern",
+  "modernPageBackground": "#f3f3f3",
+  "modernCardBackground": "#FFFFFF",
+  "modernMenuBackground": "#FFFFFF",
+  "modernBadgeBackground": "#F4F4F4",
+  "modernIconsColor": "#202223",
+  "modernLineDividers": "#E4E4E4",
+  "modernCardRadius": 4,
+  "modernCardBorder": 1,
+  "modernCardBorderColor": "#ffb405",
+  "modernSmallCardBorderRadius": 0,
+  "modernSmallCardBorderWidth": 1,
+  "modernSmallCardBorderColor": "#e5e5e5",
+  "modernPrimaryButtonColor": "#ffb405",
+  "modernPrimaryButtonBorderColor": "#ffb405",
+  "modernSecondaryButtonColor": "#FFFFFF",
+  "modernSecondaryButtonBorderColor": "#ffb405",
+  "modernButtonBorderWidth": 1,
+  "modernButtonBorderRadius": 54,
+  "modernButtonBorderHeight": 40,
+  "modernThemeSettings": {
+    "sections": {
+      "banner": {
+        "display": true,
+        "text": "",
+        "deleted": false
+      },
+      "subscriptions": {
+        "display": false,
+        "addOns": true,
+        "deleted": false
+      },
+      "orderHistory": {
+        "display": false,
+        "deleted": false
+      },
+      "rewards": {
+        "display": false,
+        "deleted": false
+      },
+      "reviews": {
+        "display": true,
+        "deleted": false
+      },
+      "wishlist": {
+        "display": true,
+        "deleted": false
+      },
+      "settings": {
+        "display": false,
+        "deleted": false
+      },
+      "instagram": {
+        "display": false
+      },
+      "trending": {
+        "display": false
+      }
+    },
+    "welcomeInfo": {
+      "welcomeMessage": "Hi",
+      "customerFirstName": true,
+      "customerEmail": true,
+      "customerSinceDate": true
+    },
+    "nextOrderActions": {
+      "sendNow": false,
+      "skip": false,
+      "gift": false,
+      "swap": false,
+      "delay": false,
+      "editAddress": false
+    },
+    "subscriptionActions": {
+      "editFrequency": false,
+      "setNextOrderDate": false,
+      "editAddress": true,
+      "editPayment": false,
+      "pause": false,
+      "showVariantName": true,
+      "swap": false
+    },
+    "sectionsOrder": [
+      "SUBSCRIPTION",
+      "SETTINGS",
+      "ORDERHISTORY",
+      "LOYALTY",
+      "INSTAGRAM",
+      "TRENDING"
+    ],
+    "showHide": {
+      "showVariantName": true,
+      "showPortalMenu": true,
+      "showUpcomingOrders": true,
+      "showDiscountCodeInput": true,
+      "showSectionTitles": true,
+      "showAddItemAsSub": true
+    }
+  },
+  "isPasswordless": false,
+  "translationOverrides": {
+    "activeLanguage": "en",
+    "en": {},
+    "fr": {},
+    "es": {}
+  },
+  "modernActiveBadgeColor": "#E8FFDA",
+  "modernPausedBadgeColor": "#FFF5DA",
+  "modernCancelledBadgeColor": "#FFDADA",
+  "modernBannerColor": "#FFFFFF",
+  "modernImageBorderRadius": 25,
+  "modernSmallImageBorderRadius": 12,
+  "modernOverrideCSS": ".smartrr-portal-customer-name {\n  font-weight: 500;\n  text-transform: uppercase;\n}\n\n/* Large Heading */\n.anchor ~ h2 {\n  text-transform: uppercase;\n  font-weight: 500;\n}\n\nh4 {\n  font-weight: 400;\n  text-transform: uppercase;\n}\n\n/* h4 in first card */\n.smartrr-portal-card > div:first-child > h4 {\n  text-transform: uppercase;\n}\n\n/* h4 in second card */\n.smartrr-portal-card > h4 {\n  text-transform: uppercase;\n}\n\n.smartrr-portal-primary-button, .smartrr-portal-secondary-button {\n  font-family: 'Helvetica';\n  font-weight: 700;\n  text-transform: uppercase;\n}\n\n/* SEE ALL UPCOMING ORDERS Text */\n\n.smartrr-portal-card > div:last-child > span {\n  text-transform: uppercase;\n  font-size: 12px;\n  font-weight: 400;\n  line-height: 16px;\n}\n\n.smartrr-portal-your-subscriptions-wrapper {\n  border-radius: 0;\n  border: 1px solid #E5E5E5;\n}\n\n/* Active Text */\n.smartrr-portal-info-badge > span {\n  text-transform: uppercase;\n}\n\n#order-history ~ div > div:nth-child(2) > div > div {\n  border-radius: 0;\n  border: 1px solid #E5E5E5;\n}\n\na[href=\"/account/logout\"] {\n  text-transform: uppercase;\n}\n\n@media only screen and (max-width: 413px) {\n  .smartrr-portal-secondary-button {\n    line-height: 15px;\n  }\n}\n\n[class*=\"quantity-container\"]{\n  border-radius:4px;\n  \n  button {\n    padding:0px;\n  }\n}\n\n/*Qty selector buttons*/\n.pGWsE > .smartrr-portal-quantity-button, .pGWsE > .smartrr-portal-quantity-number{\n    padding:0px; \n    color: #202223;\n    font-family: Futura;\n}\n\n\n/* Styling Tabs */\n[class*=\"tab-wrapper\"]{\n  .MuiTabs-fixed{\n    align-items:end;\n    display:flex;\n  }\n  \n  [class*=\"tab-button\"]{\n  background-color:rgb(0 0 0 / 30%);\n  font-size: 16px;\n  color: #fff;\n  \n  :first-child{\n    margin-right: 10px;\n  }\n  svg {\n    stroke: #fff;\n  }\n}\n}\n\n\n[class*=\"tab-wrapper\"] [class*=\"selected\"]{\n    background-color:rgb(255, 180, 5) !important;\n  }\n\n.MuiTabs-indicator{\n  display:none;\n}\n\n",
+  "modernExtraLargeFontFamily": "Futura",
+  "modernExtraLargeFontSize": 36,
+  "modernExtraLargeFontWeight": "bold",
+  "modernExtraLargeFontLineHeight": 59,
+  "modernExtraLargeFontLetterSpacing": 0,
+  "modernExtraLargeFontColor": "#202223",
+  "modernLargeFontFamily": "Futura",
+  "modernLargeFontSize": 28,
+  "modernLargeFontWeight": "bold",
+  "modernLargeFontLineHeight": 32,
+  "modernLargeFontLetterSpacing": 0,
+  "modernLargeFontColor": "#202223",
+  "modernMediumFontFamily": "Futura",
+  "modernMediumFontSize": 25,
+  "modernMediumFontWeight": "normal",
+  "modernMediumFontLineHeight": 32,
+  "modernMediumFontLetterSpacing": 0,
+  "modernMediumFontColor": "#202223",
+  "modernSmallFontFamily": "Futura",
+  "modernSmallFontSize": 20,
+  "modernSmallFontWeight": "normal",
+  "modernSmallFontLineHeight": 28,
+  "modernSmallFontLetterSpacing": 0,
+  "modernSmallFontColor": "#202223",
+  "modernSubHeadingFontFamily": "Inter",
+  "modernSubHeadingFontSize": 12,
+  "modernSubHeadingFontWeight": "bold",
+  "modernSubHeadingFontLineHeight": 16,
+  "modernSubHeadingFontLetterSpacing": 0,
+  "modernSubHeadingFontColor": "#202223",
+  "isSubHeadingUppercase": false,
+  "modernButtonCTAFontFamily": "Inter",
+  "modernButtonCTAFontSize": 14,
+  "modernButtonCTAFontWeight": "normal",
+  "modernButtonCTAFontLineHeight": 32,
+  "modernButtonCTAFontLetterSpacing": 0,
+  "modernPrimaryButtonFontColor": "#FFFFFF",
+  "modernSecondaryButtonFontColor": "#202223",
+  "modernBodyFontFamily": "Futura",
+  "modernBodyFontSize": 14,
+  "modernBodyFontWeight": "normal",
+  "modernBodyFontLineHeight": 20,
+  "modernBodyFontLetterSpacing": 0,
+  "modernBodyFontColor": "#202223",
+  "modernCaptionFontFamily": "Inter",
+  "modernCaptionFontSize": 12,
+  "modernCaptionFontWeight": "normal",
+  "modernCaptionFontLineHeight": 16,
+  "modernCaptionFontLetterSpacing": 0,
+  "modernCaptionFontColor": "#202223",
+  "lastSavedThemeId": "125184835632",
+  "purchasableThemes": []
+}
+</script>
+
+<style>
+body {
+  background-color: #ffffff;
+  transition: background-color .15s ease-in-out;
+}
+
+#smartrr_account,
+#smartrr_slide_panel,
+#smartrr_toast_container {
+  box-sizing: border-box;
+
+  color: #24254e;
+  font-family: Sans-serif;
+  font-weight: normal;
+  background-color: #ffffff;
+  font-size: 14;
+  transition: background-color .15s ease-in-out, color .15s ease-in-out;
+}
+
+#smartrr_account *,
+#smartrr_account *:before,
+#smartrr_account *:after,
+#smartrr_slide_panel *,
+#smartrr_slide_panel *:before,
+#smartrr_slide_panel *:after,
+#smartrr_toast_container *,
+#smartrr_toast_container *:before,
+#smartrr_toast_container *:after {
+  box-sizing: border-box;
+}
+
+#smartrr_toast_container {
+  z-index: 10000001;
+}
+
+#smartrr_toast_container .Toastify__toast-container {
+  z-index: 10000002;
+}
+
+.hide-in-customer-portal {
+  display: none;
+}
+
+#smartrr_account,
+#smartrr_slide_panel,
+#smartrr_toast_container {
+  
+--smartrr-primaryColor: #ffb405;
+--smartrr-secondaryColor: #e4e4e4;
+--smartrr-mainContentBackgroundColor: #FAFAFA;
+--smartrr-mainContentBorderRadius: 5px;
+--smartrr-mainContentBorderColor: #cbc8c4;
+--smartrr-mainContentBorderWidth: 1px;
+--smartrr-bodyBackgroundColor: #ffffff;
+--smartrr-bodyTextFontFamily: Sans-serif;
+--smartrr-bodyTextFontWeight: normal;
+--smartrr-bodyTextColor: #24254e;
+--smartrr-bodyTextFontSize: 14;
+--smartrr-accentTextFontFamily: Sans-serif;
+--smartrr-accentTextFontWeight: bold;
+--smartrr-accentTextColor: #313943;
+--smartrr-accentTextFontSize: 14;
+--smartrr-heading1TextFontFamily: Arial;
+--smartrr-heading1TextFontSize: 22px;
+--smartrr-heading1FontWeight: bolder;
+--smartrr-heading1TextColor: #ffb405;
+--smartrr-heading2TextFontFamily: Sans-serif;
+--smartrr-heading2TextFontSize: 16px;
+--smartrr-heading2FontWeight: normal;
+--smartrr-heading2TextColor: #24254e;
+--smartrr-heading3TextFontFamily: Sans-serif;
+--smartrr-heading3TextFontSize: 16px;
+--smartrr-heading3FontWeight: normal;
+--smartrr-heading3TextColor: #24254e;
+--smartrr-heading4TextFontFamily: Sans-serif;
+--smartrr-heading4TextFontSize: 14px;
+--smartrr-heading4FontWeight: normal;
+--smartrr-heading4TextColor: #24254e;
+--smartrr-buttonBackgroundColor: #ffb405;
+--smartrr-buttonTextColor: #FFFFFF;
+--smartrr-buttonFontFamily: Sans-serif;
+--smartrr-buttonFontSize: 16px;
+--smartrr-buttonFontWeight: normal;
+--smartrr-buttonBorderRadius: 5px;
+--smartrr-dropdownBackgroundColor: #FFFFFF;
+--smartrr-dropdownTextColor: #24254e;
+--smartrr-dropdownFontFamily: Sans-serif;
+--smartrr-dropdownFontSize: 15px;
+--smartrr-dropdownFontWeight: normal;
+--smartrr-dropdownBorderRadius: 18px;
+--smartrr-buttonBorderColor: #ffb405;
+--smartrr-buttonBorderWidth: 1px;
+--smartrr-dropdownBorderColor: #fcb315;
+--smartrr-dropdownBorderWidth: 1px;
+--smartrr-smallProductImageBorderRadius: 17px;
+--smartrr-mediumProductImageBorderRadius: 17px;
+--smartrr-largeProductImageBorderRadius: 18px;
+--smartrr-largestProductImageBorderRadius: 20px;
+}
+
+</style>

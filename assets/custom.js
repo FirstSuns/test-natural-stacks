@@ -233,6 +233,56 @@ jQuery(document).ready(function($) {
       }
     }
   }, 100);
+
+  $(window).on("load", function() {
+    $(".rc-template__radio-group").on("DOMSubtreeModified", function() {
+      if($(this).find(".rc-selling-plans .subscription_content").length <= 0) {
+        var sub_html = "<div class='subscription_content'>"
+                      +  "<ul>"
+                        +  "<li>"
+                          +  "<div class='tick_LmPVG'></div>"
+                          +  "<div>Free USA Shipping</div>"
+                        +  "</li>"
+                        +  "<li>"
+                          +  "<div class='tick_LmPVG'></div>"
+                          +  "<div>20% OFF on Every Order</div>"
+                        +  "</li>"
+                        +  "<li>"
+                          +  "<div class='tick_LmPVG'></div>"
+                          +  "<div>Change, Pause or Cancel Any Time</div>"
+                        +  "</li>"
+                      +  "</ul>"
+                    +  "</div>";
+        $(this).find(".rc-selling-plans").append(sub_html);
+      }
+
+      if($(this).find(".rc-radio.onetime-radio").hasClass("rc-radio--active")) {
+        if($(this).find(".product__variant-picker.product-options").length <= 0) {
+          var onetime_html = "<div class='product__variant-picker product-options show'>"
+                      + "<div class='otp-info'>"
+                        + "<div class='otp-info-icon'>"
+                          + "<img src='https://cdn.shopify.com/s/files/1/0269/3025/files/Untitled-1_1_70x.png?v=1669657645' alt='OTP' loading='lazy'>"
+                        + "</div>"
+                        + "<div class='otp-info-text' id='savings-message-1' style='display: block;'>"
+                          + "<span class='switch-call'>Switch to a subscription and save 20%.</span>"
+                          + "<p>Convenient way to get <b>Free Shipping</b> and best prices. You can change or cancel your subscription any time!</p>"
+                        + "</div>"
+                        + "<div class='otp-info-text' id='savings-message-2' style='display: none;'>"
+                          + "<span class='switch-call'>Switch to a subscription for a convenient hassle-free delivery</span>"
+                          + "<p>Free delivery of all recurring shipments. You can change or cancel your subscription any time!</p>"
+                        + "</div>"
+                      + "</div>"
+                    + "</div>";
+        
+          $(this).append(onetime_html);
+        }
+      }
+      else {
+        $(this).find(".product__variant-picker.product-options").remove();
+      }
+    });
+    $(".rc-template__radio-group").trigger("DOMSubtreeModified");
+  });
 });
 
 document.querySelectorAll(".ingredients .navs .nav-item").forEach(function(obj) {
@@ -571,7 +621,7 @@ document.querySelectorAll(".switch-subscribe").forEach(function(obj) {
 document.querySelectorAll(".sticky-bottom-atc .add-to-cart").forEach(function(obj) {
   obj.addEventListener("click", function(e) {
     e.preventDefault();
-    if ($(window).width() > 766 ) {
+    if ($(window).width() > 7660000 ) {
     document.querySelector(".product-template .add-to-cart").click();
     }
     else{
