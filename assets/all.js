@@ -2081,7 +2081,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         7184408543280:['Maintain Cellular Energy*','More Brain Antioxidants*','Support A Healthy Immune System*'],
         7207201636400:['Advanced Circulation Support*','Better Natural Blood Flow*','Antioxidants For Your Body And Brain*'],
         7153738580016:['Support Deep Sleep*','Wake Up With Energy*','Delicious Taste'],
-        7153737433136:['Balance Brain Health*','Relax The Body And Mind*','Delicious Taste']
+        7153737433136:['Balance Brain Health*','Relax The Body And Mind*','Delicious Taste'],
+        7221329592368:['Support Cognitive Function and Longevity*','Advanced Brain Health Support*','Maintain A Positive Mood*']
       }
     };
   },
@@ -2412,7 +2413,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         7184408543280:['Maintain Cellular Energy*','More Brain Antioxidants*','Support A Healthy Immune System*'],
         7207201636400:['Advanced Circulation Support*','Better Natural Blood Flow*','Antioxidants For Your Body And Brain*'],
         7153738580016:['Support Deep Sleep*','Wake Up With Energy*','Delicious Taste'],
-        7153737433136:['Balance Brain Health*','Relax The Body And Mind*','Delicious Taste']
+        7153737433136:['Balance Brain Health*','Relax The Body And Mind*','Delicious Taste'],
+        7221329592368:['Support Cognitive Function and Longevity*','Advanced Brain Health Support*','Maintain A Positive Mood*']
       }
     };
   },
@@ -2955,7 +2957,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         7184408543280:['Maintain Cellular Energy*','More Brain Antioxidants*','Support A Healthy Immune System*'],
         7207201636400:['Advanced Circulation Support*','Better Natural Blood Flow*','Antioxidants For Your Body And Brain*'],
         7153738580016:['Support Deep Sleep*','Wake Up With Energy*','Delicious Taste'],
-        7153737433136:['Balance Brain Health*','Relax The Body And Mind*','Delicious Taste']
+        7153737433136:['Balance Brain Health*','Relax The Body And Mind*','Delicious Taste'],
+        7221329592368:['Support Cognitive Function and Longevity*','Advanced Brain Health Support*','Maintain A Positive Mood*']
       }
     };
   },

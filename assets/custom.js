@@ -621,7 +621,7 @@ document.querySelectorAll(".switch-subscribe").forEach(function(obj) {
 document.querySelectorAll(".sticky-bottom-atc .add-to-cart").forEach(function(obj) {
   obj.addEventListener("click", function(e) {
     e.preventDefault();
-    if ($(window).width() > 7660000 ) {
+    if ($(window).width() > 76600000 ) {
     document.querySelector(".product-template .add-to-cart").click();
     }
     else{

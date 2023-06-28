@@ -108,12 +108,17 @@
             {%- endif -%}
             <div class="installment-shoppay">{{ form | payment_terms }}</div>
           {%- when 'short_description' -%}
-            {% if product.metafields.descriptor.short_description != blank %}
-              <div class="prod__description leading-6">{{ product.metafields.descriptor.short_description }}</div>
+            {% if product.metafields.custom.short_description != blank %}
+              {% comment %} <div class="prod__description leading-6">{{ product.metafields.descriptor.short_description }}</div> {% endcomment %}
+              <div class="prod__description leading-6">{{ product.metafields.custom.short_description | metafield_tag }}</div>
             {% endif %}
           {%- when 'description' -%}
             <div class="product__description prose">
+            {% if product.metafields.custom.short_description != blank %}
+              <p>{{ product.metafields.custom.short_description | metafield_tag }}</p>
+            {% else %}
               {{ product.description }}
+            {% endif %}
             </div>
           {%- when 'rating' -%}
             {% render 'product-reviews-app__badge.liquid', product: product %}

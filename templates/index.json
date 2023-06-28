@@ -6,23 +6,23 @@
         "container": "w-full",
         "hero_size": "adapt",
         "show_overlay": false,
-        "image": "shopify:\/\/shop_images\/Artboard_2_8.png",
+        "image": "shopify:\/\/shop_images\/Untitled_design_-_2022-11-30T101809.320.png",
         "bg_position": "center bottom",
-        "image_link": "https:\/\/www.naturalstacks.com\/collections\/magnesium-gummies",
+        "image_link": "",
         "parallax": false,
         "content_in_container": false,
         "content_position": "center top",
         "text_alignment": "center",
         "text_size": "medium",
         "text_color": "white",
-        "title": "",
+        "title": "BETTER BRAIN. BETTER LIFE.®",
         "subtitle": "",
-        "text": "",
-        "button_label": "",
-        "button_link": "",
+        "text": "<p>Brain Supplements You Can Feel In Minutes<\/p>",
+        "button_label": "Shop now",
+        "button_link": "https:\/\/www.naturalstacks.com\/collections\/best-sellers",
         "button_style": "sf__btn-white",
         "button_size": "sf__btn-large",
-        "mb_image": "shopify:\/\/shop_images\/Artboard_3.png",
+        "mb_image": "shopify:\/\/shop_images\/9_6.jpg",
         "use_content_above": false,
         "custom_class": ""
       }
@@ -236,6 +236,13 @@
             "collection": "best-sellers"
           }
         },
+        "ee6caef7-ccd0-45d4-9f7a-fe1c455914b7": {
+          "type": "tab",
+          "settings": {
+            "title": "Stack Bundles",
+            "collection": "combo-packs"
+          }
+        },
         "5adb0ec0-722e-4a6b-b74c-3544716222fc": {
           "type": "tab",
           "settings": {
@@ -267,6 +274,7 @@
       },
       "block_order": [
         "361b088a-ceff-4d67-bb18-5337ffdd8414",
+        "ee6caef7-ccd0-45d4-9f7a-fe1c455914b7",
         "5adb0ec0-722e-4a6b-b74c-3544716222fc",
         "16555140775762d773-0",
         "c6d1c494-bd13-4503-8572-d98f0af63e9f",
@@ -412,13 +420,13 @@
             "image": "shopify:\/\/shop_images\/test1.jpg"
           }
         },
-        "62e52096-7485-47af-b73e-5fdd01452a9c": {
+        "5a9fe7a6-5ef9-415d-a73c-f7efa3cbee4e": {
           "type": "testimonial",
           "settings": {
-            "title": "Ulrike F.",
-            "description": "<p>\"It really helps me to focus, think more clearly and faster\"<\/p>",
-            "author": "<p>Dopamine Brain Food Customer<\/p>",
-            "image": "shopify:\/\/shop_images\/test3.jpg"
+            "title": "Dr. Michael Lewis",
+            "description": "<p>\"Natural Stacks has revolutionized my approach to optimizing brain function\"<\/p>",
+            "author": "<p>MD, MPH, MBA, FACPM, FACN<\/p>",
+            "image": "shopify:\/\/shop_images\/Untitled_design_41.png"
           }
         },
         "78bda98a-3301-4191-abdd-fe55ec77eb8d": {
@@ -428,6 +436,15 @@
             "description": "<p>\"...gives me a mental clearness and boost to conquer the day\"<\/p>",
             "author": "<p>WSOP Champion<\/p>",
             "image": "shopify:\/\/shop_images\/00mar.jpg"
+          }
+        },
+        "62e52096-7485-47af-b73e-5fdd01452a9c": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Ulrike F.",
+            "description": "<p>\"It really helps me to focus, think more clearly and faster\"<\/p>",
+            "author": "<p>Dopamine Brain Food Customer<\/p>",
+            "image": "shopify:\/\/shop_images\/test3.jpg"
           }
         },
         "8280adbf-5977-4a39-9342-33c6eb86820e": {
@@ -460,8 +477,9 @@
       },
       "block_order": [
         "08c07014-3afe-42e5-86e8-811ce9bb8fa4",
-        "62e52096-7485-47af-b73e-5fdd01452a9c",
+        "5a9fe7a6-5ef9-415d-a73c-f7efa3cbee4e",
         "78bda98a-3301-4191-abdd-fe55ec77eb8d",
+        "62e52096-7485-47af-b73e-5fdd01452a9c",
         "8280adbf-5977-4a39-9342-33c6eb86820e",
         "d4116f53-d456-4bd7-9ead-402f4dbc4789",
         "40971f89-472b-449d-811a-149e7e28971f"
