@@ -26,7 +26,7 @@
     <div class="{{ container }}" style="--content-color: {{ section.settings.text_color }};">
         <div
             id="sf-hero-{{ section.id }}"
-            class="sf-hero {% if image_link != blank %} sf-hero--has-link{% endif %}{% if section.settings.mb_image != blank %} sf-hero__mobile-no-overlay{% endif %} sf-hero--text-{{ section.settings.text_color }} sf-hero--{{ section.settings.hero_size }}{% if show_overlay %} sf-hero--has-overlay{% endif %} {% if section.settings.mb_image != blank %}mb-10 md:mb-0{% endif %}"
+            class="sf-hero {% if image_link != blank %} sf-hero--has-link{% endif %}{% if section.settings.mb_image != blank %} sf-hero__mobile-no-overlay{% endif %} sf-hero--text-{{ section.settings.text_color }} sf-hero--{{ section.settings.hero_size }}{% if show_overlay %} sf-hero--has-overlay{% endif %} {% if section.settings.mb_image != blank %}mb-0 md:mb-0{% endif %}"
             {% if section.settings.hero_size == 'adapt' %}
             data-min-aspect-ratio="{{ min_aspect_ratio }}"
             style="--slide-height: {{- wrapper_height -}}vw"
@@ -66,7 +66,7 @@
                 {% capture text_color %}text-{{ section.settings.text_color }}{% endcapture %}
             {% endif %}
 
-            <div class="flex sf-hero__inner {{ content_position_mb }} {{ content_container }} {{ content_padding }} sf-hero__inner--{{ text_vertical_alignment }}-{{ text_horizontal_alignment }}">
+            <div class="fs-desktop-only flex sf-hero__inner {{ content_position_mb }} {{ content_container }} {{ content_padding }} sf-hero__inner--{{ text_vertical_alignment }}-{{ text_horizontal_alignment }}">
                 <div class="sf-hero__content w-max md:max-w-4xl  text-{{ section.settings.text_alignment }}">
                     {% if section.settings.subtitle != blank %}
                         <span class="{% if text_size == 'medium' %}text-base {% else %}text-xl {% endif %} mb-2 md:mb-4 sf-hero__subtitle {{ text_color }}">{{ section.settings.subtitle }}</span>

@@ -149,7 +149,6 @@
     },
     "165549476686868d1f": {
       "type": "brands-list",
-      "disabled": true,
       "blocks": {
         "1655494766178c89ec-0": {
           "type": "image",
@@ -204,6 +203,7 @@
         "1655494766178c89ec-3",
         "82f82d1e-701c-40b4-9a1c-b38b12f96ad8"
       ],
+      "disabled": true,
       "settings": {
         "heading": "",
         "subheading": "",
@@ -292,7 +292,6 @@
     },
     "16558433039797189d": {
       "type": "testimonials",
-      "disabled": true,
       "blocks": {
         "16558433028010edcc-0": {
           "type": "testimonial",
@@ -375,6 +374,7 @@
         "16558433028010edcc-4",
         "16558433028010edcc-5"
       ],
+      "disabled": true,
       "settings": {
         "heading": "What People Are Saying",
         "subheading": "",

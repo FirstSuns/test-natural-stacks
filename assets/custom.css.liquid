@@ -1060,7 +1060,9 @@ ul.sf__list-inline li {
   border-color: #ffb829;
   color: #FFF;
 }
-
+.octane-ai-quiz-rendered{
+  margin-top: 50px !important;
+}
 .octane-ai-quiz-rendered div {
   align-items: flex-start !important;
 }
@@ -1739,7 +1741,7 @@ ul.sf__list-inline li {
   left: -1px;
   width: calc(100% + 2px);
   transform: translateY(calc(100% - 5px));
-  background: #001e60;
+  background: #153480;
   color: #FFF;
   font-size: 12px;
   text-align: center;
@@ -1751,9 +1753,9 @@ ul.sf__list-inline li {
 }
 
 .variant_options_row input[type='radio']:checked + label {
-  background: #001e60;
+  background: #153480;
   color: #FFF;
-  border: solid 1px #001e60;
+  border: solid 1px #153480;
 }
 
 .variant_options_row input[type='radio']:checked + label:after {
@@ -2525,10 +2527,13 @@ body .rc-radio-group__options .rc-radio .rc-radio__input {
   background: #ffb405 !important;
   max-width: calc(100% - 100px) !important;
 }
-
-.klaviyo-bis-trigger{
+.product-form .klaviyo-bis-trigger{
+  display: none !important;
+}
+.product-form .flex-wrap .klaviyo-bis-trigger{
   {% comment %} display: none !important; {% endcomment %}
   {% comment %} background: #ffb405!important; {% endcomment %}
+  display: block !important;
   background: #fff !important; ;
   max-width: calc(100% - 100px)!important;
   width: 100% !important;
@@ -2546,6 +2551,10 @@ body .rc-radio-group__options .rc-radio .rc-radio__input {
 {
   display: none !important;
 }
+.fs-mobile-only
+{
+  display: none !important;
+}
 .fs-new-icon-box {
     display: none;
   }
@@ -2557,6 +2566,10 @@ body .rc-radio-group__options .rc-radio .rc-radio__input {
   .fs-mobile-only.flex
   {
     display: flex !important;
+  }
+  .fs-mobile-only
+  {
+    display: block !important;
   }
   .shopify-section .product-template
   {
@@ -2688,4 +2701,11 @@ body .rc-radio-group__options .rc-radio .rc-radio__input {
 
 .rc-template__radio-group .rc-radio .rc-radio__label {
   line-height: 1.2;
+}
+.rc-tooltip .arrow[data-v-46fbb779]:after, .rc-tooltip .arrow[data-v-46fbb779]:before
+{
+  background: #153480 !important;
+}
+.rc-tooltip .rc-tooltip__content[data-v-46fbb779]{
+  background: #153480 !important;
 }

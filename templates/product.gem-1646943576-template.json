@@ -21,7 +21,6 @@
         },
         "ac794702-714f-4dba-8393-e6a2406ea50d": {
           "type": "description",
-          "disabled": true,
           "settings": {}
         },
         "fea49fdb-38dc-492d-8976-79368cb712ee": {
@@ -922,7 +921,7 @@
       "settings": {
         "container": "container-fluid",
         "bg_color": "#ffffff",
-        "default_open": false
+        "default_open": true
       }
     },
     "90bd53fe-8ec6-4efe-89f1-980c66c84a20": {

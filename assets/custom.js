@@ -1,5 +1,61 @@
 jQuery(document).ready(function($) {
   console.log("ready");
+  //for product page subscription
+  if(window.location.href.includes("/products/") > 0)
+  {
+      //for SMS
+      setInterval(function() {
+      document.querySelectorAll(".rcsms-cart-widget__label").forEach(function(obj) {
+        // console.log("1---SMS Obj",obj);
+        // console.log("2---SMS Obj",obj.innerHTML);
+        if(obj.innerHTML.includes("Manage your subscription via SMS") < 1)
+          obj.innerHTML = "<input type='checkbox' class='rcsms-cart-widget__checkbox'><span class='rcsms-cart-widget__checkmark'></span>Manage your subscription via SMS";
+      }); 
+    }, 1000);
+    setTimeout(function() {
+      document.querySelectorAll("[name='selling_plan']").forEach(function(obj) {
+        console.log("subscription");
+        document.querySelectorAll(".variant_options_row .option-item .discount_badge").forEach(function(obj1) {
+          obj1.classList.add("hide");
+        });
+        purchase_option = 2;
+        if(document.querySelector(".switch-subscribe") && document.querySelector(".switch-subscribe").checked == true) {
+          document.querySelector(".switch-subscribe").checked = false;
+        }
+        updateSavingPrice();
+        // var event = new Event('change');
+        // obj.dispatchEvent(event);
+      });
+    }, 2500);
+    $(document).on('click','.rc-radio',function(e){
+      setTimeout(function() {
+        document.querySelectorAll("[name='selling_plan']").forEach(function(obj) {
+          if(obj.value == '') {
+            console.log("one time");
+            document.querySelectorAll(".variant_options_row .option-item .discount_badge").forEach(function(obj1) {
+              obj1.classList.remove("hide");
+            });
+            purchase_option = 1;
+            if(document.querySelector(".switch-subscribe") && document.querySelector(".switch-subscribe").checked == false) {
+              document.querySelector(".switch-subscribe").checked = true;
+            }
+          }
+          else {
+            console.log("subscription");
+            document.querySelectorAll(".variant_options_row .option-item .discount_badge").forEach(function(obj1) {
+              obj1.classList.add("hide");
+            });
+            purchase_option = 2;
+            if(document.querySelector(".switch-subscribe") && document.querySelector(".switch-subscribe").checked == true) {
+              document.querySelector(".switch-subscribe").checked = false;
+            }
+          }
+          updateSavingPrice();
+        });
+      }, 100);
+    }); 
+  }
+
   $(".fs-slider-sf-grid").slick({
     prevArrow: "<button type='button' class='slick-prev'><</button>",
     nextArrow: "<button type='button' class='slick-next'>></button>",
@@ -485,7 +541,10 @@ function updateSavingPrice() {
     return;
   }
 
-  if(!document.querySelector(".smartrr-purchase-options")) {
+  // if(!document.querySelector(".smartrr-purchase-options")) {
+  //   purchase_option = 1;
+  // }
+  if(!document.querySelector(".rc-selling-plans")) {
     purchase_option = 1;
   }
   

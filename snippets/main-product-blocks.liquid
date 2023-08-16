@@ -487,7 +487,7 @@
           {%- when 'image' -%}
             {% if block.settings.image != blank %}
             {% assign image_link = block.settings.image_link %}
-              <div class="flex justify-{{ block.settings.image_alignment }} {{ block.settings.additional_class }}">
+              <div class="flex justify-{{ block.settings.image_alignment }} {{ block.settings.additional_class }} {% if block.settings.additional_class contains 'mobile_only' %} fs-mobile-only {% endif %}">
                 <div class="bottom-block__image" style="width: {{ block.settings.image_width }}%">
                   {% if image_link != blank %}<a href="{{ image_link }}" class="block">{% endif %}
                     {% render 'responsive-image', image: block.settings.image %}

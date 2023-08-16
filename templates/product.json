@@ -60,9 +60,9 @@
         "d3dc445e-529b-4e26-b635-1fa8126587dd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ClaimsIcon_2_1.png",
+            "image": "shopify:\/\/shop_images\/Icon_50.png",
             "image_link": "",
-            "image_width": 100,
+            "image_width": 30,
             "image_alignment": "center",
             "additional_class": "guarantee_img"
           }
@@ -89,6 +89,7 @@
         },
         "addons": {
           "type": "addons",
+          "disabled": true,
           "settings": {
             "show_atcp": false,
             "show_ask_a_question": true,
@@ -99,6 +100,7 @@
         },
         "45e7749e-91ff-4446-a1e2-c29364f318d7": {
           "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
@@ -119,6 +121,9 @@
         "3c77c9bd-e44c-4053-9225-3f0386ea8663",
         "addons",
         "45e7749e-91ff-4446-a1e2-c29364f318d7"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.sf-prod__info .guarantee_img .bottom-block__image {width: 50% !important; }}"
       ],
       "settings": {
         "container": "container",

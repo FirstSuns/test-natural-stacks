@@ -67,7 +67,10 @@
             </div>
           {% endif %}
           <div class="fs-pdp-single-review">
-            {% render 'other-review-app-snippet' %}
+            {% if product.metafields.custom.review_image != blank %}
+              <img src="{{product.metafields.custom.review_image | image_url: width: 600 }}" />
+            {% endif %}
+            {% comment %} {% render 'other-review-app-snippet' %} {% endcomment %}
           </div>
         </div>
         {% if product_layout != 'layout-5' and show_thumbnails %}

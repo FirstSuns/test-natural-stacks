@@ -430,7 +430,6 @@ Shopify.onCartUpdate = async function (cart) {
   } catch (err) {
     console.error("Failed to trigger Shopify.onCartUpdate()", err);
   }
-    
   //console.log("---Test Cart Update",cart);
   var f = 0;
   var progress_cnt = 0;
